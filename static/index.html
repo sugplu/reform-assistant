@@ -3,403 +3,1000 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reform California — Ask RC</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Ask Reform California</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; font-family: 'Inter', -apple-system, sans-serif; background: #0B1F3A; }
-
-    /* ── App Shell ── */
-    .shell {
-      display: flex; flex-direction: column; height: 100dvh;
-      max-width: 860px; margin: 0 auto;
-      background: #ffffff;
-      box-shadow: 0 0 80px rgba(0,0,0,.4);
+    :root {
+      --navy-950: #08172b;
+      --navy-900: #0d2340;
+      --navy-800: #14345f;
+      --blue-700: #1f5fbf;
+      --blue-600: #2c73d6;
+      --sky-100: #eef5ff;
+      --sky-50: #f7fbff;
+      --gold-500: #f2bf2f;
+      --gold-400: #ffd766;
+      --slate-900: #1d2939;
+      --slate-700: #344054;
+      --slate-500: #667085;
+      --slate-300: #d0d5dd;
+      --slate-200: #eaecf0;
+      --slate-100: #f2f4f7;
+      --white: #ffffff;
+      --danger-bg: #fef3f2;
+      --danger-border: #fecdca;
+      --danger-text: #b42318;
+      --shadow-lg: 0 24px 60px rgba(8, 23, 43, 0.18);
+      --shadow-md: 0 12px 30px rgba(8, 23, 43, 0.1);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
     }
 
-    /* ── Header ── */
-    .header {
-      background: linear-gradient(135deg, #0B2545 0%, #1A4FA0 60%, #1E6AC4 100%);
-      padding: 0 24px;
-      display: flex; align-items: center; gap: 16px;
-      flex-shrink: 0;
-      min-height: 72px;
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(255, 215, 102, 0.18), transparent 26%),
+        radial-gradient(circle at top right, rgba(44, 115, 214, 0.18), transparent 30%),
+        linear-gradient(180deg, #eaf2ff 0%, #f8fbff 40%, #eef4fb 100%);
+      color: var(--slate-900);
+    }
+
+    body {
+      padding: 20px;
+    }
+
+    .app-shell {
+      width: min(100%, 980px);
+      min-height: calc(100vh - 40px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      border-radius: 30px;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      backdrop-filter: blur(14px);
+    }
+
+    .topbar {
       position: relative;
       overflow: hidden;
+      padding: 22px 24px;
+      background:
+        linear-gradient(135deg, rgba(8, 23, 43, 0.96), rgba(20, 52, 95, 0.94)),
+        linear-gradient(135deg, var(--navy-900), var(--blue-700));
+      color: var(--white);
     }
-    .header::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
-    .logo-mark {
-      width: 44px; height: 44px; border-radius: 12px;
-      background: linear-gradient(135deg, #F5C518, #E8A800);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 800; font-size: 16px; color: #0B2545;
-      letter-spacing: -0.5px; flex-shrink: 0;
-      box-shadow: 0 4px 12px rgba(245,197,24,.3);
-      position: relative; z-index: 1;
-    }
-    .header-info { flex: 1; position: relative; z-index: 1; }
-    .header-info h1 { font-size: 16px; font-weight: 700; color: #fff; letter-spacing: -0.3px; }
-    .header-info p  { font-size: 11.5px; color: rgba(255,255,255,.65); margin-top: 1px; }
-    .online-badge {
-      display: flex; align-items: center; gap: 6px;
-      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15);
-      border-radius: 20px; padding: 5px 10px;
-      font-size: 11px; color: rgba(255,255,255,.85); font-weight: 500;
-      flex-shrink: 0; position: relative; z-index: 1;
-    }
-    .online-dot { width: 7px; height: 7px; background: #4ade80; border-radius: 50%; animation: pulse-dot 2s infinite; }
-    @keyframes pulse-dot { 0%,100%{box-shadow:0 0 0 0 rgba(74,222,128,.5)} 50%{box-shadow:0 0 0 4px rgba(74,222,128,0)} }
 
-    /* ── Chat Area ── */
-    .chat-area {
-      flex: 1; overflow-y: auto; padding: 24px 20px;
-      display: flex; flex-direction: column; gap: 16px;
-      background: #F8FAFD;
+    .topbar::after {
+      content: "";
+      position: absolute;
+      inset: auto -40px -60px auto;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 215, 102, 0.28), rgba(255, 215, 102, 0));
+      pointer-events: none;
+    }
+
+    .topbar-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .brand-mark {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
+      background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+      color: var(--navy-900);
+      font-weight: 800;
+      font-size: 18px;
+      box-shadow: 0 12px 24px rgba(242, 191, 47, 0.35);
+    }
+
+    .brand-copy {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .brand-copy h1 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-copy p {
+      margin: 5px 0 0;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .status-pill {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4ade80;
+      box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6); }
+      70% { box-shadow: 0 0 0 9px rgba(74, 222, 128, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+    }
+
+    .chat-stage {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      background:
+        linear-gradient(180deg, rgba(247, 251, 255, 0.9), rgba(255, 255, 255, 0.95));
+    }
+
+    .chat-scroll {
+      flex: 1;
+      min-height: 0;
+      overflow-y: auto;
+      padding: 22px;
       scroll-behavior: smooth;
     }
-    .chat-area::-webkit-scrollbar { width: 5px; }
-    .chat-area::-webkit-scrollbar-track { background: transparent; }
-    .chat-area::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 10px; }
 
-    /* ── Welcome ── */
-    .welcome {
-      background: linear-gradient(135deg, #fff 0%, #EEF4FF 100%);
-      border: 1px solid #DBEAFE; border-radius: 20px;
-      padding: 28px 24px; text-align: center;
-      animation: fadeUp .5s ease;
+    .chat-scroll::-webkit-scrollbar {
+      width: 10px;
     }
-    .welcome-icon { font-size: 36px; margin-bottom: 12px; }
-    .welcome h2 { color: #0B2545; font-size: 18px; font-weight: 700; margin-bottom: 8px; }
-    .welcome p  { color: #64748B; font-size: 13.5px; line-height: 1.7; max-width: 420px; margin: 0 auto; }
 
-    /* ── Quick Actions ── */
+    .chat-scroll::-webkit-scrollbar-thumb {
+      background: rgba(20, 52, 95, 0.16);
+      border-radius: 999px;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+    }
+
+    .hero-card {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 18px;
+      padding: 24px;
+      border-radius: var(--radius-xl);
+      border: 1px solid #d9e7ff;
+      background:
+        radial-gradient(circle at top right, rgba(255, 215, 102, 0.16), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #edf5ff 100%);
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero-card h2 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--navy-900);
+    }
+
+    .hero-card p {
+      margin: 0;
+      max-width: 680px;
+      color: var(--slate-700);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .hero-badge {
+      padding: 10px 13px;
+      border-radius: 999px;
+      background: rgba(31, 95, 191, 0.08);
+      border: 1px solid rgba(31, 95, 191, 0.12);
+      color: var(--navy-800);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 14px;
+      color: var(--slate-500);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .section-label::before,
+    .section-label::after {
+      content: "";
+      height: 1px;
+      background: linear-gradient(90deg, rgba(102, 112, 133, 0.1), rgba(102, 112, 133, 0.35), rgba(102, 112, 133, 0.1));
+      flex: 1;
+    }
+
     .quick-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
-      animation: fadeUp .5s .1s ease both;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 22px;
     }
-    .quick-btn {
-      background: #fff; border: 1.5px solid #E2E8F0; border-radius: 14px;
-      padding: 12px 10px; cursor: pointer; transition: all .2s;
-      display: flex; flex-direction: column; align-items: center; gap: 6px;
-      font-family: inherit;
-    }
-    .quick-btn:hover { border-color: #1A4FA0; background: #EEF4FF; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(26,79,160,.12); }
-    .quick-btn .q-icon { font-size: 22px; }
-    .quick-btn .q-label { font-size: 11.5px; font-weight: 600; color: #1A4FA0; text-align: center; line-height: 1.3; }
 
-    /* ── Messages ── */
-    .msg-row { display: flex; align-items: flex-end; gap: 10px; animation: fadeUp .35s ease; }
-    .msg-row.user { flex-direction: row-reverse; }
+    .quick-btn {
+      appearance: none;
+      border: 1px solid var(--slate-200);
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 16px 14px;
+      text-align: left;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+      box-shadow: 0 8px 18px rgba(16, 24, 40, 0.04);
+    }
+
+    .quick-btn:hover {
+      transform: translateY(-2px);
+      border-color: #bdd6ff;
+      background: linear-gradient(180deg, #ffffff, #f6faff);
+      box-shadow: 0 14px 28px rgba(16, 24, 40, 0.08);
+    }
+
+    .quick-btn:active {
+      transform: translateY(0);
+    }
+
+    .quick-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, rgba(31, 95, 191, 0.12), rgba(242, 191, 47, 0.18));
+      color: var(--navy-900);
+      font-size: 18px;
+    }
+
+    .quick-title {
+      display: block;
+      margin: 0 0 4px;
+      color: var(--slate-900);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .quick-copy {
+      display: block;
+      color: var(--slate-500);
+      font-size: 12.5px;
+      line-height: 1.45;
+    }
+
+    .message-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .message-row {
+      display: flex;
+      gap: 12px;
+      align-items: flex-end;
+      animation: fadeUp 0.28s ease;
+    }
+
+    .message-row.user {
+      flex-direction: row-reverse;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
     .avatar {
-      width: 34px; height: 34px; border-radius: 10px; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 13px; font-weight: 700;
+      width: 38px;
+      height: 38px;
+      flex: 0 0 auto;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 800;
+      box-shadow: 0 8px 18px rgba(16, 24, 40, 0.08);
     }
-    .avatar.rc   { background: linear-gradient(135deg, #0B2545, #1A4FA0); color: #F5C518; }
-    .avatar.user { background: linear-gradient(135deg, #E2E8F0, #CBD5E1); color: #475569; }
 
-    .msg-body { display: flex; flex-direction: column; max-width: 72%; gap: 4px; }
-    .msg-row.user .msg-body { align-items: flex-end; }
+    .avatar.rc {
+      background: linear-gradient(135deg, var(--navy-900), var(--blue-700));
+      color: var(--gold-400);
+    }
 
-    .sender { font-size: 10.5px; font-weight: 600; color: #94A3B8; padding: 0 4px; }
+    .avatar.user {
+      background: linear-gradient(135deg, #ffffff, #e7eef8);
+      color: var(--slate-700);
+      border: 1px solid #dce5f0;
+    }
+
+    .message-stack {
+      max-width: min(78%, 760px);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .message-row.user .message-stack {
+      align-items: flex-end;
+    }
+
+    .message-label {
+      padding: 0 4px;
+      color: var(--slate-500);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
 
     .bubble {
-      padding: 12px 16px; border-radius: 18px;
-      font-size: 13.5px; line-height: 1.7; word-break: break-word;
-    }
-    .bubble.rc-bubble {
-      background: #fff; border: 1px solid #E8EDF5;
-      border-bottom-left-radius: 4px; color: #1E293B;
-      box-shadow: 0 2px 8px rgba(0,0,0,.05);
-    }
-    .bubble.user-bubble {
-      background: linear-gradient(135deg, #1A4FA0, #1E6AC4);
-      color: #fff; border-bottom-right-radius: 4px;
-      box-shadow: 0 4px 12px rgba(26,79,160,.25);
-    }
-    .bubble a { color: #1A4FA0; text-decoration: underline; text-underline-offset: 2px; }
-    .bubble.user-bubble a { color: #BAE0FF; }
-    .bubble p + p { margin-top: 8px; }
-    .bubble ul, .bubble ol { padding-left: 18px; margin: 6px 0; }
-    .bubble li { margin-bottom: 4px; }
-    .bubble strong { font-weight: 600; }
-
-    /* ── Typing ── */
-    .typing-dots { display: flex; align-items: center; gap: 5px; padding: 14px 18px; }
-    .typing-dots span {
-      width: 8px; height: 8px; background: #94A3B8; border-radius: 50%;
-      animation: bounce-dot .9s infinite;
-    }
-    .typing-dots span:nth-child(2) { animation-delay: .15s; }
-    .typing-dots span:nth-child(3) { animation-delay: .3s; }
-    @keyframes bounce-dot { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-7px)} }
-
-    /* ── Error ── */
-    .error-msg {
-      background: #FFF0F0; border: 1px solid #FECACA; color: #B91C1C;
-      padding: 10px 14px; border-radius: 12px; font-size: 13px;
-      animation: fadeUp .3s ease;
+      padding: 14px 16px;
+      border-radius: 18px;
+      font-size: 14px;
+      line-height: 1.68;
+      word-break: break-word;
     }
 
-    /* ── Divider ── */
-    .divider {
-      display: flex; align-items: center; gap: 10px;
-      font-size: 11px; color: #94A3B8; font-weight: 500;
-    }
-    .divider::before, .divider::after {
-      content: ''; flex: 1; height: 1px; background: #E2E8F0;
+    .bubble.assistant {
+      background: var(--white);
+      border: 1px solid #e4ebf3;
+      border-bottom-left-radius: 6px;
+      color: var(--slate-900);
+      box-shadow: 0 8px 22px rgba(16, 24, 40, 0.05);
     }
 
-    /* ── Input Area ── */
-    .input-area {
-      background: #fff; border-top: 1px solid #EEF0F5;
-      padding: 14px 16px; flex-shrink: 0;
+    .bubble.user {
+      background: linear-gradient(135deg, var(--blue-700), var(--blue-600));
+      color: var(--white);
+      border-bottom-right-radius: 6px;
+      box-shadow: 0 12px 24px rgba(31, 95, 191, 0.22);
     }
-    .input-row { display: flex; gap: 10px; align-items: flex-end; }
-    .input-wrap {
-      flex: 1; background: #F8FAFD; border: 1.5px solid #E2E8F0;
-      border-radius: 16px; padding: 10px 14px; transition: all .2s;
-      display: flex; align-items: flex-end; gap: 8px;
+
+    .bubble p {
+      margin: 0;
     }
-    .input-wrap:focus-within { border-color: #1A4FA0; background: #fff; box-shadow: 0 0 0 3px rgba(26,79,160,.08); }
-    .input-wrap textarea {
-      flex: 1; resize: none; border: none; background: transparent;
-      font-size: 14px; font-family: inherit; outline: none;
-      max-height: 120px; min-height: 22px; line-height: 1.5;
-      color: #1E293B;
+
+    .bubble p + p {
+      margin-top: 10px;
     }
-    .input-wrap textarea::placeholder { color: #94A3B8; }
+
+    .bubble ul,
+    .bubble ol {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+
+    .bubble li + li {
+      margin-top: 4px;
+    }
+
+    .bubble a {
+      color: var(--blue-700);
+      font-weight: 600;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 2px;
+    }
+
+    .bubble.user a {
+      color: #e8f1ff;
+    }
+
+    .typing {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 2px;
+    }
+
+    .typing span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #98a2b3;
+      animation: bounce 1s infinite ease-in-out;
+    }
+
+    .typing span:nth-child(2) {
+      animation-delay: 0.12s;
+    }
+
+    .typing span:nth-child(3) {
+      animation-delay: 0.24s;
+    }
+
+    @keyframes bounce {
+      0%, 80%, 100% { transform: translateY(0); opacity: 0.6; }
+      40% { transform: translateY(-6px); opacity: 1; }
+    }
+
+    .error-banner {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--danger-border);
+      background: var(--danger-bg);
+      color: var(--danger-text);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .composer {
+      border-top: 1px solid rgba(208, 213, 221, 0.7);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      padding: 18px 20px 20px;
+    }
+
+    .composer-shell {
+      display: flex;
+      gap: 12px;
+      align-items: flex-end;
+    }
+
+    .composer-input {
+      flex: 1;
+      display: flex;
+      gap: 10px;
+      align-items: flex-end;
+      padding: 12px 14px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, #ffffff, #f8fbff);
+      border: 1px solid #d8e3ef;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+      transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .composer-input:focus-within {
+      border-color: #9fc2ff;
+      box-shadow: 0 0 0 4px rgba(44, 115, 214, 0.12);
+      background: #ffffff;
+    }
+
+    .composer-leading {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(31, 95, 191, 0.08);
+      color: var(--navy-900);
+      flex: 0 0 auto;
+      font-size: 16px;
+    }
+
+    textarea {
+      width: 100%;
+      resize: none;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: var(--slate-900);
+      font: inherit;
+      font-size: 14px;
+      line-height: 1.55;
+      max-height: 140px;
+      min-height: 24px;
+    }
+
+    textarea::placeholder {
+      color: #98a2b3;
+    }
+
     .send-btn {
-      width: 38px; height: 38px; border-radius: 12px; flex-shrink: 0;
-      background: linear-gradient(135deg, #1A4FA0, #1E6AC4);
-      border: none; cursor: pointer; color: #fff;
-      display: flex; align-items: center; justify-content: center;
-      transition: all .2s; box-shadow: 0 4px 10px rgba(26,79,160,.3);
+      width: 52px;
+      height: 52px;
+      flex: 0 0 auto;
+      border: 0;
+      border-radius: 18px;
+      cursor: pointer;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--navy-900), var(--blue-700));
+      box-shadow: 0 16px 28px rgba(31, 95, 191, 0.22);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
     }
-    .send-btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(26,79,160,.4); }
-    .send-btn:disabled { background: #CBD5E1; box-shadow: none; cursor: not-allowed; }
-    .send-btn svg { width: 16px; height: 16px; }
 
-    /* ── Footer ── */
-    .footer {
-      text-align: center; font-size: 11px; color: #94A3B8;
-      padding: 6px 16px 10px; background: #fff;
+    .send-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 32px rgba(31, 95, 191, 0.28);
     }
-    .footer a { color: #1A4FA0; text-decoration: none; font-weight: 500; }
-    .footer a:hover { text-decoration: underline; }
 
-    /* ── Animations ── */
-    @keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+    .send-btn:disabled {
+      cursor: not-allowed;
+      opacity: 0.55;
+      transform: none;
+      box-shadow: none;
+    }
 
-    /* ── Responsive ── */
-    @media (max-width: 560px) {
-      .quick-grid { grid-template-columns: repeat(2, 1fr); }
-      .bubble { max-width: 90%; }
-      .online-badge span { display: none; }
+    .send-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .composer-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 10px;
+      color: var(--slate-500);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .composer-footer a {
+      color: var(--blue-700);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .composer-footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      body {
+        padding: 0;
+      }
+
+      .app-shell {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topbar-inner {
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+
+      .status-pill {
+        order: 3;
+      }
+
+      .quick-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .message-stack {
+        max-width: 88%;
+      }
+
+      .composer-footer {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .topbar {
+        padding: 18px 16px;
+      }
+
+      .chat-scroll {
+        padding: 16px;
+      }
+
+      .hero-card {
+        padding: 18px;
+      }
+
+      .hero-card h2 {
+        font-size: 20px;
+      }
+
+      .quick-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .composer {
+        padding: 14px 14px 16px;
+      }
+
+      .composer-shell {
+        gap: 10px;
+      }
+
+      .send-btn {
+        width: 48px;
+        height: 48px;
+        border-radius: 16px;
+      }
     }
   </style>
 </head>
 <body>
-<div class="shell">
-
-  <!-- Header -->
-  <div class="header">
-    <div class="logo-mark">RC</div>
-    <div class="header-info">
-      <h1>Reform California Assistant</h1>
-      <p>Ask anything — petitions, events, volunteering &amp; more</p>
-    </div>
-    <div class="online-badge">
-      <div class="online-dot"></div>
-      <span>Live 24/7</span>
-    </div>
-  </div>
-
-  <!-- Chat -->
-  <div class="chat-area" id="chatArea">
-
-    <div class="welcome" id="welcomeCard">
-      <div class="welcome-icon">🏛️</div>
-      <h2>How can we help you today?</h2>
-      <p>Get instant answers about Reform California's campaigns, petitions, events, volunteering opportunities, and more.</p>
-    </div>
-
-    <div class="divider" id="suggestDivider">Suggested questions</div>
-
-    <div class="quick-grid" id="quickGrid">
-      <button class="quick-btn" onclick="askQuick('How do I sign a petition?')">
-        <span class="q-icon">📝</span><span class="q-label">Sign a Petition</span>
-      </button>
-      <button class="quick-btn" onclick="askQuick('How can I volunteer with Reform California?')">
-        <span class="q-icon">🙋</span><span class="q-label">Volunteer</span>
-      </button>
-      <button class="quick-btn" onclick="askQuick('Where are your upcoming events?')">
-        <span class="q-icon">📅</span><span class="q-label">Events</span>
-      </button>
-      <button class="quick-btn" onclick="askQuick('Where can I find the voter guide?')">
-        <span class="q-icon">🗳️</span><span class="q-label">Voter Guide</span>
-      </button>
-      <button class="quick-btn" onclick="askQuick('How do I donate to Reform California?')">
-        <span class="q-icon">💛</span><span class="q-label">Donate</span>
-      </button>
-      <button class="quick-btn" onclick="askQuick('What is Reform California and what do you stand for?')">
-        <span class="q-icon">ℹ️</span><span class="q-label">About RC</span>
-      </button>
-    </div>
-
-  </div>
-
-  <!-- Input -->
-  <div class="input-area">
-    <div class="input-row">
-      <div class="input-wrap">
-        <textarea
-          id="userInput"
-          placeholder="Ask us anything…"
-          rows="1"
-          onkeydown="handleKey(event)"
-          oninput="autoResize(this)"
-        ></textarea>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand-mark">RC</div>
+        <div class="brand-copy">
+          <h1>Ask Reform California</h1>
+          <p>24/7 help with petitions, events, volunteering, voter guides, donations, and official public information.</p>
+        </div>
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span>Live Assistant</span>
+        </div>
       </div>
-      <button class="send-btn" id="sendBtn" onclick="sendMessage()" title="Send">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="22" y1="2" x2="11" y2="13"></line>
-          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-        </svg>
-      </button>
-    </div>
+    </header>
+
+    <main class="chat-stage">
+      <div class="chat-scroll" id="chatArea">
+        <div class="hero-card" id="welcomeCard">
+          <h2>Get a direct answer fast.</h2>
+          <p>
+            Ask about campaign updates, petitions, volunteer opportunities, events, office details, voter guides,
+            donation questions, or where to go next.
+          </p>
+          <div class="hero-badges">
+            <span class="hero-badge">Official links</span>
+            <span class="hero-badge">Action-oriented help</span>
+            <span class="hero-badge">Live website updates</span>
+          </div>
+        </div>
+
+        <div id="starterBlock">
+          <div class="section-label">Popular Questions</div>
+          <div class="quick-grid">
+            <button class="quick-btn" type="button" onclick="askQuick('How do I sign a petition?')">
+              <span class="quick-icon">📝</span>
+              <span class="quick-title">Sign a Petition</span>
+              <span class="quick-copy">Learn the exact steps and official links.</span>
+            </button>
+
+            <button class="quick-btn" type="button" onclick="askQuick('How can I volunteer with Reform California?')">
+              <span class="quick-icon">🙋</span>
+              <span class="quick-title">Volunteer</span>
+              <span class="quick-copy">See signup options, activities, and contact info.</span>
+            </button>
+
+            <button class="quick-btn" type="button" onclick="askQuick('Where are upcoming events and town halls?')">
+              <span class="quick-icon">📅</span>
+              <span class="quick-title">Events</span>
+              <span class="quick-copy">Find the current events page and next steps.</span>
+            </button>
+
+            <button class="quick-btn" type="button" onclick="askQuick('Where can I find the voter guide?')">
+              <span class="quick-icon">🗳️</span>
+              <span class="quick-title">Voter Guide</span>
+              <span class="quick-copy">Get the right guide page quickly.</span>
+            </button>
+
+            <button class="quick-btn" type="button" onclick="askQuick('How do I donate to Reform California?')">
+              <span class="quick-icon">💛</span>
+              <span class="quick-title">Donate</span>
+              <span class="quick-copy">Find the official donation route and support options.</span>
+            </button>
+
+            <button class="quick-btn" type="button" onclick="askQuick('What is Reform California and what does it stand for?')">
+              <span class="quick-icon">🏛️</span>
+              <span class="quick-title">About Reform CA</span>
+              <span class="quick-copy">See the mission, priorities, and public overview.</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="message-list" id="messageList"></div>
+      </div>
+
+      <div class="composer">
+        <div class="composer-shell">
+          <div class="composer-input">
+            <div class="composer-leading">?</div>
+            <textarea
+              id="userInput"
+              rows="1"
+              placeholder="Ask your question here..."
+              oninput="autoResize(this)"
+              onkeydown="handleKey(event)"
+            ></textarea>
+          </div>
+
+          <button class="send-btn" id="sendBtn" type="button" onclick="sendMessage()" aria-label="Send message">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 2L11 13"></path>
+              <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="composer-footer">
+          <div>Use clear questions for the fastest answer. For official updates, links are included when relevant.</div>
+          <div>
+            <a href="https://reformcalifornia.org" target="_blank" rel="noopener">reformcalifornia.org</a>
+            &nbsp;·&nbsp;
+            <a href="tel:6193547257">619-354-7257</a>
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
 
-  <!-- Footer -->
-  <div class="footer">
-    <a href="https://reformcalifornia.org" target="_blank">reformcalifornia.org</a>
-    &nbsp;·&nbsp;
-    <a href="tel:6193547257">619-354-7257</a>
-    &nbsp;·&nbsp; Reform California with Carl DeMaio
-  </div>
+  <script>
+    const chatArea = document.getElementById("chatArea");
+    const messageList = document.getElementById("messageList");
+    const userInput = document.getElementById("userInput");
+    const sendBtn = document.getElementById("sendBtn");
 
-</div>
+    let conversationHistory = [];
+    let isStreaming = false;
 
-<script>
-  const chatArea  = document.getElementById("chatArea");
-  const userInput = document.getElementById("userInput");
-  const sendBtn   = document.getElementById("sendBtn");
-  let history = [];
-  let streaming = false;
+    function scrollBottom() {
+      chatArea.scrollTop = chatArea.scrollHeight;
+    }
 
-  function scrollBottom() { chatArea.scrollTop = chatArea.scrollHeight; }
-  function autoResize(el) { el.style.height = "auto"; el.style.height = Math.min(el.scrollHeight, 120) + "px"; }
-  function handleKey(e) { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendMessage(); } }
+    function autoResize(el) {
+      el.style.height = "auto";
+      el.style.height = Math.min(el.scrollHeight, 140) + "px";
+    }
 
-  function clearWelcome() {
-    ["welcomeCard","suggestDivider","quickGrid"].forEach(id => document.getElementById(id)?.remove());
-  }
-
-  function askQuick(q) { clearWelcome(); userInput.value = q; sendMessage(); }
-
-  function formatText(t) {
-    if (!t) return "";
-    t = t.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
-    t = t.replace(/(https?:\/\/[^\s<>"']+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
-    t = t.replace(/^\d+\.\s(.+)$/gm, "<li>$1</li>");
-    t = t.replace(/^[-•]\s(.+)$/gm, "<li>$1</li>");
-    return t.split(/\n{2,}/).map(p => {
-      p = p.trim(); if (!p) return "";
-      if (p.includes("<li>")) return "<ul>" + p + "</ul>";
-      return "<p>" + p.replace(/\n/g, "<br>") + "</p>";
-    }).join("");
-  }
-
-  function addMessage(role, content) {
-    const row = document.createElement("div");
-    row.className = "msg-row " + role;
-
-    const av = document.createElement("div");
-    av.className = "avatar " + (role === "assistant" ? "rc" : "user");
-    av.textContent = role === "assistant" ? "RC" : "You";
-
-    const body = document.createElement("div");
-    body.className = "msg-body";
-
-    const sender = document.createElement("div");
-    sender.className = "sender";
-    sender.textContent = role === "assistant" ? "Reform California" : "You";
-
-    const bubble = document.createElement("div");
-    bubble.className = "bubble " + (role === "assistant" ? "rc-bubble" : "user-bubble");
-    bubble.innerHTML = formatText(content || "");
-
-    body.appendChild(sender);
-    body.appendChild(bubble);
-    row.appendChild(av);
-    row.appendChild(body);
-    chatArea.appendChild(row);
-    scrollBottom();
-    return bubble;
-  }
-
-  function addTyping() {
-    const row = document.createElement("div");
-    row.className = "msg-row assistant"; row.id = "typingRow";
-    const av = document.createElement("div"); av.className = "avatar rc"; av.textContent = "RC";
-    const body = document.createElement("div"); body.className = "msg-body";
-    const sender = document.createElement("div"); sender.className = "sender"; sender.textContent = "Reform California";
-    const bubble = document.createElement("div"); bubble.className = "bubble rc-bubble";
-    bubble.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>';
-    body.appendChild(sender); body.appendChild(bubble);
-    row.appendChild(av); row.appendChild(body);
-    chatArea.appendChild(row); scrollBottom();
-  }
-  function removeTyping() { document.getElementById("typingRow")?.remove(); }
-
-  async function sendMessage() {
-    if (streaming) return;
-    const text = userInput.value.trim(); if (!text) return;
-    clearWelcome();
-    addMessage("user", text);
-    history.push({ role: "user", content: text });
-    userInput.value = ""; userInput.style.height = "auto";
-    sendBtn.disabled = true; streaming = true;
-    addTyping();
-
-    let full = ""; let bubble = null;
-    try {
-      const res = await fetch("/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: history })
-      });
-      if (!res.ok) throw new Error("Server error");
-      const reader = res.body.getReader();
-      const dec = new TextDecoder();
-      let buf = "";
-      while (true) {
-        const { done, value } = await reader.read(); if (done) break;
-        buf += dec.decode(value, { stream: true });
-        const lines = buf.split("\n"); buf = lines.pop();
-        for (const line of lines) {
-          if (!line.startsWith("data: ")) continue;
-          const raw = line.slice(6).trim(); if (raw === "[DONE]") break;
-          try {
-            const p = JSON.parse(raw);
-            if (p.error) { removeTyping(); const e = document.createElement("div"); e.className = "error-msg"; e.textContent = p.error; chatArea.appendChild(e); scrollBottom(); return; }
-            if (p.content) { removeTyping(); if (!bubble) bubble = addMessage("assistant", ""); full += p.content; bubble.innerHTML = formatText(full); scrollBottom(); }
-          } catch(_) {}
-        }
+    function handleKey(event) {
+      if (event.key === "Enter" && !event.shiftKey) {
+        event.preventDefault();
+        sendMessage();
       }
-      if (full) history.push({ role: "assistant", content: full });
-    } catch(err) {
-      removeTyping();
-      const e = document.createElement("div"); e.className = "error-msg";
-      e.textContent = "Connection issue. Please try again or call 619-354-7257.";
-      chatArea.appendChild(e); scrollBottom();
-    } finally { streaming = false; sendBtn.disabled = false; userInput.focus(); }
-  }
-</script>
+    }
+
+    function clearWelcome() {
+      document.getElementById("welcomeCard")?.remove();
+      document.getElementById("starterBlock")?.remove();
+    }
+
+    function askQuick(question) {
+      userInput.value = question;
+      sendMessage();
+    }
+
+    function escapeHtml(text) {
+      return text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    }
+
+    function formatText(text) {
+      if (!text) return "";
+
+      let safe = escapeHtml(text);
+
+      safe = safe.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+      safe = safe.replace(/(https?:\/\/[^\s<>"']+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>');
+      safe = safe.replace(/^\d+\.\s(.+)$/gm, "<li>$1</li>");
+      safe = safe.replace(/^[-•]\s(.+)$/gm, "<li>$1</li>");
+
+      return safe
+        .split(/\n{2,}/)
+        .map((block) => {
+          const trimmed = block.trim();
+          if (!trimmed) return "";
+          if (trimmed.includes("<li>")) {
+            return "<ul>" + trimmed + "</ul>";
+          }
+          return "<p>" + trimmed.replace(/\n/g, "<br>") + "</p>";
+        })
+        .join("");
+    }
+
+    function createMessageRow(role, content = "") {
+      const row = document.createElement("div");
+      row.className = "message-row " + role;
+
+      const avatar = document.createElement("div");
+      avatar.className = "avatar " + (role === "assistant" ? "rc" : "user");
+      avatar.textContent = role === "assistant" ? "RC" : "You";
+
+      const stack = document.createElement("div");
+      stack.className = "message-stack";
+
+      const label = document.createElement("div");
+      label.className = "message-label";
+      label.textContent = role === "assistant" ? "Reform California" : "You";
+
+      const bubble = document.createElement("div");
+      bubble.className = "bubble " + (role === "assistant" ? "assistant" : "user");
+      bubble.innerHTML = formatText(content);
+
+      stack.appendChild(label);
+      stack.appendChild(bubble);
+
+      row.appendChild(avatar);
+      row.appendChild(stack);
+      messageList.appendChild(row);
+
+      scrollBottom();
+      return bubble;
+    }
+
+    function addTyping() {
+      const row = document.createElement("div");
+      row.className = "message-row assistant";
+      row.id = "typingRow";
+
+      const avatar = document.createElement("div");
+      avatar.className = "avatar rc";
+      avatar.textContent = "RC";
+
+      const stack = document.createElement("div");
+      stack.className = "message-stack";
+
+      const label = document.createElement("div");
+      label.className = "message-label";
+      label.textContent = "Reform California";
+
+      const bubble = document.createElement("div");
+      bubble.className = "bubble assistant";
+      bubble.innerHTML = '<div class="typing"><span></span><span></span><span></span></div>';
+
+      stack.appendChild(label);
+      stack.appendChild(bubble);
+
+      row.appendChild(avatar);
+      row.appendChild(stack);
+      messageList.appendChild(row);
+
+      scrollBottom();
+    }
+
+    function removeTyping() {
+      document.getElementById("typingRow")?.remove();
+    }
+
+    function showError(message) {
+      const error = document.createElement("div");
+      error.className = "error-banner";
+      error.textContent = message;
+      messageList.appendChild(error);
+      scrollBottom();
+    }
+
+    async function sendMessage() {
+      if (isStreaming) return;
+
+      const text = userInput.value.trim();
+      if (!text) return;
+
+      clearWelcome();
+      createMessageRow("user", text);
+      conversationHistory.push({ role: "user", content: text });
+
+      userInput.value = "";
+      userInput.style.height = "auto";
+      sendBtn.disabled = true;
+      isStreaming = true;
+
+      addTyping();
+
+      let fullResponse = "";
+      let responseBubble = null;
+
+      try {
+        const response = await fetch("/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ messages: conversationHistory })
+        });
+
+        if (!response.ok || !response.body) {
+          throw new Error("Server error");
+        }
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = "";
+        let doneReceived = false;
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split("\n");
+          buffer = lines.pop() || "";
+
+          for (const line of lines) {
+            if (!line.startsWith("data: ")) continue;
+
+            const payload = line.slice(6).trim();
+
+            if (payload === "[DONE]") {
+              doneReceived = true;
+              break;
+            }
+
+            try {
+              const parsed = JSON.parse(payload);
+
+              if (parsed.error) {
+                removeTyping();
+                showError(parsed.error);
+                doneReceived = true;
+                break;
+              }
+
+              if (parsed.content) {
+                removeTyping();
+                if (!responseBubble) {
+                  responseBubble = createMessageRow("assistant", "");
+                }
+                fullResponse += parsed.content;
+                responseBubble.innerHTML = formatText(fullResponse);
+                scrollBottom();
+              }
+            } catch (err) {
+              console.error("Bad SSE payload", err);
+            }
+          }
+
+          if (doneReceived) break;
+        }
+
+        if (fullResponse) {
+          conversationHistory.push({ role: "assistant", content: fullResponse });
+        }
+      } catch (error) {
+        removeTyping();
+        showError("Connection issue. Please try again or call 619-354-7257.");
+      } finally {
+        isStreaming = false;
+        sendBtn.disabled = false;
+        userInput.focus();
+      }
+    }
+
+    userInput.focus();
+  </script>
 </body>
 </html>
