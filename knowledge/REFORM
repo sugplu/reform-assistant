@@ -1,0 +1,3700 @@
+REFORM CALIFORNIA — FULL KNOWLEDGE BASE
+Sources: BrainStuff, KNOWLEDGE, PUBLIC, RCA MASTER BRAIN
+============================================================
+
+============================================================
+SOURCE: BrainStuff (12 pages)
+============================================================
+
+Reform California Helpdesk AI
+Structured FAQ Knowledge Base,
+Response Templates, and Guardrails
+Purpose
+Use this document to answer common supporter, volunteer, voter, and donor emails with short,
+accurate, and non-hallucinated responses. The model should prefer official Reform California
+links and only answer what is supported below.
+Prepared for internal AI helpdesk use
+
+1. Global Rules for the AI
+ Answer in a helpful, professional, appreciative tone.
+ Prefer short, direct answers for simple questions. Add one or two links when useful.
+ Do not invent dates, event locations, petition availability, office hours, or endorsement decisions.
+ If the answer depends on a current event or a page not listed here, tell the user to check the main
+website or events page.
+ Do not say an online petition signup is the same as signing an official ballot petition unless
+explicitly stated. Official petitions usually require a physical 'wet' signature.
+ When discussing ballot curing, explain the concept and direct the person to the county registrar
+instructions they received.
+ When a race or candidate is missing from a voter guide, explain that Reform California either
+did not endorse in that race or did not have enough information to make an informed
+recommendation.
+ Do not offer legal advice, tax advice, or campaign-finance advice beyond the approved factual
+statements in this document.
+ If a person asks for something not covered here, use the fallback template in Section 4.
+Preferred response pattern
+1) acknowledge the question, 2) give the answer in one plain-English paragraph, 3) include the
+best link, 4) offer the next practical step.
+2. Approved Core Links
+Resource Link / Contact
+Main website https://reformcalifornia.org/
+Events https://reformcalifornia.org/events
+Volunteer https://reformcalifornia.org/volunteer
+Volunteer activities https://reformcalifornia.org/volunteer-activities
+Campaigns https://reformcalifornia.org/campaigns
+Voter guides https://reformcalifornia.org/voter-guides
+https://reformcalifornia.org/campaigns/election-
+Election integrity initiative
+integrity-initiative
+https://www.reformcalifornia.org/forms/run-for-
+Run for office
+office
+https://www.reformcalifornia.org/forms/
+Signature volunteer signup
+election-integrity-signature-volunteer-sign-up
+https://www.sos.ca.gov/elections/registration-
+California voter registration status
+status
+
+California polling place lookup https://www.sos.ca.gov/elections/polling-place
+Ballot tracking https://www.trackmyballot.org
+Cal-Access campaign finance records https://cal-access.sos.ca.gov/
+Volunteer email volunteers@reformcalifornia.org
+Volunteer hotline 619-354-7257
+3. FAQ Intent-to-Response Map
+Each entry below is designed so the AI can match a user email to an intent, answer it consistently,
+and know when to escalate or avoid guessing.
+FAQ 1 - Learn about Reform California
+what is reform california, tell me more, what
+Trigger phrases are you working on, what campaigns are you
+running
+Reform California is a grassroots political
+organization focused on taxpayer protection,
+Approved answer public safety, education reform, and election
+integrity. The best place to learn about current
+campaigns and updates is the main website.
+Best links / contacts https://reformcalifornia.org/
+If the user asks about a specific current
+Escalate or be careful when campaign not listed here, direct them to the
+campaigns page.
+Thank you for reaching out. The best place to
+learn about Reform California’s work, current
+Paste-ready short reply
+campaigns, and updates is our website:
+https://reformcalifornia.org/
+FAQ 2 - Upcoming events / town halls
+event, town hall, meet carl, rsvp, upcoming
+Trigger phrases
+events
+Direct users to the events page for current in-
+Approved answer
+person and online events.
+Best links / contacts https://reformcalifornia.org/events
+
+Escalate or be careful when Do not invent dates or venues.
+You can find all upcoming Reform California
+Paste-ready short reply events and RSVP information here:
+https://reformcalifornia.org/events
+FAQ 3 - How to volunteer
+Trigger phrases volunteer, help out, get involved, sign up to help
+Direct users to the volunteer page and volunteer
+Approved answer activities page. Mention the volunteer hotline
+for follow-up questions.
+https://reformcalifornia.org/volunteer
+Best links / contacts https://reformcalifornia.org/volunteer-activities
+619-354-7257
+If they say they already signed up and heard
+Escalate or be careful when nothing, provide the volunteer email and
+hotline.
+Thank you for your willingness to help. You can
+sign up here:
+https://reformcalifornia.org/volunteer and view
+Paste-ready short reply
+current opportunities here:
+https://reformcalifornia.org/volunteer-activities.
+Our volunteer hotline is 619-354-7257.
+FAQ 4 - Volunteer by phone / from home
+phone bank, make calls, call from home,
+Trigger phrases
+volunteer remotely
+Explain that phone-banking opportunities may
+Approved answer be available and volunteers should sign up or
+contact the volunteer team.
+https://reformcalifornia.org/volunteer-activities
+Best links / contacts volunteers@reformcalifornia.org
+619-354-7257
+Do not promise a specific shift or app unless
+Escalate or be careful when
+already confirmed elsewhere.
+Yes, there are often volunteer opportunities that
+Paste-ready short reply can be done from home, including phone
+outreach. Please check
+
+https://reformcalifornia.org/volunteer-activities
+or contact volunteers@reformcalifornia.org /
+619-354-7257 for current options.
+FAQ 5 - Voter guide location
+voter guide, plain english guide,
+Trigger phrases
+recommendations, endorsements guide
+Approved answer Send the voter guide link.
+Best links / contacts https://reformcalifornia.org/voter-guides
+If they ask for a county guide that is
+Escalate or be careful when unavailable, note that a statewide guide may
+still be available.
+You can find Reform California voter guides
+Paste-ready short reply
+here: https://reformcalifornia.org/voter-guides
+FAQ 6 - Candidate or race missing from voter guide
+why isn't, missing from voter guide, not listed in
+Trigger phrases
+guide
+Explain that if Reform California did not weigh
+in on a race, it either could not support the
+Approved answer candidates running or did not have enough
+information to make an informed
+recommendation.
+Best links / contacts https://reformcalifornia.org/voter-guides
+Do not speculate about candidate motives or
+Escalate or be careful when
+internal deliberations.
+If a race or candidate is not included in the
+voter guide, it generally means Reform
+California either could not support the
+Paste-ready short reply
+candidates running or did not have enough
+information to make an informed
+recommendation.
+FAQ 7 - Sign a petition / campaign initiative
+Trigger phrases sign petition, where do i sign, initiative,
+
+campaign petition
+Direct to the campaigns page or the specific
+Approved answer
+campaign page if named.
+https://reformcalifornia.org/campaigns
+https://reformcalifornia.org/campaigns/election-
+Best links / contacts integrity-initiative
+https://reformcalifornia.org/campaigns/block-
+the-rate-hikes
+If the user wants the official ballot petition, do
+Escalate or be careful when
+not confuse it with an online interest form.
+You can find current Reform California
+Paste-ready short reply campaigns and petitions here:
+https://reformcalifornia.org/campaigns
+FAQ 8 - Collect signatures / volunteer for petitions
+collect signatures, signature volunteer, petition
+Trigger phrases
+volunteer
+Approved answer Use the signature volunteer signup form.
+https://www.reformcalifornia.org/forms/
+Best links / contacts
+election-integrity-signature-volunteer-sign-up
+If asked when materials will be mailed, say
+Escalate or be careful when timing depends on campaign rollout and
+approved petition materials.
+If you would like to help collect signatures,
+please sign up here:
+Paste-ready short reply
+https://www.reformcalifornia.org/forms/election
+-integrity-signature-volunteer-sign-up
+FAQ 9 - Online petition versus official petition
+signed online, does online count, petition by
+Trigger phrases
+mail, wet signature
+Explain that signing an online form may
+register interest or request a mailed petition,
+Approved answer
+but official ballot petitions generally require a
+physical signature.
+Best links / contacts https://www.reformcalifornia.org/forms/
+
+election-integrity-signature-volunteer-sign-up
+Do not say the online form itself qualifies a
+Escalate or be careful when
+measure for the ballot.
+Thank you for your support. Please note that
+online sign-up forms can register your interest
+Paste-ready short reply
+or request materials, but official ballot petitions
+generally require a physical signature.
+FAQ 10 - Check voter registration
+am i registered, check registration, voter
+Trigger phrases
+registration status
+Send the California Secretary of State voter
+Approved answer
+registration status page.
+https://www.sos.ca.gov/elections/registration-
+Best links / contacts
+status
+No escalation needed unless they ask legal
+Escalate or be careful when
+questions.
+You can check your voter registration status
+here:
+Paste-ready short reply
+https://www.sos.ca.gov/elections/registration-
+status
+FAQ 11 - Find polling place
+Trigger phrases polling place, where do i vote, vote center
+Approved answer Send the polling place lookup page.
+Best links / contacts https://www.sos.ca.gov/elections/polling-place
+Escalate or be careful when No escalation needed.
+You can look up your polling place here:
+Paste-ready short reply
+https://www.sos.ca.gov/elections/polling-place
+FAQ 12 - Track ballot
+Trigger phrases track ballot, did my ballot count, ballot received
+Approved answer Send the ballot tracking link.
+
+Best links / contacts https://www.trackmyballot.org
+Do not claim a ballot was counted unless the
+Escalate or be careful when
+user confirms through the official tracker.
+You can track your ballot here:
+Paste-ready short reply
+https://www.trackmyballot.org
+FAQ 13 - Ballot curing
+ballot cure, rejected ballot, signature mismatch,
+Trigger phrases
+my ballot was rejected
+Explain what ballot curing is and tell the voter
+Approved answer
+to follow the instructions sent by the registrar.
+Best links / contacts https://www.trackmyballot.org
+Do not give county-specific legal instructions
+Escalate or be careful when
+unless you have them.
+Ballot curing is the process used when a ballot is
+flagged, often due to a signature issue, and the
+Paste-ready short reply voter is given a chance to confirm the ballot so it
+can be counted. Please follow the instructions
+sent by your county registrar.
+FAQ 14 - Donate / how donations help
+donate, contribute, where do i give, what does
+Trigger phrases
+my donation do
+Direct people to the main website contribution
+Approved answer button and explain donations support
+grassroots advocacy and campaign activity.
+Best links / contacts https://reformcalifornia.org/
+Do not promise tax deductibility for Reform
+Escalate or be careful when
+California donations.
+Thank you for considering a contribution. You
+can donate through the main website at
+Paste-ready short reply
+https://reformcalifornia.org/ using the
+contribution link.
+FAQ 15 - Are donations tax deductible
+
+Trigger phrases tax deductible, deductible, can i write it off
+State that contributions to Reform California are
+Approved answer
+not deductible on federal or state taxes.
+Best links / contacts https://reformcalifornia.org/
+Do not improvise tax advice beyond this
+Escalate or be careful when
+statement.
+Contributions to Reform California are not
+Paste-ready short reply
+deductible on federal or state taxes.
+FAQ 16 - Fundraising emails / unsubscribe
+stop emails, unsubscribe, why am i getting
+Trigger phrases
+emails, too many emails
+Explain that Reform California sends
+fundraising and update emails to support its
+Approved answer work, and the user can change frequency or
+unsubscribe using the link at the bottom of the
+email.
+No special link needed; use the relevant email
+Best links / contacts
+footer or unsubscribe link.
+Do not threaten legal positions or argue with the
+Escalate or be careful when
+sender.
+Reform California does send fundraising and
+update emails to support its work. You can
+Paste-ready short reply
+change the frequency or unsubscribe using the
+link at the bottom of the email.
+FAQ 17 - Office location / mailing address
+office address, mailing address, where are you
+Trigger phrases
+located, headquarters
+Provide the mailing address and known office
+Approved answer
+locations.
+P.O. Box 27227, San Diego, CA 92198
+Best links / contacts 1320 W Valley Pkwy #304, Escondido, CA 92029
+3435 Camino del Rio S #114, San Diego, CA 92108
+Escalate or be careful when Do not invent office hours beyond what is listed
+
+in the knowledge base being used.
+Mailing address: Reform California, P.O. Box
+27227, San Diego, CA 92198. Known offices
+include Escondido HQ at 1320 W Valley Pkwy
+Paste-ready short reply
+#304, Escondido, CA 92029 and Mission Valley at
+3435 Camino del Rio S #114, San Diego, CA
+92108.
+FAQ 18 - Run for office
+run for office, become candidate, candidate
+Trigger phrases
+support
+Direct interested people to the run-for-office
+Approved answer
+form.
+https://www.reformcalifornia.org/forms/run-for-
+Best links / contacts
+office
+Escalate or be careful when Do not promise an endorsement.
+If you are interested in running for office, please
+fill out the form here:
+Paste-ready short reply
+https://www.reformcalifornia.org/forms/run-for-
+office
+FAQ 19 - Campaign finance / financial records
+financial records, where do donations go,
+Trigger phrases
+campaign finance, public records
+Approved answer Direct users to Cal-Access for public records.
+Best links / contacts https://cal-access.sos.ca.gov/
+Do not summarize filings unless already
+Escalate or be careful when
+verified.
+Campaign finance records are public and can be
+Paste-ready short reply
+viewed here: https://cal-access.sos.ca.gov/
+FAQ 20 - Reform California priorities
+priorities, what do you stand for, main issues,
+Trigger phrases
+platform
+
+State the major priorities: affordability/taxpayer
+protection, public safety, education
+Approved answer
+reform/parental empowerment, and election
+integrity.
+https://reformcalifornia.org/campaigns/election-
+Best links / contacts integrity-initiative
+https://reformcalifornia.org/
+Escalate or be careful when Do not add unverified policy planks.
+Reform California’s major priorities include
+making California more affordable, improving
+Paste-ready short reply public safety, supporting education reform and
+parental empowerment, and advancing election
+integrity.
+4. Fallback Templates and Safety Rails
+Use case Template
+General fallback Thank you for reaching out. I want to make sure
+I point you to the right information. The best
+place for current updates is
+https://reformcalifornia.org/ and upcoming
+events can be found at
+https://reformcalifornia.org/events.
+Already signed up but no reply Thank you for signing up to help. If you have
+not heard back yet, please contact the volunteer
+team at volunteers@reformcalifornia.org or
+619-354-7257 and they can assist you with next
+steps.
+Current event not in knowledge base I do not want to give you outdated information.
+Please check the latest updates at
+https://reformcalifornia.org/ or the events page
+at https://reformcalifornia.org/events.
+Cannot verify a claim I do not want to guess or give you inaccurate
+information. Please use the official link above,
+or contact the appropriate Reform California
+team for confirmation.
+5. Hallucination Prevention Checklist
+ Do not invent a petition mailing date, event schedule, or office hour.
+
+ Do not claim a person is officially signed up, confirmed, or registered unless that status was
+explicitly provided by staff systems.
+ Do not claim donations are tax deductible for Reform California.
+ Do not promise an endorsement, candidate support, or volunteer assignment.
+ Do not confuse an online sign-up page with an official ballot petition signature.
+ When uncertain, use a fallback template and point the user to the official website or volunteer
+contact.
+Implementation note
+For best results, feed this document to the model as a priority knowledge source and instruct the
+model to answer only from the approved answers, links, and fallback templates in this document
+unless a human operator provides updated guidance.
+
+============================================================
+SOURCE: KNOWLEDGE (142 pages)
+============================================================
+
+KNOWLEDGE
+You can confirm your voter registration status with the
+following link.
+https://www.sos.ca.gov/elections/registration-status
+The best place to learn about the work that we are doing
+is on our website.
+https://reformcalifornia.org/
+You can also find all of our in-person or online events
+where Carl is always present in the following link.
+https://reformcalifornia.org/events
+You can follow Carl's work here https://
+reformcalifornia.org/
+If you would be willing to go to this link https://
+reformcalifornia.org/campaigns and sign any of the
+petitions we have going that would be a huge help!
+Due to the volume emails and calls I receive daily;
+individual calls are not possible. I am happy to answer
+your questions by email, or you can join me at any of our
+in-person events. https://reformcalifornia.f/events
+
+You can access the Reform California “Plain English” Voter
+Guide online for your area using the following link. There is
+an option to print the voter guide yourself and share it with
+your friends, family, and community! https://
+reformcalifornia.org/news/reform-california-releases-a-
+plain-english-voter-guide-for-march-2024-primary
+Volunteer
+Reform California relies heavily on grassroots volunteers.
+You can sign up to join us here https://reformcalifornia.org/
+volunteer
+You can also view more volunteer opportunities using the
+following link.
+https://reformcalifornia.org/volunteer-activities
+You can also reach our Volunteer Hotline at
+619-354-7257.
+My campaign is currently funding Reform California,
+however if you would prefer the funds processed by
+Reform California, please go to https://
+reformcalifornia.org/ and click on the yellow contribution
+link.
+
+About No Donate
+Hello,
+Reform California is a non-profit donor supported
+organization and we do send out fundraising emails to
+support our work.
+You do not have to contribute, and if you want to follow
+our work and campaigns please visit
+www.reformcalifornia.org
+For additional information on our block the rate hikes
+campaign and to sign the petition please go to https://
+reformcalifornia.org/campaigns/block-the-rate-hikes
+You can change the frequency of our emails by clicking on
+unsubscribe at the bottom of the email and choose from
+weekly, monthly or none at all.
+Poll location
+https://www.sos.ca.gov/elections/polling-place
+Vol after vm
+
+Hello,
+I left you a message today about volunteering because
+you signed up to help us make phone calls for Reform
+California not too long ago.
+If you are still interested, you can find phone banking
+events on our website at https://reformcalifornia.org/
+volunteer-activities
+You can also reply to this email/call us at 619-354-7257
+for more information.
+With the primary elections just 5 weeks away, we're really
+counting on dedicated volunteers like you to help us make
+a difference.
+Also please join us at our Free Barbecue, Beer And Ballots
+Town Hall.
+Details and RSVP here https://reformcalifornia.org/events
+Best,
+Trinity
+Reform California with Carl DeMaio
+Online Voter Guide
+
+Hello
+You can access the Reform California “Plain English” Voter
+Guide online for your area using the following link. There is
+an option to print the voter guide yourself and share it with
+your friends, family, and community!
+https://reformcalifornia.org/news/reform-california-
+releases-a-plain-english-voter-guide-for-march-2024-
+primary
+Thank you for your support!
+P.0. Box
+Hello ,
+Here is the mailing address:
+Reform California
+P.O. Box 27227
+San Diego, CA 92198
+Thank you very much for your support!
+Best,
+yes Please Join Us For Calling With
+
+Carl!
+Hello,
+Thank you for taking my call today regarding our Calling
+with Carl sessions.
+As I mentioned on the phone, Carl is hosting several
+calling with Carl sessions at our campaign headquarters
+and we could truly use your help!
+If you can join us, please sign up for a shift here https://
+reformcalifornia.volunteershift.com/shifts?sort=soonest
+(dates and times are listed). There is also an option in that
+sign up link to make calls from home if that is easier for
+you.
+If you have questions, please call our Volunteer Hotline at
+619-354-7257.
+Thank you for all that you do!
+Best,
+Trinity
+Reform California with Carl DeMaio
+P.S. Hopefully you can join us at one of our upcoming
+Town Halls, they're free and food and beverages will be
+served!
+
+Details here https://reformcalifornia.org/events
+VM Please Join Us For Calling With
+Carl!
+Hello,
+I just left you a voicemail about joining Carl for a calling
+session at our campaign headquarters in the coming
+days.
+We could really use your help.
+If you can join us, please sign up for a shift here https://
+reformcalifornia.volunteershift.com/shifts?sort=soonest
+There is also an option in that sign up link to make calls
+from home if that is easier for you.
+If you have questions please call our Volunteer Hotline at
+619-354-7257 or respond to this email.
+Thank you for all that you do!
+Best,
+Trinity
+
+Reform California with Carl DeMaio
+P.S. Hopefully you can join us at one of our upcoming
+Town Halls, they're free and food and beverages will be
+served!
+Details here https://reformcalifornia.org/events
+Door vm email
+Subject: Volunteer to walk doors with Reform
+California and Carl DeMaio
+I just left you a message regarding our walk
+program with Carl DeMaio.
+With the primary just weeks away, we could really
+use your help.
+If you would like to sign up to walk doors in your
+neighborhood, please go to https://reformca.us/
+walk-your-neighborhood to sign up.
+If you have any issues with signing up, please call
+our volunteer hotline at 619-354-7257 or email us
+at volunteers@reformcalifornia.org and we’ll help
+you get started.
+Our walk-in volunteer office hours are 9am to
+3pm Monday through Friday, 9am to 5pm
+Saturdays, and 11am to 3pm Sundays.
+1320 W Valley Pkwy #304, Escondido CA 92029
+Thank you for your support!
+Trinity
+Reform California with Carl DeMaio
+
+Candidate not there
+Hello ,
+You can find our voter guides here https://
+reformcalifornia.org/voter-guides
+If we did not weigh in on a race, we either cannot get
+behind the candidates running or do not have enough
+information on the candidates running in those races to
+make an informed decision.
+Best,
+Trinity
+Reform California with Carl DeMaio
+No guide
+Hello,
+We do not have a guide for ___ County for the primary.
+You can find our statewide guide here https://
+reformcalifornia.org/voter-guides/california
+
+Best,
+Trinity
+Reform California with Carl DeMaio
+Ftc losers
+That was a waste of time.
+The CAN-SPAM Act applies only to commercial email,
+whether sent individually or in bulk. It doesn't apply to
+non-commercial bulk email. Furthermore, political
+messages are protected under the First Amendment.
+https://www.ftc.gov/business-guidance/blog/2015/08/
+candid-answers-can-spam-questions
+Track ballot link
+https://www.trackmyballot.org
+
+Vmail vol follow up email
+Volunteering at Reform California with Carl DeMaio
+Hello ____
+I just left you a message regarding volunteering at Reform
+California with Carl DeMaio.
+With the primary approaching us, we could really use your
+help.
+If you would like to start volunteering now, please go to
+https://reformcalifornia.volunteershift.com/shifts?
+sort=soonest
+If you have any issues with signing up, please call our
+volunteer hotline at 619-354-7257 or email us at
+volunteers@reformcalifornia.org and we’ll help you get
+started.
+Our walk-in volunteer office hours are 9am to 3pm
+Monday through Friday, 9am to 5pm Saturdays, and 11am
+to 3pm Sundays.
+1320 W Valley Pkwy #304, Escondido CA 92029
+Thank you for your support!
+Trinity
+Reform California with Carl DeMaio
+
+619-354-7257
+Email for collecting signature ppl
+Hi ___ !
+I just tried to call you in regard to collecting signatures for
+the "Protect Kids Act". If you are still interest, you can stop
+by our office to get the sheets.
+Our walk-in volunteer office hours are 9am to 3pm
+Monday through Friday, 9am to 5pm Saturdays, and 11am
+to 3pm Sundays.
+1320 W Valley Pkwy #304, Escondido CA 92029
+With the primary just weeks away, we could really use your
+help.
+If you would like to start volunteering now, please go to
+https://reformcalifornia.volunteershift.com/shifts?
+sort=soonest
+If you have any issues with signing up, please call our
+volunteer hotline at 619-354-7257 or email us at
+volunteers@reformcalifornia.org and we’ll help you get
+started.
+Thank you for your support!
+
+Trinity
+Reform California with Carl DeMaio
+Vol picks up follow up email
+Volunteering at Reform California with Carl DeMaio
+Hello ____
+Thank you for taking my call about volunteering at Reform
+California with Carl DeMaio.
+With the primary coming up, we could really use your
+help.
+Please go to the following link so you can sign up for a
+shift: https://reformcalifornia.volunteershift.com/shifts?
+sort=soonest
+If you have any issues with signing up, please call our
+volunteer hotline at 619-354-7257 or email us at
+volunteers@reformcalifornia.org and we’ll help you get
+started.
+Our walk-in volunteer office hours are 9am to 3pm
+Monday through Friday, 9am to 5pm Saturdays, and 11am
+to 3pm Sundays.
+
+1320 W Valley Pkwy #304, Escondido CA 92029
+Thank you for your support!
+Trinity
+Reform California with Carl DeMaio
+collectsignatures
+Collect Signatures at Reform California with Carl DeMaio
+Hi __!
+I just tried to call you in regard to collecting signatures for
+the "Protect Kids Act". If you are still interested, you can
+stop by our office to get the sheets.
+Our walk-in volunteer office hours are 9am to 3pm
+Monday through Friday, 9am to 5pm Saturdays, and 11am
+to 3pm Sundays.
+1320 W Valley Pkwy #304, Escondido CA 92029
+If you would like to start volunteering now, please go to
+the following link to view all our volunteer opportunities
+https://reformcalifornia.volunteershift.com/shifts?
+
+sort=soonest
+If you have any issues with signing up, please call our
+volunteer hotline at 619-354-7257 or email us at
+volunteers@reformcalifornia.org and we’ll help you get
+started.
+Thank you for your support!
+Trinity
+Reform California with Carl DeMaio
+619-354-7257
+CarlCongrats response
+Hello,
+Thank you for your congratulations and kind words! With
+your support, I'm confident we can make an impact in
+Sacramento and get California back on track.
+Looking forward to the journey ahead!
+Best,
+Email for financial records of campaign/
+
+RC
+Reform California has been a ballot measure committee
+since Carl’s announcement of candidacy.
+These committees are unable to contribute to candidate
+campaigns and contributions and campaign finances are
+kept separate. Financial transactions are reported to the
+state where they can be viewed by the public.
+I’ve linked those records here:
+Carl DeMaio for State Assembly 2024
+Reporting Here>>
+Reform California
+Reporting Here>>
+Coffee VOLUNTEER Phone Script -
+Hi, my name is ___________ and I’m calling from Carl
+DeMaio’s office at Reform California.
+I’m looking for (Volunteer’s name). Carl DeMaio wants to
+have a coffee meet and greets in your community to hear
+from voters and discuss his campaign to save Prop 13 and
+block unfair tax hikes. We were hoping that you might be
+able to help.
+
+First, we are trying to get individuals that can open their
+home or business to host the coffee event. Rest assured,
+we will provide all the necessary supplies and, of course,
+the coffee itself. Our aim is to get 30 to 40 supporters at
+each event. If you or anyone you know is interested in
+hosting, please let us know!
+If you cannot host an event, can you join the host
+committee for an existing event in your area? As a host
+committee member we would just ask that you commit to
+bringing at least 5 neighbors or friends with you. We can
+also give you a phone list of 25 voters in your
+neighborhood we are trying to reach and invite to the
+coffee event.
+Finally, we are also looking to have a local distribution
+center for other volunteers to pick up materials to walk
+their neighborhoods for these events. Can you help
+organizing getting materials distributed to our other grass
+roots volunteers?
+Thank you!!
+Coffee Email Follow Up for Volunteers
+Coffee Meet and Greet
+Hi ___,
+
+I just left you a message regarding a coffee meet and
+greet with Carl DeMaio in ____,
+Carl wants to hear from voters and discuss his campaign
+to save Prop 13 and block unfair tax hikes. He is also going
+to address concerns about crime, utility rates,
+homeowners losing insurance coverage, and any other
+neighborhood issues residents want to bring to his
+attention.
+We were hoping that you might be able to come and help.
+First, we are trying to get individuals that can open their
+home or business to host the coffee event. Rest assured,
+we will provide all the necessary supplies and, of course,
+the coffee itself. Our aim is to get 30 to 40 supporters at
+each event. If you or anyone you know is interested in
+hosting, please let us know!
+If you're unable to host an event at your home or business,
+consider joining the host committee for an established
+event in _____. As a member of the host committee, we
+kindly request your commitment to bringing along at least
+5 neighbors or friends. Additionally, we can provide you
+with a phone list of 25 voters from your neighborhood
+whom we aim to invite to the coffee event.
+One last option is setting up a local distribution center.
+This means having a place in your community where
+volunteers can come to collect materials for neighborhood
+events. If you're open to it, we'd need your help in
+
+organizing the distribution of these materials to other
+grass roots volunteers.
+If you find yourself in a position to host, being apart of the
+host committee, or distributing materials, kindly respond
+to this email and inform us if you will be available to help!
+Thank you for your support!
+Best,
+VM non contacted ad75/sd county
+Hello _____,
+This is ______ calling from Reform California with Carl
+DeMaio.
+I'm reaching out to you because you signed up to
+volunteer with us in the past to __[whatever they signed
+up to do]__ so I wanted me to see if you were still
+interested in helping.
+Our walk-in volunteer office hours are 9am to 3pm
+Monday through Friday so you can stop by whenever you
+are available. We are located at 1320 W Valley Pkwy
+
+#304, Escondido CA 92029.
+If you have any questions or need further information,
+please call our volunteer hotline at 619-354-7257 or email
+us at volunteers@reformcalifornia.org and we’ll help you
+get started.
+Thank you for your support, have a great day!
+Make phone calls
+Good morning,
+I hope this message finds you well.
+I just left you a voice message about the possibility of
+making calls from the comfort of your own home. We
+greatly appreciate your willingness to contribute your time
+and effort to our cause.
+I wanted to see if you might be available this week to
+assist us with making calls. Your participation would
+involve reaching out to 25 friendly Republicans, inviting
+them to join us for a coffee event taking place this
+Saturday, April 27th in Santee. Rest assured, I will provide
+you with a script and call list.
+If you're still interested and available to assist with calls
+before our event this Saturday, please let me know at your
+earliest convenience, and I'll promptly provide you with all
+
+the necessary materials. However, if your schedule
+doesn't permit it this week, your support for future events
+later this month would still be greatly appreciated. Your
+involvement, whenever possible, makes a significant
+impact on our efforts.
+Thank you for considering this opportunity, your support
+is deeply appreciated.
+Warm regards,
+Trinity Hannaway
+Volunteer Manager
+Reform California/Carl DeMaio
+(619)-354-7257
+Lvm abt calling
+Good morning,
+I just left you a voice message about the possibility of
+making calls from the comfort of your own home. We
+greatly appreciate your willingness to contribute your time
+and effort to our cause.
+I wanted to see if you might be available this week to
+assist us with making calls. Your participation would
+involve reaching out to 25 friendly Republicans, inviting
+them to join us for a coffee event taking place this
+Saturday, April 27th in Santee. Rest assured, I will provide
+you with a script and call list.
+
+If you're still interested and available to assist with calls
+before our event this Saturday, please respond to this
+email and I'll promptly provide you with all the necessary
+materials.
+However, if your schedule doesn't permit it this week, your
+support for making calls for future events would still be
+greatly appreciated. Your involvement, whenever possible,
+makes a significant impact on our efforts.
+Thank you for considering this opportunity, your support
+is deeply appreciated.
+Warm regards,
+Trinity Hannaway
+Volunteer Manager
+Reform California/Carl DeMaio
+(619)-354-7257
+Live caller not contacted
+Hello is this _____ ?
+This is ______ calling from Reform California with Carl
+DeMaio.
+I'm reaching out to you because you signed up to
+
+volunteer with us in the past to [whatever they signed up
+to do] so I wanted to see if you were still interested in
+helping, we could really use your help.
+Do you think you'll be able to come by the office soon to
+get started?
+If YES – GREAT! Our walk-in volunteer office hours are
+9am to 3pm Monday through Friday so you can stop by
+whenever you are available and we can get you started.
+We are located at 1320 W Valley Pkwy #304, Escondido
+CA 92029.
+Also, if you’d like to join Carl at one of our upcoming
+fundraisers or community coffee events, you can go to our
+website REFORMCALIFORNIA.ORG/EVENTS – that’s
+REFORMCALIFORNIA.ORG/EVENTS to see all of our
+upcoming events
+*Or if they are on phone long enough to see events, you
+can RSVP for them
+If NO – Okay, we understand! Thank you for your support
+anyways. However, if you would like to join Carl at one of
+our upcoming fundraisers or community coffee events,
+you can go to our website REFORMCALIFORNIA.ORG/
+EVENTS – to see all of our upcoming events.
+*Mark the record in Formsite AND Swift with whatever
+they say and move on.
+Thank you for your support, have a great day!
+
+Ads are shown:
+These ads are primarily shown on social media platforms,
+where our data shows is the most effective and most likely
+place to reach new or persuadable voters and younger
+voters.
+Many newspapers and magazines are liberal-leaning and
+intentionally leave out interviews with conservatives, etc.
+But that's also because their readers are primarily liberals,
+which they are catering to (who will likely not be
+persuaded by a conservative ad).
+Lobbying
+Due to strict lobbying, campaign finance, and disclosure
+rules, we're not typically allowed to name names or give
+contact information of these bad politicians.
+However, I've addressed this a bit on my recent podcast:
+https://reformcalifornia.org/videos/betrayal-some-
+republicans-are-trying-to-raise-taxes
+Phone volunteer
+
+Good morning,
+I hope this message finds you well.
+I saw you filled out our volunteer form about the possibility
+of volunteering, we greatly appreciate your willingness to
+contribute your time and effort to our cause.
+I wanted to see if you might be available to assist with
+making phone calls.
+If you're still interested and available to help with calls,
+please let me know at your earliest convenience, and I'll
+promptly provide you with all the necessary materials and
+get you set up on the app we use to make these calls.
+Volunteering to make calls can be made from the comfort
+of your home, whenever you are available or from our
+office if you would prefer to make them here.
+Thank you for considering this opportunity, your support
+is deeply appreciated. Hope to hear from you soon!
+Warm regards,
+Trinity Hannaway
+Volunteer Manager
+Reform California/Carl DeMaio
+(619)-354-7257
+
+Us Supreme Court
+It's unlikely, but we are looking into possibilities. Usually
+the CA Supreme Court gets the final say on state ballot
+measure issues. But the abuse of power in this ruling is so
+clear and egregious that we may have standing to pursue
+a federal 14th Amendment case and seek remedy at the
+US Supreme Court. In addition, the ruling would seemingly
+invalidate a number of initiatives that Democrats cherish –
+so we are exploring legal challenges there too!
+Leaving the state
+Sorry to see you leave but wishing you the best in your
+new chapter! Thank you for your support it truly means
+everything to us.
+Republican party
+Absolutely. The California Republican Party is a complete
+dumpster fire of dysfunction, and I often say you'd be
+better off lighting your money on fire than giving it to
+them.
+
+I advocate for contributing directly to candidates and
+organizations you believe in that show evidence they
+continue to do the hard work.
+Reform California Mailing Volunteer
+Follow Up
+Good morning,
+I hope this message finds you well.
+I just left you a voice message about the possibility of
+volunteering, we greatly appreciate your willingness to
+contribute your time and effort to our cause.
+I wanted to see if you might be available to assist with our
+mailing project.
+If you're still interested and available to help with this
+important project, you can join us at our Reform CA HQ in
+Escondido to work on these mailing kits. There is also the
+option to pick up a mail tray from our office and complete
+the mailings from the comfort of your home.
+We are located 1320 W. Valley Parkway, Suite 304,
+Escondido, CA and open Monday to Friday, 10 am to 3 pm
+(No appointment necessary for picking up mailing kits)
+
+Thank you for considering this opportunity, your support
+is deeply appreciated.
+Warm regards,
+Trinity Hannaway
+Volunteer Manager
+Reform California/Carl DeMaio
+(619)-354-7257
+Vol Activities link
+https://reformcalifornia.org/volunteer-activities
+Vol
+One of my colleagues tried to reach you about
+volunteering at our office here at Reform California with
+Carl DeMaio.
+I wanted to follow up with you to give you information on
+our office hours and location:
+Reform CA HQ Location:
+1320 W. Valley Parkway, Suite 304, Escondido, CA
+
+- You can also pick up yard signs here.
+Walk-in Hours:
+Monday to Friday, 9 am to 3 pm
+No appointment needed for in-office volunteering.
+Let me know if you have any questions!
+Trinity
+Volunteer Manager
+Reform California
+Priorities
+My Reform California platform has three top priorities:
+Make California Affordable Again: By rejecting costly
+and unfair tax hikes and mandates that spike our cost of
+living unnecessarily.
+Make California Safe Again: By giving police and
+prosecutors back the ability to arrest and punish criminals
+– and by securing our border!
+Make California Dream Again: By giving our children a
+quality education – free of divisive political agendas and
+controversial curriculum. Let’s empower parents, give
+them education vouchers to send their kids to a school of
+their choice, and return to basics in the classroom.
+
+I will also aggressively pursue Voter ID, and am the author
+of the CA Voter ID law that I will push to get on the ballot
+in 2026: https://reformcalifornia.org/campaigns/election-
+integrity-initiative
+Congrats thanks
+Thank you so much!! It was a team effort and wouldn’t
+have been possible without supporters like you and our
+amazing volunteers. Now the hard work begins – fixing
+our broken political system and getting reforms
+implemented to address the issues that people are
+struggling with. Looking forward to working with you in
+the days and weeks to come!
+Ballot cure
+You should have received a letter in the mail box from the
+registrars office, it has a form and paid envelope for you to
+mail back your cured ballot.
+
+Donation clarification canned
+Let me clarify why we must use DeMaio for Assembly for
+many of our Reform CA programs now.
+Once Carl became a candidate for state office on
+December 6, California state campaign finance law
+required that he convert Reform California into two
+separate committees.
+One committee (DeMaio for Assembly) will pay for all
+operating expenses for Reform California as a political
+movement – including the website, the daily podcast,
+recruitment/training of candidates, ballot harvesting like
+Barbeque, Beer and Ballots events, canvassing door-to-
+door, preparation of the Reform CA Voter Guide, texts and
+digital ads on voter guide, weekly newsletter, ballot curing,
+and media projects etc.)
+The other committee (Reform California with Carl DeMaio
+– Ballot Measure Committee) can ONLY spend funds for
+and against ballot measures.
+We must follow the state law on these matters – hence the
+new structure.
+Campaign finance expenditures can be found here https://
+cal-access.sos.ca.gov/Campaign/Committees/Detail.aspx?
+id=1464955&view=electronic and here https://cal-
+access.sos.ca.gov/Campaign/Committees/Detail.aspx?
+
+id=1268914&view=electronic&session=2023
+Carb
+Ballot measures require over a million signatures,
+thousands of volunteers, and potentially over a million
+dollars to get on the ballot — let alone to win. We currently
+have other items higher in the priority list for ballot
+measures, but we can look into it!
+Check out our upcoming ballot measure plans: https://
+reformcalifornia.org/news/prop-36-landslide-becomes-
+template-for-reforming-ca-in-2026
+Cure ballot
+Ballot curing is the process of a ballot not getting counted
+because of an error such as a mismatching signature
+(which can be an honest mistake), and then the voter has
+an opportunity to affirm that they intended to vote and
+want their vote counted. They get to "cure" their rejected
+ballot.
+
+Campaigns are able to get a list of voters whose ballots
+were rejected to help reach out to them and urge them to
+"cure" their ballot and make sure it gets counted.
+In order to "cure" a ballot, the registered voter has to
+confirm they intended to and did vote — which means any
+votes by people who don't exist don't get cured and
+counted.
+Good Morning!
+Thank you for RSVPing to our upcoming Victory
+Celebration & 2024 Holiday Party on Sunday, December
+15th at 4 PM in Escondido.
+We are thrilled to have so many enthusiastic volunteers
+and supporters joining us to celebrate!
+Due to the overwhelming response, our first seating at
+4:00 PM has reached full capacity. To ensure everyone
+has a comfortable and enjoyable experience, we are
+opening a second seating at 6:00 PM.
+If you are able to switch to the 6:00 PM seating, please
+reply to this email, and I will update your RSVP
+accordingly. If you would like to stay with the 4:00 PM
+seating, you are more than welcome to.
+We appreciate your flexibility and understanding. Looking
+
+forward to celebrating with you!
+Best regards,
+Trinity Hannaway
+Volunteer Manager
+Reform California / Carl DeMaio
+(619) 354-7257
+No Money Politics
+The reality is that while we fight to cut wasteful spending
+and lower taxes, the other side is using millions to push
+their agenda. If we don’t fund efforts like voter ID, we risk
+losing ground.
+Every dollar we raise goes directly to fighting for taxpayers
+not special interests.
+Carl Cant call
+
+Due to my busy work schedule, it's difficult for me to take
+calls, but feel free to reach out to me via email—I'm happy
+to answer any questions here.
+Voter ID Funds Go to…
+Early fundraising is crucial because it allows us to unlock
+matching funds from coalition partners, so your support
+goes even further right now.
+Here’s where the funds go:
+● Legal work to draft and file initiative
+● Polling and research
+● Coalition building
+● Volunteer management
+● Printing and distributing petitions
+● Online ads and text messages
+● Mailing petitions to online sign ups
+● Statewide bus tour and rallies
+● Validation of signatures
+These are all critical steps to getting the Voter ID initiative
+on the ballot and passed. We appreciate your support in
+helping us make it happen.
+
+Volunteer Roles - VoterID
+Team Leader: Recruit at least 5 other volunteer
+signature collectors in your area and work as a team
+to collect signatures.
+Area Leader: Manage 5 to 10 Team Leaders in your
+immediate area to help them stay on track and
+organize tabling at local events.
+Regional Leader: Manage 5 to 10 Area Leaders in
+your region to help them stay on track and organize
+tabling at local events.
+Committee Differences
+Carl POV:
+Once I became a candidate for state office on December
+6, California state campaign finance law required we
+convert Reform California into two separate committees.
+One committee (DeMaio for Assembly) will pay for all
+operating expenses for Reform California as a political
+movement – including the website, the daily podcast,
+recruitment/training of candidates, ballot harvesting like
+
+Bbq, Beer and Ballots events, canvassing door-to-door,
+preparation of the Reform CA Voter Guide, texts and
+digital ads on voter guide, weekly newsletter and media
+projects etc.)
+The other committee (Reform California with Carl DeMaio
+– Ballot Measure Committee) can ONLY spend funds for
+and against ballot measures.
+We have to follow the state law on these matters.
+⸻⸻—
+Once Carl became a candidate for state office on
+December 6, California state campaign finance law
+required we convert Reform California into two separate
+committees.
+One committee (DeMaio for Assembly) will pay for all
+operating expenses for Reform California as a political
+movement – including the website, the daily podcast,
+recruitment/training of candidates, ballot harvesting like
+Bbq, Beer and Ballots events, canvassing door-to-door,
+preparation of the Reform CA Voter Guide, texts and
+digital ads on voter guide, weekly newsletter and media
+projects etc.)
+The other committee (Reform California with Carl DeMaio
+– Ballot Measure Committee) can ONLY spend funds for
+and against ballot measures.
+
+We have to follow the state law on these matters.
+Trinity
+Reform California / Carl DeMaio
+Want to Run for Office
+If you are interested in running for office, please fill out the
+form below and someone from our campaign team will be
+in touch with you on the next steps.
+https://www.reformcalifornia.org/forms/run-for-office
+Finances
+All of our finances can be seen on the Cal Access website.
+https://cal-access.sos.ca.gov/
+Physical Petitions Shipment
+
+We truly appreciate your patience while our system was
+down. That is wonderful you have signed up to collect
+signatures and petitions for the Voter ID Initiative. All
+physical petitions will be shipped out in October.
+Sign up to collect signatures
+You can sign up to collect signatures in your area!
+Just visit www.VoterIDVolunteer.org and let us know how
+many petition sheets you’d like. We’ll mail them directly to
+you when distribution begins in October.
+Thank you for helping us fight for Voter ID in California!
+System Down
+Thank you for your patience in waiting for our response as
+we were experiencing a temporary system outage.
+
+Will Money Help
+Your donation helps us fund the fight to bring Voter ID to
+California — a common-sense reform that’s long overdue.
+Efforts like this come with real costs: printing, mailing,
+outreach, and organizing voters statewide. Your
+contribution helps us cover those costs and keep pushing
+forward so we can execute this fight.
+Mail Tray Volunteer
+You can volunteer at our Reform CA Headquarters on mail
+or take a tray home. We're open Monday–Friday, 10 am–3
+pm, at 1320 W Valley Parkway #304 in Escondido.
+Statewide Events
+
+We’ll be holding events across the state, and we hope to
+see you at one soon. You can find upcoming events here:
+https://www.reformcalifornia.org/events
+Waiting for petitions
+Your donations and efforts are helping us fund the fight to
+bring Voter ID to California — a common-sense reform
+that’s long overdue.
+Efforts like this come with real costs: printing, mailing,
+outreach, and organizing voters statewide. Your
+contribution helps us cover those costs and keep pushing
+forward.
+Physical flyers and petitions will be distributed in October.
+We appreciate you standing with us.
+Best,
+Jordan
+Reform CA
+
+Is there anything else I can do
+Thank you for your patience in waiting for our response as
+we were experiencing a temporary system outage.
+Sign up for the following link if you would like to be a
+group volunteer leader or collect signatures, and we will
+send you the petitions in October:
+https://www.reformcalifornia.org/forms/election-integrity-
+signature-volunteer-sign-up
+In the meantime you can...
+Send this online petition out to others: https://
+www.reformcalifornia.org/forms/petition-help-pass-the-
+california-voter-id-law?
+_gl=1*1uh4502*_gcl_au*MTU3NzQ5MjAzMy4xNzQ4ODk
+zODAw*_ga*MTc3MjA3Mzk5OS4xNzQ4ODkzODAx*_ga_
+4FE4Z7MHZR*czE3NDg5ODA1NzgkbzUkZzEkdDE3NDg5
+ODA2MTUkajIzJGwwJGgw
+Donate: https://secure.reformcalifornia.org/donate-
+election-integrity?
+utm_source=reform&_gl=1*1fq6w6c*_gcl_au*NjM5MTIw
+Nzg4LjE3NDY2MzgzMTcuMjM2MTAwNzkwLjE3NDg4Mzg
+3NDIuMTc0ODgzODc0Mg..*_ga*OTkyNDQzNjY4LjE3Mzg
+3NzgyOTg.*_ga_4FE4Z7MHZR*czE3NDg4ODM0MTkkbz
+U4JGcxJHQxNzQ4ODg2MDk4JGo1MSRsMCRoMA..
+Best,
+
+Jordan
+Reform CA
+Trump lol
+Carl DeMaio supports Trump and has endorsed him
+EVERY election since 2016. Politicians in the Sacramento
+Swamp are trying to attack and smear Carl by saying that
+he's a never-Trumper, but it's a complete LIE — and even
+worse because they themselves have refused to support
+Trump! Get the facts and see Carl's years of support for
+Trump at CarlFacts.com: https://carldemaio.com/carl-facts
+Unfortunately, Carl's opponents are spreading these lies
+because they KNOW Carl can win and that when he does,
+he will be a thorn in their side in Sacramento by shining a
+light on their corruption, laziness, and disfunction. That's
+why the special interests and unions are pouring money
+into this race to attack Carl and boost his opponents —
+they are desperate to stop him from holding them
+accountable!
+But Carl is committed to rooting out the corruption and
+being our fighter in the Assembly like he always has been!
+⸻⸻⸺
+
+Hello ,
+I support Donald Trump 100%!
+https://carldemaio.com/carl-facts
+Carl DeMaio
+Reform California
+Bills
+AB 84
+Thank you for taking the time to reach out and share your
+thoughts on AB 84. Carl appreciates your engagement on
+this important issue. I would like to inform you that Carl
+will be opposing AB 84. Carl will fight as hard as he can to
+protect charter and homeschools. These types of
+education are their best opportunity for students to learn
+and thrive when public schools are not an option.
+Carl understands your concerns and am committed to
+ensuring that all perspectives are taken into account as
+we move forward in the legislative process.
+If you have any further questions or would like to discuss
+this matter in more detail, please do not hesitate to reach
+out. Thank you again for your input.
+
+Carl POV:
+Thank you for taking the time to reach out and share your
+thoughts on AB 84. I appreciate your engagement on this
+important issue. I would like to inform you that I will be
+opposing AB 84. I will fight as hard as I can to protect
+charter and homeschools. These types of education are
+their best opportunity for students to learn and thrive
+when public schools are not an option.
+I understand your concerns and am committed to
+ensuring that all perspectives are taken into account as
+we move forward in the legislative process.
+If you have any further questions or would like to discuss
+this matter in more detail, please do not hesitate to reach
+out. Thank you again for your input.
+AB 86
+Thank you for writing to me about AB 86.
+I will be supporting AB 86. The bill helps ensure that
+educators have access to age-appropriate, standardized
+instructional materials to teach sensitive but important
+topics—such as healthy relationships, child sexual abuse
+prevention, and human trafficking—without changing
+existing curriculum standards or creating new mandates.
+Currently, many teachers face the challenge of finding
+suitable materials on their own, which can lead to
+
+inconsistencies or avoidance of the subject altogether.
+I appreciate your engagement on this issue.
+Democrats Ruining Voter ID Initiative
+We are proactively addressing concerns about the
+Democratic-controlled election system potentially
+blocking the Voter ID Initiative through several key
+strategies:
+- Careful Legal Crafting: The initiative’s language was
+developed with national election law experts and
+grounded in existing U.S. Supreme Court case law to
+withstand legal challenges and prevent state politicians
+from easily blocking it.
+- Massive Volunteer Mobilization: To qualify the initiative
+for the ballot, Reform California is recruiting thousands of
+volunteers statewide to collect over 1 million valid
+signatures, making it harder for opponents to stop the
+measure through procedural tactics.
+- Robust Fundraising: The campaign is raising $1-2 million
+to support paid canvassers, printing, and outreach efforts,
+ensuring a strong, well-funded signature drive that can
+overcome opposition efforts.
+
+- Integrated Campaign Efforts: The Voter ID Initiative is
+being integrated into Reform California’s broader election
+cycle campaigns, including voter guides, advertisements,
+and ballot measure efforts, maximizing exposure and
+support.
+- County-Level Audits and Monitoring: While working to
+qualify the initiative, Reform California is pushing for local
+“Audit the Vote” ordinances and recruiting poll watchers to
+monitor elections closely, increasing transparency and
+accountability.
+- Public Education and Engagement: Through virtual
+briefings, online petitions, and grassroots outreach,
+Reform California is building widespread public support to
+counteract political resistance.
+These combined efforts are designed to ensure the
+initiative qualifies for the ballot and ultimately passes,
+despite anticipated opposition from Democratic-
+controlled entities.
+Why should I donate to RCA:
+Donations to Reform California are essential because our
+organization operates independently from special
+interests and uses grassroots funding to hold elected
+
+officials accountable and push for real reform.
+Unlike traditional politicians who may rely on lobbyists
+and big donors, Reform California depends on
+contributions to:
+- Mobilize volunteers and grassroots supporters to
+influence elections and policy decisions.
+- Run campaigns that expose wasteful spending, fight tax
+hikes, and support principled candidates who will actually
+do their jobs.
+- Provide resources like voter guides and public education
+to help Californians make informed choices.
+- Challenge the entrenched political establishment that
+often fails to represent the interests of everyday citizens.
+Congress and state legislators often face pressure from
+powerful special interests, and without active citizen-
+driven organizations like Reform California, many
+important reforms would stall. Your donations help keep
+the fight going to ensure elected officials work for the
+people, not for political insiders.
+If you want to get involved beyond donating, you can also
+volunteer or participate in campaigns to amplify your
+impact.
+
+How sac politicians increase tax:
+In California, many tax increases are supposed to be
+approved by voters, especially local tax hikes which
+generally require a two-thirds majority vote. However,
+Sacramento politicians have found ways to bypass or
+weaken these protections by:
+- Exploiting loopholes that allow some tax increases to
+pass with just a simple majority instead of the required
+two-thirds vote.
+- Using misleading ballot titles and summaries that hide
+the true nature of tax hikes, making it harder for voters to
+understand what they are approving.
+- Imposing hidden taxes through fees or utility rate
+increases that do not require direct voter approval.
+- Taking advantage of the current system where
+politicians control the wording of ballot measures, often
+resulting in confusing or deceptive language.
+Reform California is actively fighting these tactics by
+pushing for the California Taxpayer Protection Initiative,
+which would:
+- Restore the two-thirds voter approval requirement for all
+tax hikes.
+- Require clear, honest ballot titles that explicitly disclose
+tax increases.
+- Close loopholes that allow hidden taxes and fees.
+
+- Prohibit politicians from raising utility rates without voter
+consent.
+To protect your rights and help stop these unfair tax
+increases, it’s important to stay informed, vote NO on tax
+hikes, and support efforts to reform the system.
+Carl Bill Stance
+AB 84 - OPPOSE
+Thank you for taking the time to reach out and share your
+thoughts on AB 84. I appreciate your engagement on this
+important issue. I would like to inform you that I will be
+th
+opposing AB 84. On June 5 I voted No and spoke out
+against the bill. Unfortunately, it still passed and will be up
+for vote in the Senate. I recommend you also write to your
+Senator as they will be voting on AB84 next.
+I will fight as hard as I can to protect charter and
+homeschools. These types of education are their best
+opportunity for students to learn and thrive when public
+schools are not an option.
+I understand your concerns and am committed to
+ensuring that all perspectives are taken into account as
+we move forward in the legislative process.
+
+If you have any further questions or would like to discuss
+this matter in more detail, please do not hesitate to reach
+out. Thank you again for your input.
+⸻⸻⸻⸻—
+AB 86 - SUPPORT
+Thank you for writing to me about AB 86.
+I will be supporting AB 86. The bill helps ensure that
+educators have access to age-appropriate, standardized
+instructional materials to teach sensitive but important
+topics—such as healthy relationships, child sexual abuse
+prevention, and human trafficking—without changing
+existing curriculum standards or creating new mandates.
+Currently, many teachers face the challenge of finding
+suitable materials on their own, which can lead to
+inconsistencies or avoidance of the subject altogether.
+I appreciate your engagement on this issue.
+⸻⸻⸻—
+SB 712 - SUPPORT
+Thank you for reaching out to express your support for SB
+712 (Grove), a bill related to smog check. I appreciate
+hearing your thoughts on this important issue.
+This bill deletes a specified partial smog check exemption
+
+for collector motor vehicles from existing law. The bill
+exempts a collector motor vehicle from the smog check
+requirement if the vehicle is at least a specified number of
+model years old and proof is submitted that the motor
+vehicle is insured as a collector motor vehicle, as
+specified.
+The bill is currently making its way through the Senate
+Rules Committee. I share your support for this legislation,
+and will work hard to represent you on the Assembly floor.
+If you would like to track the progress of SB 712, you may
+do so online at https://leginfo.legislature.ca.gov.
+Thank you again for contacting my office. Please don't
+hesitate to keep in touch about this or any other issue of
+concern to you.
+⸻⸻⸻⸺
+AB 715 - SUPPORT
+Thank you for writing to me about Assembly Bill 715.
+I want you to know that I will be supporting this important
+legislation. AB 715 takes meaningful steps to strengthen
+protections against discrimination—particularly
+antisemitism—in K–12 education. It establishes a
+framework to ensure that all students can learn in safe,
+inclusive, and supportive environments.
+The bill also enhances the Uniform Complaint Process,
+increases accountability for school districts, and
+
+reinforces compliance with anti-discrimination laws.
+These efforts are essential to protecting not only Jewish
+students, but all students who may face discrimination
+based on religion, nationality, or other identities.
+Thank you again for sharing your perspective. I appreciate
+your engagement on this critical issue
+⸻⸻⸻⸺
+Thank you for writing to me about Assembly Bill 942.
+I am aware that solar owners are not the problem in this
+equation. The real culprit is the cost of energy increases
+comes from costly government regulations and mandates.
+I will also be opposing AB 942 and voted No on the floor
+rd
+on June 3 . My office and I are fighting tooth and nail to
+reduce the cost of living for Californians.
+Thank you again for sharing your perspective. I appreciate
+your engagement on this critical issue.
+⸻⸻⸺
+SB 79
+Thank you for taking the time to write to me and share
+your thoughts on Senate Bill 79 (SB79). I appreciate
+hearing from constituents like you, and your input is an
+important part of my work in the Assembly.
+At this time, I have not yet taken a position on SB79. I will
+
+be closely monitoring the bill as it moves through the
+legislative process, including any amendments or
+discussions in committee. Please know that I will keep
+your perspective in mind as I continue to evaluate the bill.
+If you have any additional information or thoughts you’d
+like to share, I welcome your continued engagement.
+⸻⸻—
+AB 930
+AB 930 is a blatant attack on election integrity and
+California citizens. We won’t stand for it and will keep
+fighting to protect honest elections.
+Thanks for reaching out.
+Gas Tax Petitions
+You’re absolutely right that we already pay enough in
+taxes, and it's frustrating to feel like we have to donate
+just to get the government to do what’s right. The sad
+truth is: the system is rigged in favor of the politicians
+and special interests who have the money and power.
+That’s why it costs so much for us to even get a chance to
+fix things through the ballot.
+
+With this link, you will find where you can contribute, the
+petition, and more information:
+https://www.reformcalifornia.org/campaigns/gas-tax-
+repeal?utm_source=chatgpt.com
+Thank you for your support.
+Carl run for governor
+Thank you for your support and enthusiasm! I am deeply
+committed to continuing the fight to take back California
+through grassroots efforts, policy reform, and supporting
+strong candidates in key races.
+While I am not currently running for Governor, I will remain
+focused on leading campaigns to protect taxpayer rights,
+fight crime, reform schools, and support conservative
+judges and candidates across the state.
+Mail office not near
+
+I appreciate your passion and willingness to get involved.
+Right now, our mail centers do need to be located near our
+headquarters in San Diego County because we’ll be
+processing and sending out every mail tray directly from
+there starting in October. But that’s just one part of the
+campaign.
+We absolutely will be opening offices across the state
+including in __________ when we launch the official
+petition phase in October and will be posted to our
+website. These offices will serve as petition distribution
+hubs so volunteers in every region can participate without
+needing to travel far.
+Thanks again for your support, please let me know if you
+have any questions.
+Open links
+I’m unable to open this link due to security restrictions,
+but if you can provide a brief summary of the content, I’d
+be happy to share my thoughts. Thanks!
+What initiative do?
+
+The CA Voter ID Initiative would amend our state
+constitution to restore the integrity of California elections
+by requiring 1) verification of citizenship to register to vote
+in CA and 2) verification of every voter’s identity through
+the use of a government ID when casting a ballot in each
+election. Polls show 70% of voters would vote YES on this
+bipartisan and common-sense initiative if it qualifies for
+the ballot.
+What petition look like
+If someone asks what info is needed on the petitions
+sheet:
+
+Already signed up as vol
+
+Thank you for reaching out! I can confirm that we did
+receive your sign-up to collect signatures, thank you so
+much for taking that step!
+We send our weekly volunteer emails to all of our
+supporters, including both those who have signed up and
+those who haven’t yet, to ensure everyone stays informed
+about current opportunities and campaign updates. These
+emails are also easy to share with friends and family who
+may want to get involved.
+We truly appreciate your support and commitment to
+helping collect signatures!
+Descanso/caltrans
+Thank you for reaching out, I completely understand your
+frustration. My legislative team and I have been actively
+working on this issue. In fact, we held a Town Hall in Alpine
+recently where we addressed the community’s concerns
+about CalTrans’ plans.
+We’ve heard loud and clear how urgent this is which is
+why I’m currently drafting another formal letter to
+CalTrans. I’ll keep fighting to make sure you’re heard,
+
+thank you again for reaching out.
+Matching Funds
+You can change out dates depending on the recent
+matching funds “deadline”
+Thank you so much for reaching out and for considering a
+contribution!
+Yes, the matching funds program is still active! While our
+July 31 deadline helped us meet one of our first major
+benchmarks, we still have several upcoming matching
+opportunities throughout the remainder of the signature
+drive. Every dollar raised now will go directly toward
+printing, mailing, and distributing petitions across
+California and our coalition partners are continuing to
+match donations to help us hit our overall $3 million goal.
+We officially filed the initiative on July 16 and are now in
+the 45-day vetting period. The Secretary of State is
+expected to release the petitions to us by October 1, and
+from there we’ll have just a few months to gather over 1
+million valid signatures statewide. We’ve already built up a
+strong base of volunteers and supporters, and we’re
+working every day to recruit more and prepare the
+materials needed to launch.
+Your support could make a real difference in this effort.
+
+Let me know if you’d like more details, and thank you
+again for considering a donation to help us secure Voter
+ID in California.
+Best regards,
+Why can’t I just print at home?
+You'll be able to find the PDF version of the petition online
+once we receive the official title and summary from the
+Secretary of State. We'll make a website with printing
+instructions to ensure you can collect as many signatures
+as you want. The mailers are important, however, as we
+will be sending over a million petitions out to voters to fill
+out at home from day one. Reducing the work required for
+voters to sign their petitions significantly increases
+signature collection rates, and we want to do all we can to
+get this initiative on the ballot.
+I want to come to ___ office
+Escondido
+Our Escondido office can be found at 1320 W Valley Pkwy
+
+#304 Escondido, CA 92029. Its office hours are 10 AM - 3
+PM. Feel free to come by anytime and a team member can
+help get you a mailer kit. Thank you for the support!
+Mission Valley
+Our Mission Valley office can be found at 3435 Camino
+del Rio S #114 San Diego, CA 92108. Its office hours are
+10 AM - 3 PM. Feel free to come by anytime and a team
+member can help get you a mailer kit. Thank you for the
+support!
+Know your rights..
+PruneYard Shopping Center v. Robins 1980
+https://www.oyez.org/cases/1979/79-289
+Your rights - Petitions
+http://www.caclean.org/content/pdf/vrtk_rights.pdf
+Volunteer Distribution Hub
+
+Confirmation of Info (OFFICE)
+Your willingness to use your home as a distribution hub
+means a great deal to the campaign and to all Californians
+who care about securing our elections.
+As we begin preparing our regional maps and volunteer
+communication plans, could you kindly send over the
+following details at your earliest convenience?
+● Phone number
+● Preferred Method of Communication (text or
+email)
+● Street Address
+● City
+● County
+● ZIP Code
+● Preferred Office Hours (once opened)
+This will help us list your location accurately and
+coordinate future drop-offs, sign-outs, and volunteer flow.
+Let me know if you have any questions or if there’s
+anything else you need to get set up. We’re honored to
+have you on the team!
+
+Grasshopper RPD Lines
+(888) 505-1776 - Voter ID Hotline
+(858) 617-8611 – Trinity Hannaway
+(858) 321-7446 – Joseph Linares
+(858) 230-8942 – Brian Pedral
+AB 495 Opinion
+Carl pov:
+I am adamantly opposed to AB 495. I voted NO on the bill
+when it was presented on the Assembly floor. You can
+hear me talk more about it on my podcast here: https://
+x.com/i/broadcasts/1zqKVjjlzbdKB.
+Carl is adamantly opposed to AB 495 and voted NO on
+the bill when it was presented on the Assembly floor. You
+
+can hear him talk more about it on his podcast here:
+https://x.com/i/broadcasts/1zqKVjjlzbdKB
+Where is Petition?
+We won’t have the physical copies of the petition available
+until October, when signature collection officially begins.
+At that time, we’ll provide both a physical copy by mail and
+a PDF version for those who prefer to print more at home.
+In the meantime, you can sign up to receive the petition by
+mail in October if you have not done so yet:
+https://www.reformcalifornia.org/forms/petition-help-
+pass-the-california-voter-id-law
+Anyone who signs up through that link will automatically
+be added to our list to receive both the mailed petition and
+the printable PDF once they're available in October.
+Thank you for your support!
+⸻⸻⸺
+We officially filed our Voter ID Initiative with the Secretary
+of State last week, and they now have 75 days to issue the
+official title and summary. That puts us on track to begin
+signature gathering this October. While we’re not
+collecting signatures just yet, we’re actively recruiting
+
+volunteers and building a statewide coalition so we’re
+ready to hit the ground running the moment we get the
+green light.
+In the meantime, we’re encouraging supporters to sign up
+as volunteers at VoterIDVolunteer.org and to share that
+link far and wide. The more people we have ready in
+October, the faster we’ll qualify this for the ballot.
+Thanks again for standing with us and for your support.
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+Where do I pick up forms for folks to sign up for Voter
+ID?
+If you have folks asking you for where to sign up then they
+can use the Online Petition Sign Up page found at this link:
+http://www.voteridpetition.org/
+It's important to note that signing this online does NOT
+equate to signing the actual petition! This only registers
+you (or those you refer) into our system to receive the
+physical petition sometime in early October when we
+receive them from the CA Secretary of State. That
+physical petition will be the actual petition since we need
+"wet" signature to qualify for the ballot.
+Additionally, if you would like to sign up to be a volunteer
+and commit to collecting signatures for us, then you can
+personally use this link: https://www.reformcalifornia.org/
+volunteer. If you sign up with this link, then you'll receive a
+
+volunteer bin in October with all the materials you'd need
+to go out and collect signatures for us!
+Hope this helps and feel free to reach out with any more
+questions. We want to make it as easy as we can for our
+supporters!
+Tax Deductible
+Hello,
+Contributions to Reform California are not deductible on
+federal or state taxes.
+While Reform California is not a nonprofit, we work closely
+with The Transparency Foundation, a 501(c)(3) nonprofit
+and nonpartisan organization that supports many of the
+initiatives we’re working on.
+If you choose to contribute directly to The Transparency
+Foundation, your donation may be tax-deductible since
+you receive no goods or services in exchange for your
+contribution.
+https://thetransparencyfoundation.org
+Thank you for your support,
+
+Why can’t Voter ID be in the special
+election?
+We can't put them on the same ballot because they are
+using two different avenues to change California law. This
+upcoming special election is a
+legislative constitutional amendment that the state
+legislature can trigger with a 2/3 majority vote; that then
+sends it to the citizens to vote on the amendment. Our
+Voter ID initiative is a citizen's constitutional amendment
+which requires getting a number of signatures equivalent
+to 8% of the previous election's recorded votes for the
+gubernatorial race, which in this case is ~850,000
+signatures. Once we collect these, the Secretary of State
+confirms the signatures which then triggers it to be on the
+ballot for consideration at the next election. Hope this
+makes sense, feel free to reach out with further questions.
+Update credit card
+
+We’re unable to update your credit card information on
+our end. However, we can stop donations to the card
+you’d like removed, and you can then make a new
+donation using your updated card information.
+Please let us know if you’d like us to proceed with
+stopping the old card.
+What’s in Mail Kit
+Thanks so much for reaching out! Helping with the mailing
+kit involves picking up a tray from one of our office to work
+on from home then addressing and stuffing envelopes
+with voter ID letters.
+Each Voter ID mailing kit contains 500 letters, envelopes,
+return address labels, and easy-to-follow instructions.
+You would be preparing and hand addressing the mailers
+so they’re ready to go out to voters once physical
+petitions arrive end of September. At that point, we’ll stuff
+the petitions into these prepped envelopes and send them
+out to voters.
+
+Once you’ve finished, you would simply drop the
+completed kit back off at the office you picked up from.
+Each office is open every Monday-Friday from 10AM
+-3PM.
+– Escondido HQ: 1320 W Valley Pkwy #304,
+Escondido, CA 92029
+– San Diego HQ: 3435 Camino del Rio S #114, San
+Diego, CA 92108
+Let me know if you have any questions, I’m happy to help!
+Best regards,
+Each kit includes 500 letters, envelopes, and return
+address stickers, along with simple instructions.
+just preparing the mailers to be ready for when the
+petitions arrive in October to later be stuffed into these
+mailers.
+Distribution Hub Canned Responses:
+Thank you for your support. Which part of California do
+you live in? I will check if we already have a hub set up in
+your area.
+⸻⸻— ⸻⸻— ⸻⸻— ⸻⸻— —
+
+⸻⸻
+Decline of petition location (already have one in
+that area)
+Thank you so much for offering to host a petition
+distribution center, we truly appreciate your willingness to
+help!
+Looks like we’ve already secured a hub in your area, so we
+won’t need an additional location nearby. That said, we will
+need all hands on deck collecting signatures once
+October comes so I’ll be sure to keep you updated in
+regard to that effort.
+Thanks again for stepping up to support the Voter ID
+Initiative! Please don’t hesitate to reach out if you have
+any questions.
+⸻⸻— ⸻⸻— ⸻⸻— ⸻⸻— —
+⸻⸻
+“What is a Distribution Hub?”
+Thank you for your interest in possibly helping as a
+distribution center for the California Voter ID Initiative.
+Distribution hubs are reliable locations where volunteers
+can pick up and drop off petition materials during the
+signature collection period (October 2025–March 2026).
+These hubs can be:
+● A business or home with consistent weekday hours,
+
+●
+or
+● A location where volunteers can coordinate
+scheduled pickups with you directly
+○ You have full flexibility to choose which days and
+hours you are available during the collection
+period
+Here’s what to expect if you host a petition distribution
+location:
+● Initial Delivery: Petition materials will be delivered to
+your location in late September or early October.
+● Supplies: You’ll receive an initial batch of petitions,
+with refills provided as needed. We ask that you
+reserve a small corner or room to store the supplies.
+● Volunteer Traffic: Volunteers will stop by to pick up
+blank petitions and either return completed ones to
+your location or drop them off at our monthly
+regional rallies.
+● Simple Coordination: We’ll make the process as
+easy and flexible as possible for you.
+If you are hosting at a home, your location will be listed on
+our website as the “[Your City] Petition Distribution
+Center,” but your address will remain private. Volunteers
+will be instructed to contact you directly to schedule a
+pickup time.
+The distribution hub will operate throughout the full
+collection period from October 2025 through March 2026.
+If you can only commit to hosting during part of this
+timeframe, please let me know so we can coordinate
+accordingly.
+If you're open to serving as a hub, please reply with the
+following:
+
+1. Whether you’re offering a business or home
+address
+2. The address where materials should be dropped off
+3. For businesses: Your office hours
+4. For homes: Your preferred contact method (text,
+email, phone) so volunteers can coordinate directly
+with you
+Let me know if you have any questions, I’m happy to help!
+Best,
+⸻⸻— ⸻⸻— ⸻⸻— ⸻⸻— —
+⸻⸻
+“What is a Distribution Hub?” - If wanting to
+host at home
+Thank you for your interest in possibly helping as a
+distribution center for the California Voter ID Initiative.
+Distribution hubs are reliable locations where volunteers
+can pick up and drop off petition materials. You will have
+full flexibility to choose which days and hours you are
+available during the collection period from October 2025
+through March 2026.
+Here’s what to expect if you host a petition distribution
+location at your home:
+● Initial Delivery: Petition materials will be delivered
+to your home in late September or early October.
+● Supplies: You’ll receive an initial batch of petitions,
+with refills provided as needed. We ask that you
+
+●
+reserve a small corner or room to store the supplies.
+● Volunteer Traffic: Volunteers will contact you
+directly to schedule a pickup time for blank
+petitions and either return completed ones to your
+home or drop them off at our monthly regional
+rallies.
+● Simple Coordination: We’ll make the process as
+easy and flexible as possible for you.
+If you are hosting at home, your location will be listed on
+our website as the “[Your City] Petition Distribution
+Center,” but your address will remain private and
+volunteers will coordinate with you directly for pickups.
+The distribution hub will operate throughout the full
+collection period from October 2025 through March 2026.
+If you can only commit to hosting during part of this
+timeframe, please let us know so we can coordinate
+accordingly.
+If you're open to serving as a hub, please reply with the
+following:
+1. The address where materials should be dropped off
+2. Your preferred contact method (text, email, or
+phone) so volunteers can coordinate directly with
+you
+Let me know if you have any questions—I’m happy to help!
+Best,
+⸻⸻⸻⸻⸻⸺
+
+Confirmation Response (Home/business) – All
+Details Received
+Thank you so much. I have you marked down as a
+confirmed distribution hub.
+As a reminder, we are finalizing the number of volunteers
+collecting signatures in your area, which will help
+determine how many petition sheets we send to your
+location. Volunteers will stop by to pick up blank petitions
+and will return completed ones either to you or to one of
+our monthly regional rallies.
+The hub will operate from October 2025 through March
+2026. If your availability changes or you can only host part
+of this period, please let me know. I will follow up soon
+with petition delivery details to your hub. Your support
+truly makes a difference, thank you again!
+Best,
+⸻⸻— ⸻⸻— ⸻⸻— ⸻⸻— —
+⸻⸻
+Business Office Offer (Any Zone, Did not give
+location/hours yet)
+Thank you for offering your office. It sounds like an ideal
+location for a petition distribution hub. Can you please
+confirm your office address and business hours that
+volunteers would be able to come by and pick up?
+
+As a hub, you can choose which days and hours your
+location will be open for volunteers during the collection
+period, which runs from October 2025 through March
+2026. We will post your availability on our website so
+volunteers know when to stop by.
+Volunteers will pick up blank petition sheets from your
+office and return completed petitions either to your office
+or at one of our monthly regional rallies.
+Petition deliveries will begin in late September or early
+October. We will confirm the exact delivery date soon.
+If you can only commit to hosting during part of this time
+frame, please let me know so we can coordinate
+accordingly.
+Thank you again for stepping up to help. We truly
+appreciate it.
+Best,
+⸻⸻⸻⸻⸻— ⸻⸻— ⸻⸻
+— ⸻⸻— ⸻⸻—
+Home Distribution – Location Not Yet Provided
+Thank you so much for stepping up! As a distribution hub,
+you will have full flexibility to choose which days and hours
+you are available during the collection period from
+October 2025 through March 2026. Once petition
+packets are ready in October, we will begin delivering
+
+them to hubs and volunteers statewide.
+Your location will be listed on our website as the “[Your
+City] Petition Distribution Center,” but your address will
+remain private. Volunteers will be instructed to contact
+you directly to schedule a pickup time.
+To finalize your location if you are still interested, could
+you please send us:
+● Your home address (for delivery purposes only)
+● Your preferred contact method (text, email, or
+phone) so volunteers can reach you
+Volunteers will pick up blank petitions and return
+completed sheets either to you or at one of our monthly
+regional rallies. If you can only commit to hosting during
+part of the timeframe, please let me know so we can
+coordinate accordingly!
+Thank you again for your support. Please let me know if
+you have any questions.
+Best,
+______ Petition Distribution Center", keeping your address
+private and direct volunteers to contact you by email or
+phone to coordinate a pickup time for volunteers in your
+area to pickup petitions.
+⸻⸻— ⸻⸻— ⸻⸻— ⸻⸻— —
+⸻⸻ ⸻⸻— ⸻⸻—
+
+Home Distribution - Already Provided Location:
+Thank you so much for stepping up! As a petition hub,
+have full flexibility choose which days and hours work best
+for you during the petition collection period from October
+2025 through March 2026. Petition packets will be
+delivered in late September or early October. We will call
+to confirm the exact delivery date closer to that time.
+Your location will be listed on our website as the “[Your
+City] Petition Distribution Center,” but your address will
+remain private. Volunteers will contact you directly to
+arrange pickup times.
+Could you confirm your preferred contact method
+(text, email, or phone) for volunteers to reach you?
+Volunteers will pick up blank petition sheets from your
+location and return completed ones either to you or to a
+monthly regional rally we will be holding every month.
+If your availability changes or you can only host part of
+this time period, please let me know so we can plan
+accordingly.
+We are very grateful for your support. Please let me know
+if you have any questions.
+Best,
+
+Apple Pay/paypal
+Thank you for the suggestion! We’re always looking for
+ways to make contributing easier, and I’ll share your
+request with our team to explore adding Apple Pay or
+PayPal as options on the contribution page.
+Best,
+Voter ID Vol SIgnUp/Petition
+Thank you so much for your support — it truly makes a
+difference!
+
+If you haven’t already, please take a moment to sign our
+Voter ID Petition and consider volunteering to help us
+collect signatures. Every action helps us move closer to
+securing fair and honest elections in California!
+Sign the petition:
+https://www.reformcalifornia.org/campaigns/election-
+integrity-initiative
+Volunteer to collect signatures:
+https://www.reformcalifornia.org/forms/election-integrity-
+signature-volunteer-sign-up
+Zoom Recording
+Wuddup (person)
+Regrettably, technical difficulties prevented us from
+recording the video.
+You can join the Zoom meeting next week Wednesday at
+noon.
+Alternatively, you may access a previous recording of
+Carl’s presentation on Prop 50 HERE.
+We apologize for any inconvenience this may have
+
+caused. We eagerly anticipate your participation in the
+upcoming call.
+Thank you for your support!
+Zoom Recording
+Wuddup (person)
+Regrettably, technical difficulties prevented us from
+recording the video.
+You can join the Zoom meeting next week Wednesday at
+noon.
+Alternatively, you may access a previous recording of
+Carl’s presentation on Prop 50 HERE.
+We apologize for any inconvenience this may have
+caused. We eagerly anticipate your participation in the
+upcoming call.
+Thank you for your support!
+Radio-a-thon locations
+
+Map
+https://www.easymapmaker.com/map/
+83dd924df8c81dde05ec2414fe13770c
+Signature Validation - Interested Vol
+Thank you so much for stepping up! We’re just about to
+finalize an office location for this volunteer role in
+Escondido. Once it’s confirmed, we’ll send you the
+address and set up a signature validation training with you
+this month so you’ll be ready to go by October.In the
+meantime, do you have a preferred day you’d like to come
+in? The office will be open Monday–Friday starting
+October and we’ll also allow for flexible pop-ins in addition
+to your scheduled day.
+I’ve cc’d Joseph, our Petition Validation Manager, who will
+be in touch soon with next steps and can answer any
+further questions.
+<<<<< Make sure to CC joe dummy:
+joseph@reformhq.org
+
+Joe -
+You need to schedule a training in September with them.
+Talk to Jordan about this.
+Fund Voter ID if passed
+If the initiative passes, the ongoing costs related to
+election administration and enforcement would be
+managed by state and local election officials as part of
+their election budgets, but the campaign’s immediate
+focus is on fundraising to get the initiative on the ballot.
+Governor Race
+Thank you for reaching out. Reform California focuses on
+endorsing candidates who align closely with our core
+principles of opposing tax hikes, fighting crime,
+empowering parents in education, and addressing
+homelessness.
+Our endorsements are carefully selected based on these
+criteria and the candidate’s ability to effectively challenge
+
+the current political establishment. We apply a rigorous
+review process to ensure every endorsed candidate fully
+reflects the reform values we stand for. I will be closely
+monitoring this race, just as we do with every race across
+the state, and will make an endorsement decision as we
+get closer to the election.
+Thank you again for your engagement and support!
+Ink outside signature box
+There is no specific rule in California elections stating that
+if ink goes outside the signature rectangle on a ballot or
+form, the signature or the entire sheet automatically
+becomes invalid. However, California election officials do
+review signatures carefully to verify voter identity, and
+significant discrepancies or issues with the signature
+could lead to a ballot being rejected.
+Minor ink marks outside the signature box alone are
+unlikely to invalidate a ballot unless they interfere with
+signature verification.
+Do Not Contact Form
+
+https://fs2.formsite.com/capitolmedia/aevsttrtzj/index
+ALL MAIL HQ ADDRESS
+OFFICE WALK-IN HOURS
+Monday to Friday, 10:00am to 3:00pm
+● Escondido HQ: 1320 W Valley Pkwy #304,
+Escondido, CA 92029
+● San Diego HQ: 3435 Camino del Rio S #114, San
+Diego, CA 92108
+Download Not Work
+I’ve manually entered your information to ensure your
+petition is properly validated and counted during
+processing.
+
+Please find attached a PDF version of the petition for you
+to download and print. Thank you for your support, and
+don’t hesitate to reach out if you have any further
+questions.
+Want to print legal size
+If you’d like to collect signatures using the legal-size
+petition, we can mail you an official petition kit. The legal-
+size petitions cannot be photocopied due to compliance
+issues. You can request a petition kit at the link below:
+https://www.reformcalifornia.org/cavoterid/volunteer
+Once you’ve submitted the form, your kit should arrive
+within 3–5 days at the address you provide.
+Thank you for your support! Please let me know if you
+have any questions.
+Two diff committee
+There are two groups working together to collect
+
+signatures for the CA Voter ID Initiative:
+● The main committee, Californians for Voter ID,
+which uses paid circulators. Their petition sheets
+are labeled “Californians for Voter ID.”
+● Reform California, which leads the grassroots side
+of the campaign. Our petition sheets say “Reform
+California” at the bottom.
+Both petitions support the same initiative we’re just
+handling different parts of the operation.
+Cant remember if signed
+Thank you for reaching out. Unfortunately, there isn’t a
+way for us to check whether you have personally signed
+the California Voter ID Initiative petition.
+If you’re unsure whether you have signed already, I
+recommend signing again. During the verification process,
+election officials compare every signature with official
+voter records. If a voter has signed more than once, only
+the first valid signature is counted, and any duplicates are
+automatically removed. This ensures your signature will be
+counted either way.
+Please let me know if you have any questions, thank you
+for your support.
+
+Does online sig count?
+Only physical paper petitions count toward qualifying the
+California Voter ID Initiative. Online forms are just for sign-
+ups or pledges — they are not official petition signatures.
+If you haven’t signed a physical petition, please be sure to
+do so for your signature to count.
+CRP Support ??
+We’re doing our best to mount a campaign but as of yet
+the CRP seems disorganized and not willing to collaborate
+on much. We’ll keep trying to get them to collaborate, but
+in the meantime we have to focus on organizing our
+aggressive campaign and doing good work with the
+grassroots and hope they catch up to us and are helpful
+along the way.
+
+Post Election Day response:
+We did best to mount a campaign but the California
+Republican Party seemed disorganized and unwilling to
+collaborate on much. We kept trying to get them to
+collaborate, but in the meantime we had to focus on
+organizing our aggressive campaign and doing good work
+with the grassroots and hoping that they would catch up
+to us and be helpful along the way.
+Mail a Check:
+If you would prefer you can mail a contribution to us or we
+can mail you a postage paid remit envelope.
+Checks can be made out to "Reform California" at PO Box
+27227, San Diego, CA 92198
+Thank you for your support!
+My Check Hasn’t Cleared Yet
+Thank you so much for your support! Please note that it
+
+can take 2–3 weeks for donations to be processed, as
+they must first go through compliance review before being
+deposited. As an organization, we are required to follow
+strict regulations.
+It is not unusual for there to be a delay in the processing
+of checks during peak campaign times. Checks are
+received securely by the post office, and picked up in
+batches, then processed through our compliance team
+before depositing into the bank. Thank you for your
+support!
+Mailing HQs
+Hello,
+Thank you for reaching out. You can view our Mailing HQs
+office address and walk-in hours at the following page:
+MailingVoters.com
+Thank you for your support! Please let me know if you
+have any questions.
+Mail the mail trays
+
+Thank you for your interest in helping with the mailing kits!
+We aren't able to mail the kits, they would need to be
+picked up from one of our local offices in person.
+If that’s not doable, no worries at all we have plenty of
+other ways you can support the initiative such as
+collecting signatures in your neighborhood for Voter ID,
+and we’d love your help with that effort.
+Thank you again for your support.
+Newsom redistricting scheme
+General newsom email:
+I understand your frustration. Newsom is abusing his
+power by trying to bypass the independent redistricting
+commission with a special legislative session to redraw
+districts mid-decade, which is unprecedented and
+unconstitutional.
+We are fighting back with lawsuits at both state and
+federal levels, preparing a referendum to block the new
+maps, and organizing recalls against legislators who
+
+support this scheme.
+Post Election Day ’25:
+I understand your frustration. Newsom is abused his
+power by bypassing the independent redistricting
+commission with a special legislative session and election
+to redraw districts mid-decade, which is unprecedented
+and unconstitutional.
+We will be fighting back with lawsuits at both state and
+federal levels, preparing a referendum to block the new
+maps, and organizing recalls against legislators who
+support this scheme.
+⸻⸻⸺
+Question - how is he even able to do that?
+Answer -
+Newsom is trying to use his authority to call a special
+legislative session, which allows the state legislature to
+take up issues outside the regular calendar.
+Normally, redistricting is done once every 10 years by an
+independent commission, but Newsom’s plan would let
+lawmakers redraw districts mid-cycle to favor Democrats.
+It’s a power grab that’s unprecedented and
+unconstitutional, which is why we’re fighting it.
+⸻⸻—
+
+Answer to “What about Texas?”
+Gerrymandering districts by politicians is NEVER ok –
+whether here, in Texas, or anywhere else. We believe
+Texas and all states should adopt California’s
+citizens’ independent redistricting model. But
+Newsom is using Texas as window dressing to give
+politicians what they always wanted – control of
+redistricting so they can gerrymander and that will
+end fair elections in our state.
+Gerrymandering is wrong no matter who does it. If it’s
+unacceptable there, it’s unacceptable here.
+Prop 50 hands redistricting power back to politicians and
+destroys California’s independent commission — the
+model every state should adopt. This isn’t about Trump or
+party politics; it’s about keeping any party from rigging the
+maps.
+Fair maps should apply to everyone, everywhere. That’s
+why we’re fighting this.
+Prop 50 Court - hostile responses
+
+“Well prop 50 passed”
+Gerrymandering is wrong no matter who does it. Prop 50
+may have passed, but most voters were not told that it
+hands redistricting power back to politicians and
+dismantles California’s independent citizens’ commission
+— the very model every state should adopt to prevent
+map-rigging. That’s why we’re challenging it to make sure
+no party can manipulate district lines to stay in power.
+You deserve fair elections, transparent government, and
+accountability and that’s exactly what I’m fighting for.
+“Prop 50 passed..trump this..texas that”
+Gerrymandering is wrong no matter who does it. If it’s
+unacceptable in Texas, it’s unacceptable in California as
+well.
+Prop 50 may have passed, but most voters were not told
+that it hands redistricting power back to politicians and
+dismantles California’s independent citizens’ commission
+— the very model every state should adopt to prevent
+map-rigging. That’s why we’re challenging it. This isn’t
+about Trump, the GOP, or national politics; it’s about
+making sure no party can manipulate district lines to stay
+in power.
+You deserve fair elections, transparent government, and
+
+accountability and that’s exactly what I’m fighting for.
+“Well why aren’t you fighting Texas’ map “
+Gerrymandering is wrong no matter who does it, in any
+state. But my fight right now is here in California, where
+Prop 50 has let politicians take control of redistricting
+again. We need to keep our independent system in place.
+Mention of Texas map being blocked:
+As of this week, the federal court has blocked the new
+congressional map in Texas. As I’ve stated before,
+gerrymandering is wrong no matter who does it. If it’s
+unacceptable in Texas, it’s unacceptable in California as
+well.
+Prop 50 may have passed here, but most voters were not
+told that it hands redistricting power back to politicians
+and dismantles California’s independent citizens’
+commission — the very model every state should adopt to
+prevent map-rigging. That’s why we’re challenging it: to
+ensure no party can manipulate district lines to stay in
+power.
+
+You deserve fair elections, transparent government, and
+accountability and that’s exactly what I’m fighting for.
+My Petition Counted?
+Thank you for returning your petition. Because of the high
+volume of mail we receive, we’re not able to confirm
+whether an individual petition was delivered or counted on
+our end. However, as long as it was mailed, it will be
+processed when it reaches our petition validation
+volunteers.
+Thank you again for helping with this effort.
+Signed not collecting:
+Thank you for signing the petition. Because of the high
+volume of mail we receive, we’re not able to confirm
+whether an individual petition was delivered or counted on
+our end. However, as long as it was mailed, it will be
+processed when it reaches our petition validation
+volunteers.
+Thank you again for helping with this effort.
+
+Darrell Isis
+If people ask..
+We’re focused on getting 1M Voter ID signatures until Dec
+31 and nothing else.
+Delay Response - SORRYYYYY
+Use this for emails older than a week.
+I apologize for the delay in responding. We recently
+resolved a technical issue that had hidden many emails
+from us, and I only now came across your message.
+⸻⸻
+I apologize for the delay in responding. Your email was
+hidden in my spam folder for some reason!
+
+⸻⸻
+Thank you for your patience — an email issue prevented
+some messages (including yours) from appearing in my
+inbox.
+⸻⸻
+DMV / Illegal Drivers license response
+Thanks for reaching out you’re right that some
+misinformation is being spread about the Voter ID
+Initiative, and it’s important we clear it up with the facts
+straight from the measure itself.
+The initiative simply amends the California Constitution to
+require proof of identity when voting either showing a
+government issued ID at the polls or providing the last
+four digits of your ID number when voting by mail. It does
+not make voting harder or add any new paperwork for
+eligible voters.
+If the name on a voter’s ID doesn’t match what’s on the
+voter rolls (for example, a maiden vs. married name), they
+
+can simply update their registration to match their legal
+name the same as when someone moves or changes their
+address today.
+Also, no one will be turned away for not having a license.
+The initiative guarantees:
+“Government-issued identification means documentation
+that allows conclusive verification of the voter’s identity.
+Upon request by an eligible voter, the state shall provide,
+at no charge, a voter ID card for use in casting a ballot.”
+That means any eligible voter can get a free voter ID
+card from the state. Not to mention a license is not the
+only form of ID, other valid forms of government-issued ID
+can include passport, military ID, state ID, SSN which will
+all also qualify.
+The government issued ID of your choosing will be used
+solely to confirm a voter’s identity when voting. For mail
+ballots, voters would just write the last four digits of their
+ID number on the envelope to confirm their identity.
+Anyone claiming this initiative “makes voting harder” is
+simply trying to undermine confidence in fair elections
+and mislead voters. The measure makes our
+system stronger and more transparent, ensuring every
+eligible voter can easily cast a secure ballot.
+You can find this exact language in Section 3.1(a) and
+3.1(b) of the initiative text >>
+Please let me know if you have any questions.
+
+Check not cashed:
+It is not unusual for there to be a delay in the processing
+of checks during peak campaign times. Checks are
+received securely by the post office, and picked up in
+batches, then processed through our compliance team
+before depositing into the bank. Thank you for your
+support!
+Add Mail-In Ballot to Voter ID
+We did a lot of research, polling, and had conversations
+with Californians from all walks of life, and the majority
+prefer mail-in ballots. As the Voter ID Initiative stands, it is
+a non-partisan issue, but if we add “No Mail-In Ballots,” we
+would lose an overwhelming amount of support from
+Californians. There will be room for us to challenge mail-in
+ballots in the future, but we must walk before we run.
+
+“I give up”
+I hear your frustration, and you’re not alone in feeling that
+way. But walking away is exactly what the political
+establishment is counting on. They want good people to
+give up so they can continue operating without
+accountability.
+That’s precisely why we’re fighting so hard for Voter ID,
+fiscal accountability, transparency, and common sense
+reforms. None of this changes overnight, but the only way
+the system gets better is if people like you stay engaged,
+not step back.
+Top Funder Sheet
+oterIDTopFunders.org
+The official monthly list of top funders for the California
+Voter ID Initiative is available at the following website:
+VoterIDTopFunders.org
+
+Please note that the November Top Funder Sheet (PDF) is
+posted under the date October 29, 2025, on the Secretary
+of State’s website.
+Frequency of emails
+Hello,
+I completely understand, our fundraising emails are
+essential.
+You can reduce the frequency of my communications to
+only monthly if you want to stay informed.
+Just scroll all the way down to the bottom of any of my
+emails, click unsubscribe and change your frequency
+settings.
+Thank you for your support!
+I apologize for the brief response I provided yesterday. I
+was moving from event to event, engaging with
+
+Californians about the Voter ID Initiative and our plan to
+take back our state from the Democrat super-majority.
+I want to emphasize that Reform California is a small,
+grassroots campaign funded entirely by donations. That
+said, I would like to highlight the great work my District
+Office has been doing for rural San Diego. You can view
+testimonials and learn more at the following link: https://
+ad75.asmrc.org/testimonials/
+Secondly, I would like to share that my District Office has
+successfully resolved 2,015 cases and returned a total of
+$617,439 to constituents.
+Thirdly, the Democrat super-majority consistently strikes
+down legislation I present in the Assembly, which is why I
+remain highly active within my district to address issues
+directly and work with local government on solutions.
+Once again, Shanon, I sincerely apologize and hope you
+are having a good day. If you have any further questions,
+please do not hesitate to reach out to me.
+Donations thank you
+Thank you for your support! Your donation is helping us
+fund the fight to bring Voter ID to California, a common-
+
+sense reform that’s long overdue.
+Efforts like this come with real costs: printing, mailing,
+outreach, and organizing voters statewide. Your
+contribution helps us cover those costs and keep pushing
+forward!
+We appreciate you standing with us and know that this
+cannot be done without you.
+Voter ID Funding
+https://www.sos.ca.gov/administration/news-releases-
+and-advisories/2025-news-releases-and-advisories/
+proposed-initiative-enters-circulation-establishes-
+additional-voter-identification-and-citizenship-
+verification-requirements-ini
+Dec Top Funder Link
+
+Hello,
+Please see below the December Top Funder sheet.
+https://cdn.prod.website-files.com/
+638648240867557bf7775f3e/
+692dcfb79de402f7197b7c83_VoterID_DonorCardVolunte
+er_Dec.pdf
+Thank you for your support!
+YAPPER
+For people who send a long email complaining about
+something but you are not exactly sure what they are
+asking/want from you
+Thanks for sharing this with me, I appreciate you taking
+the time to write this out.
+If there’s a specific issue you need help navigating, please
+let me know and I’ll do my best to point you in the right
+direction.
+
+Two Types of Petition
+We currently have two versions of the petition available:
+● 8.5x11 printable petition – includes 3 signature slots
+● Legal-size petition – includes 20 signature slots
+If you have a printer, you can print the 8x11 petition from
+home using the link below, this petition sheet has 2
+signature blocks for individuals to sign. You’ll first need to
+enter your information to ensure your petition is properly
+validated and counted. After that, you’ll be directed to the
+main page where you can download, print, sign, and mail it
+back:
+https://www.reformcalifornia.org/cavoterid/sign-the-
+petition
+If you’d like to collect signatures using the legal-size
+petition which has 20 total signature blocks, we can mail
+you an official petition kit. The legal-size petitions cannot
+be photocopied due to compliance issues. You can
+request a petition kit at the link below:
+https://www.reformcalifornia.org/cavoterid/volunteer
+Once you’ve submitted the form, your kit should arrive
+within 5 days at the address you provide.
+
+Thank you for your support! Please let me know if you
+have any questions.
+Idk if signed
+“I am not sure if I have signed the CA Voter ID Perdition.”
+Thanks for reaching out. At this time, we do not have a
+system that allows us to look up whether a specific voter
+has already signed the CA Voter ID petition.
+If you are unsure whether you’ve signed, please go ahead
+and sign again. Only one signature will be counted as valid
+if it turns out you have already signed.
+Thank you for your support!
+Want to Print Petition
+To print and sign the petition from home, please use the
+link below. You’ll first need to enter your information to
+ensure your petition is properly validated and counted.
+
+After that, you’ll be directed to the main page where you
+can download, print, sign, and mail it back.
+https://www.reformcalifornia.org/cavoterid/sign-the-
+petition
+Thank you for your support! Please let me know if you
+have any trouble downloading the petition.
+Cant donate
+Of course, I understand that everyone has different
+situations and please do not feel as though you need to
+contribute more than you can.
+Your help in spreading the word is more than
+enough. Thank you so much for your continued support
+and have a great day!
+Best,
+⸻⸻⸺
+Of course, I understand that everyone has different
+situations and please do not feel as though you need to
+contribute more than you can. Feel free to ignore the
+emails about contributions as we send those to all
+
+supporters.
+Your help in spreading the word is more than
+enough. Thank you so much for your continued support
+and have a great day!
+⸻⸻—
+If you can’t donate right now, staying informed and
+spreading the word is just as important.
+Thank you for your support.
+⸻
+Hello ,
+I completely understand. Your help in spreading the word
+is more than enough.
+Thank you for your support!
+Best,
+⸻⸺
+Feel free to ignore the emails about contributions as we
+send those to all supporters. Your help in spreading the
+word is more than enough.
+Thank you for your support!
+
+⸻⸻—
+Thank you for your support and for defending election
+integrity!
+Governor’s Poll
+If you would like to make your opinion heard on who we
+should endorse in the Governor’s race, you can follow the
+link and do so here:
+https://www.reformcalifornia.org/forms/poll-who-should-
+be-ca-governor-in-2026
+Thank you for your support!
+Dec 17 Zoom Link
+Hello,
+You can view a recording of the December 17th Voter ID
+
+Zoom webinar here:
+https://us02web.zoom.us/rec/share/
+zacdVQkKtdnDjsKQjrLr44pILfdEumo31mtSRDMUWZUur8
+4WtMkBuDuu7oqBKyXA.__p-gLErBUQqx8mA
+Where to drop peti??
+Dropping off at an appointment only location:
+Use this excel to find contact info for petition hub contact:
+VOTER ID VOLUNTEERS.xlsx
+Hello,
+Thank you for your interest in dropping off petitions at one
+of our volunteer-run petition hubs! The hub you selected
+is operated out of a volunteer’s home, which is why the
+location is not publicly listed on our website.
+Please contact [Name] at [email] or [phone number] to
+schedule a time to drop off your petition. Once you
+coordinate with them, they will provide you with their
+address and available times.
+Thank you for your support and dedication to helping us
+qualify the Voter ID Initiative!
+
+General question on returning petitions:
+Hello,
+You’re welcome to drop off your completed petitions at
+any of our designated petition hub locations as seen here:
+https://www.reformcalifornia.org/cavoterid/locations
+You can also mail your completed petitions to:
+Reform California
+PO Box 27227
+San Diego, CA 92198
+Thank you so much for your support!
+Newscum gruesome
+Does Newsom deserve to be recalled? Absolutely. But a
+new recall effort will only waste millions of dollars for a
+similar result as the first recall.
+
+There is virtually no chance of a recall succeeding
+currently — no data shows it will work and I don't want to
+waste your time and money on something doomed to fail.
+We'd rather Republicans spend their resources on
+competitive, winnable races — like flipping a few
+congressional or state legislative seats and setting
+ourselves up for gains in 2026.
+⸻—
+Thank you for your message and support, you’re
+absolutely right to be fed up.
+Newsom and the Sacramento politicians are out of
+control, and the only way we stop them is by organizing,
+informing voters, and voting them out. That’s exactly what
+I’m fighting for and I won’t back down.
+⸻⸻
+I agree! Thankfully he leaves office in January 2027!
+Signature update email
+
+“Still collecting, will mail in soon”
+Thank you for the update and for your support with
+collecting signatures!
+Once you are finished with collecting signatures, you can
+mail your completed petitions to:
+Reform California
+PO Box 27227
+San Diego, CA 92198
+Thank you again for your support, it means a lot.
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+⸻—
+“Already sent in signatures, done collecting”
+Thank you for the update and for your support with
+collecting signatures!
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+
+⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
+⸻—
+“Can no longer collect because [insert excuse]”
+I completely understand. Your support in spreading the
+word is more than enough!
+Unsubscribe/No longer live in Ca
+Hello ,
+I cannot unsubscribe you from emails for you. However, if
+you return to the original email and scroll to the bottom,
+there should be an unsubscribe link that you can click on.
+Best,
+No longer live in Ca
+Thank you for letting me know. If you return to the original
+email and scroll to the bottom there should be an
+
+unsubscribe link that you can click on.
+USPS Trust Issue
+We completely understand that you may not fully trust the
+Post Office but I want to reassure you that we’ve received
+hundreds of thousands of petitions through our PO Box
+without any issues.
+If you want extra certainty, you have a few secure options:
+Certified Mail (Most Secure Mail Option)
+You can take your petition to USPS and send it via
+Certified Mail. That means a staff member from our team
+will personally sign for it, and you’ll receive a notification
+confirming we received it.
+Drop Off at a Petition Hub
+You can also bring it to any of our designated petition hub
+locations:
+https://www.reformcalifornia.org/cavoterid/locations
+Whatever option you choose, we’ll make sure your petition
+is safely counted. Please let me know if you have any
+questions, we appreciate your support!
+
+How will we win seats?
+We will win seats by dramatically increasing turnout
+through direct, personal voter contact, deploying 26,000
+volunteers to knock doors, send in 2.6 MILLION
+handwritten voter guides, and deliver coordinated text
+messaging in 26 targeted districts. We will also qualify
+and campaign for a Voter ID ballot initiative, using it to
+energize low-propensity Republican voters while
+persuading high-propensity DTS voters. Together, these
+efforts aim to mobilize 700,000 new voters, consolidate
+support, and convert turnout gains into victories across
+targeted congressional and legislative races.
+Apple Pay/Paypal/Venmo Donation
+We do not accept PayPal or Venmo but if you feel more
+comfortable donating by check, they can be made out to
+"Reform California" and mailed to Reform California at PO
+Box 27227, San Diego, CA 92198
+Thank you for your support!
+
+26 for 2026 List
+https://www.reformcalifornia.org/news/reform-california-
+releases-26-for-2026-list-of-target-seats-2
+The List of 26 Seats -
+US CONGRESS – 4 Targets Will Be Selected
+1. CD-3 (Sacramento) — Kevin Kiley (Defend)
+2. CD-13 (Central Valley) – Kevin Lincoln (Pick Up)
+3. CD-22 (Central Valley) — David Valadao (Defend)
+4. CD-48 (Riverside/San Diego) – Darrell Issa
+(Defend)
+On the Watch List (7 seats):​
+1. CD-1 (Northern CA) – TBD Candidate Needed (Pick
+Up)
+2. CD-2 (Northern CA) – Doug LaMalfa (Defend)
+3. CD-21 (Central Valley) - TBD Candidate Needed
+(Pick Up)
+4. CD-25 (Riverside County) - TBD Candidate Needed
+(Pick Up)
+5. CD-45 (Orange County/Los Angeles County) —
+TBD Candidate Needed (Pick Up)
+6. CD-47 (Orange County) — TBD Candidate Needed
+(Pick Up)
+7. CD-49 (San Diego/Orange County) Jim Desmond
+(Pick Up)
+
+7.
+​
+STATE SENATE – 5 Targets Will Be Selected
+1. SD-14 (Central Valley) - TBD Candidate Needed
+(Pick Up)
+2. SD-16 (Central Valley) – TBD Candidate Needed
+(Pick Up)
+3. SD-36 (Orange County) – Tony Strickland (Defend)
+4. SD-38 (Orange County/San Diego) – Laura Bassett
+(Pick Up)
+5. SD-40 (San Diego) – Kristie Bruce-Lane (Defend)
+On the Watch List (4 seats):
+1. ​SD-4 (Central Valley) – Marie Alvarado-Gil (Defend)
+2. SD-6 (Sacramento) Roger Niello (Defend)
+3. SD-18 (San Diego/Imperial/Riverside) - TBD
+Candidate Needed (Pick Up)
+4. SD-34 (Orange County) – Rhonda Shader (Pick Up)
+​
+STATE ASSEMBLY – 17 Targets Will Be Selected
+1. AD-7 (Sacramento) — Josh Hoover (Defend)
+2. AD-22 (Central Valley) — Juan Alanis (Defend)
+3. AD-27 (Central Valley) — Mike Murphy (Pick Up)
+4. AD-31 (Central Valley) - TBD Candidate Needed
+(Pick Up)
+5. AD-35 (Central Valley) – Saul Ayon (Pick Up)
+6. AD-36 (Riverside County) — Jeff Gonzalez
+(Defend)
+7. AD-40 (Los Angeles County) — TBD (Pick Up)
+8. AD-42 (Los Angeles/Ventura County) - TBD
+Candidate Needed (Pick Up)
+
+9. AD-47 (Riverside County) — Greg Wallis (Defend)
+10. AD-58 (Riverside County) — Leticia Castillo
+(Defend)
+11. AD-60 (Riverside County) — Ed Delgado (Pick Up)
+12. AD-66 (Los Angeles) – Jessica Maldonado (Pick
+Up)
+13. AD-67 (Orange County) — Paolo Morales (Pick Up)
+14. AD-70 (Orange County) — Tri Ta (Defend)
+15. AD-72 (Orange County – Gracey Van Der Mark
+(Defend)
+16. AD-74 (Orange County/San Diego) — Laurie Davies
+(Defend)
+17. AD-76 (San Diego) — TBD Candidate Needed
+(Pick Up)
+On the Watch List (7 seats):
+1. AD-13 (Central Valley) - TBD Candidate Needed
+(Pick Up)
+2. AD-16 (Bay Area) – TBD Candidate Needed (Pick
+Up)
+3. AD-39 (Los Angeles/San Bernardino) - TBD
+Candidate Needed (Pick Up)
+4. AD-50 (San Bernardino) - TBD Candidate Needed
+(Pick Up)
+5. AD-53 (Los Angeles County) - TBD Candidate
+Needed (Pick Up)
+6. AD-56 (Los Angeles County) - TBD Candidate
+Needed (Pick Up)
+7. AD-73 (Orange County) — TBD Candidate Needed
+(Pick Up)
+
+Petition Deadline
+We have a limited amount of time to collect these
+signatures. Please get as many as you can ASAP and
+submit them before February 6th1st!
+Thank you for your support.
+Why is the deadline December if the Sec of
+state deadline is Feb?
+We’re asking volunteers to turn in signatures preferably by
+February 6th. We are requesting for early submissions so
+we’re not overwhelmed at the last minute and have
+enough time to process and validate everything before our
+February 28th signature deadline with the Secretary of
+State.
+
+Return petition?
+Thank you for reaching out. You can mail your completed
+petitions to:
+Reform California
+PO Box 27227
+San Diego, CA 92198
+We have a limited amount of time to collect signatures, so
+please send them in as soon as possible. Our deadline is
+February 6thDecember 31st, and every signature truly
+makes a difference.
+Thank you again for your support, it means a lot.
+Mail/drop off petition:
+Thank you for reaching out. You can mail your completed
+petitions to:
+Reform California
+PO Box 27227
+San Diego, CA 92198
+
+There is also an option to drop off petitions at a petition
+hub close to you, all locations can be found here: https://
+www.reformcalifornia.org/cavoterid/locations
+We have a limited amount of time to collect signatures, so
+please send them in as soon as possible. Our deadline is
+February 6th, and every signature truly makes a
+difference.
+Thank you again for your support, it means a lot.
+Howard Jarvis/Protect Prop 13
+Hi,
+If you would like to request the petition for the Howard
+Jarvis Taxpayer’s Association’s initiative, you can request
+it from the website at www.opposetaxhikes.org
+Thank you for your support!
+Mail me a petition kit:
+
+for your kit to reach the address you have provided.
+Thank you for reaching out. You can order both the Voter
+ID & Prop 13 petition at the following link:
+https://www.reformcalifornia.org/cavoterid/volunteer
+We’ll mail you everything you need to sign and return your
+petition! Once you have filled out the above form, it may
+take up to a week for your kit to reach the address you
+have provided.
+Once you are finished with collecting signatures, you can
+mail your completed petitions to:
+Reform California
+PO Box 27227
+San Diego, CA 92198
+We have a limited amount of time to collect signatures, so
+please send them in as soon as possible. Our deadline is
+February 6th, and every signature truly makes a
+difference!
+Thank you for your support, it means a lot.
+
+Donation not work
+Hello ____,
+I'm not sure why our donor portal isn't working for you, we
+are receiving donations by other supporters at this time. If
+you would prefer you can mail a contribution to us or we
+can mail you a postage paid remit envelope.
+Checks can be made out to "Reform California" at PO Box
+27227, San Diego, CA 92198
+Thank you for your support!
+Print Prop 13 Petition
+To print and sign the Prop 13 petition from home, please
+use the link below. You’ll be directed to the page where
+you can download, print, sign, and mail back the petition.
+https://cdn.prod.website-files.com/
+63bde1c926647470d659205c/
+694323dd70a0fbceeff1d119_TPA_SaveProp13_ReformLo
+
+cal_PetitionAndInstructionsFunders_8.5x11.pdf
+Once you are finished with collecting signatures, you can
+mail your completed petitions to:
+Reform California
+PO Box 27227
+San Diego, CA 92198
+We have a limited amount of time to collect signatures, so
+please send them in as soon as possible. Our deadline is
+February 6th, and every signature truly makes a
+difference!
+Thank you for your support, it means a lot.
+Prop 13 Petition - Mail or print option
+Thank you for reaching out. You can order Prop 13
+petitions by mail at the following link:
+https://www.reformcalifornia.org/cavoterid/volunteer
+We’ll mail you everything you need to sign and return your
+petition! Once you have filled out the above form, it may
+take up to a week for your kit to reach the address you
+have provided.
+
+Another option is to print and sign the Prop 13 petition
+from home. Using the link below, you can download, print,
+sign, and mail back the petition.
+https://cdn.prod.website-files.com/
+63bde1c926647470d659205c/
+694323dd70a0fbceeff1d119_TPA_SaveProp13_ReformLo
+cal_PetitionAndInstructionsFunders_8.5x11.pdf
+Once you are finished with collecting signatures, you can
+mail your completed petitions to:
+Reform California
+PO Box 27227
+San Diego, CA 92198
+We have a limited amount of time to collect signatures, so
+please send them in as soon as possible. Our deadline is
+February 6th, and every signature truly makes a
+difference!
+Thank you for your support, it means a lot.
+Can I sign online?
+
+California law does not allow online signatures for state
+ballot initiatives. All signatures must be collected on a
+physical petition with a wet signature to be valid.
+If you still haven’t signed a petition for the California Voter
+ID Initiative, you can do so through any of the following
+options:
+Print and sign from home:
+Download the petition, print it, sign, and mail it back.
+https://www.reformcalifornia.org/cavoterid/sign-the-
+petition
+Request a mailed petition kit:
+We’ll send you everything you need to sign and return
+your petition.
+https://www.reformcalifornia.org/cavoterid/volunteer
+Locate a petition hub near you:
+You can sign in person or pick up and return petitions to a
+limited number of distribution centers across CA
+https://www.reformcalifornia.org/cavoterid/locations
+Please let me know if you have any further questions.
+Thank you for supporting election integrity in California!
+
+Prop 13 Petition - Mail or print option
+Thank you for reaching out. You can order Prop 13
+petitions by mail at the following link:
+https://www.reformcalifornia.org/cavoterid/volunteer
+We’ll mail you everything you need to sign and return your
+petition! Once you have filled out the above form, it may
+take up to a week for your kit to reach the address you
+have provided.
+Another option is to print and sign the Prop 13 petition
+from home. Using the link below, you can download, print,
+sign, and mail back the petition.
+https://cdn.prod.website-files.com/
+63bde1c926647470d659205c/
+694323dd70a0fbceeff1d119_TPA_SaveProp13_ReformLo
+cal_PetitionAndInstructionsFunders_8.5x11.pdf
+Once you are finished with collecting signatures, you can
+mail your completed petitions to:
+Reform California
+PO Box 27227
+San Diego, CA 92198
+We have a limited amount of time to collect signatures, so
+please send them in as soon as possible. Our deadline is
+
+February 6th, and every signature truly makes a
+difference!
+Thank you for your support, it means a lot.
+ADU in community:
+California state laws passed since 2019, such as SB 9 and
+SB 10, have significantly reduced local control over
+housing developments. These laws eliminate single-family
+zoning and allow developers to build multiple units on
+parcels previously zoned for one home, often without local
+approval. Additionally, the “Builders Remedy” provision
+lets developers bypass local city council approvals for
+certain projects.
+If the project is government-subsidized and rent-
+controlled, it may escape even more local oversight.
+Unfortunately, local city councils often have limited power
+to stop these developments due to these state laws.
+However, there is still one key protection: Article XXXIV of
+the California Constitution, which requires voter approval
+for publicly funded affordable housing projects. But this
+protection is under threat from SCA-2, a proposed
+constitutional amendment that would eliminate this voter
+
+approval requirement.
+What you can do:
+- Get involved with Reform California’s campaign to
+restore local control by opposing laws like SB 9, SB 10,
+and SCA-2. This includes signing petitions and
+contributing to efforts that fight for community input on
+housing projects.
+- Attend local city council meetings to voice your
+concerns and organize with neighbors to push for projects
+that fit the character of your community.
+- Support reform-minded candidates who prioritize local
+control and sensible housing policies.
+For more information and to join the campaign to keep
+housing decisions local, visit:
+https://reformcalifornia.org/campaigns/keep-housing-
+decisions-local (https://reformcalifornia.org/campaigns/
+keep-housing-decisions-local)
+Taking collective action is the best way to push back
+against projects that don’t fit your neighborhood.
+Vottiv
+
+If you have any questions about how to use the platform,
+please feel free to reach out or watch the following tutorial
+on how to use the platform: https://help.vottiv.com/
+canvass-onboarding-for-canvassers/
+Zoom meeting 1/07/26
+https://shortshare.info/chxm
+How to get petition
+If you still haven’t signed a petition or need extra sheets,
+you can get petitions for the California Voter ID Initiative
+through any of the following options:
+Print and sign from home:
+Download the petition, print it, sign, and mail it back.
+https://www.reformcalifornia.org/cavoterid/sign-the-
+petition
+
+Request a mailed petition kit:
+We’ll send you everything you need to sign and return
+your petition.
+https://www.reformcalifornia.org/cavoterid/volunteer
+Locate a petition hub near you:
+You can sign in person or pick up and return petitions to a
+limited number of distribution centers across CA
+https://www.reformcalifornia.org/cavoterid/locations
+If you have any questions about how to sign the petition,
+please visit the following page: https://
+www.reformcalifornia.org/cavoterid/petition-instructions
+Thank you for supporting election integrity in California!
+“I received petition” response -
+That’s great news thank you so much for helping us move
+this initiative forward! Your support makes a real
+difference.
+If you have any questions about how to sign or return your
+petition, please visit the following page: https://
+www.reformcalifornia.org/cavoterid/petition-instructions
+Thank you again for your support!
+
+“I sent back petitions” response -
+Thank you so much! We appreciate your signatures and
+support, every one helps us move the CA Voter ID
+initiative forward. Your effort makes a real difference in
+giving Californians a voice and protecting the integrity of
+our elections.
+Confirmed -
+Thanks for confirming! Please sign your petition, have
+others sign, and send it back as soon as possible every
+signature counts in getting CA Voter ID on the ballot.
+If you have any questions about how to sign the petition,
+please visit the following page: https://
+www.reformcalifornia.org/cavoterid/petition-instructions
+Thank you for supporting election integrity in California!
+Lawn sign-
+If you’re in San Diego County, you can pick up a yard sign
+at our HQ:
+1320 W. Valley Pkwy, Suite 304, Escondido, CA 92029.
+
+We’ll also be distributing yard signs during my statewide
+bus tour, you can find events near you here:
+https://www.reformcalifornia.org/cavoterid/events
+Thanks for your support and for helping us spread the
+word!
+Double packet:
+Thanks for letting me know, and I appreciate your support.
+Occasionally a duplicate packet is sent to make sure no
+one is missed, but your contribution is being used
+strategically and efficiently to win these campaigns —
+every dollar goes toward results, not waste.
+Donation ISSUE!!!!!!!!!!!
+
+IF ASKED VIA EMAIL/CHATBOT:
+— BCC jh@hale.media AND info@reformcalifornia.org
+Hello NAME,
+Thank you for reaching out. I'll have someone from our
+donor relations team research this and get back to you as
+soon as possible. Thank you for your support!
+MAKE SURE TO BCC jh@hale.media and
+info@reformcalifornia.org
+⸻⸻⸻⸻⸻⸻⸻⸻⸻—
+IF ASKED VIA PHONE:
+TELL THEM ON PHONE that you will submit your request
+to donor relations team to look into this and that you will
+need to confirm the following with them
+● Spelling of first and last name
+● Email address used for contributions
+● Zip code
+● Date of the transaction
+● Amount of the transaction
+● How the charge appears on their statement - This is
+
+●
+important to determine which committee they
+donated to
+Once you get the above information from them,
+forward the original voice message to JH
+(jh@hale.media) with the above info.
+For Knowledge:
+https://x.com/carldemaio
+https://www.reformcalifornia.org
+https://www.reformcalifornia.org/news
+https://www.reformcalifornia.org/campaigns
+https://www.reformcalifornia.org/events
+https://www.reformcalifornia.org/podcast
+https://www.reformcalifornia.org/volunteer
+https://www.reformcalifornia.org/about
+https://www.reformcalifornia.org/faqs
+https://secure.carldemaio.com/contribute
+
+https://www.reformcalifornia.org/voter-guides
+https://registertovote.ca.gov/RegisterToVote
+https://www.sos.ca.gov/elections/who-are-my-
+representatives
+https://www.sos.ca.gov/elections/polling-place
+https://www.trackmyballot.org
+https://www.sos.ca.gov/elections/upcoming-elections
+https://www.reformcalifornia.org/cavoterid/home
+https://www.reformcalifornia.org/cavoterid/petition-
+instructions
+https://www.reformcalifornia.org/cavoterid/locations
+https://www.reformcalifornia.org/cavoterid/about
+https://www.reformcalifornia.org/cavoterid/sign-the-
+petition
+https://www.reformcalifornia.org/cavoterid/contact
+https://ad75.asmrc.org
+https://ad75.asmrc.org/legislation/
+
+https://ad75.asmrc.org/press-releases/
+https://ad75.asmrc.org/op-eds/
+https://ad75.asmrc.org/letters/
+https://ad75.asmrc.org/events/
+https://ad75.asmrc.org/district-map/
+https://ad75.asmrc.org/biography/
+https://ad75.asmrc.org/testimonials/
+https://lcmspubcontact.lc.ca.gov/PublicLCMS/
+ContactPopup.php?district=AD75&inframe=N
+https://www.youtube.com/user/carldemaioCA
+https://www.youtube.com/@carldemaioca/videos
+Carl DeMaio / Reform California
+
+Description
+Fight or Flee. That’s the choice that millions of common-
+sense Californians are facing as California’s cost-of-living
+skyrockets higher and state politicians continue to enact
+extreme policies that infringe on personal freedoms and
+stifle economic opportunity.
+For Carl DeMaio the choice is simple: STAND AND FIGHT!
+Carl DeMaio is the most-recognized reformer and
+taxpayer advocate in California.
+Carl DeMaio serves as Chairman of Reform California – a
+grassroots organization that advocates for transparency
+and accountability reforms in state and local government
+while mounting campaigns to defeat unfair and
+unnecessary tax hikes.
+DeMaio also hosts his daily video/podcast Reform
+California with Carl DeMaio – where he uses his media
+platform to inform, engage and inspire common-sense
+Californians to get involved in the fight to take back their
+state from socialism.
+Links
+Carl's Web Site
+
+carldemaio.com
+Facebook
+facebook.com/carl.demaio
+Twitter
+twitter.com/carldemaio
+Instagram
+instagram.com/carldemaioca
+More info
+www.youtube.com/
+@carldemaioca
+United States
+Joined Sep 30, 2013
+219K subscribers
+875 videos
+39,148,150 views
+https://reformlocal.org
+Prop 13: https://reformlocal.org/campaigns/stop-tax-
+hikes-save-prop-13
+
+https://reformlocal.org/campaigns
+Run for Office: https://reformlocal.org/run-for-office
+Governor Question
+Anything governor related, Bianco and BLM, etc.
+Thank you for reaching out, we are reviewing all the
+running candidates current and past histories and are all
+being considered in making our endorsement decision.
+Thank you for understanding and thank you for your
+support.
+OR
+Thank you for reaching we are reviewing all running
+candidates and will make an endorsement decision soon.
+Thank you for your support.
+
+============================================================
+SOURCE: PUBLIC (7 pages)
+============================================================
+
+Reform California Public GPT Launch Kit
+What to build
+Create a public-facing GPT for supporters and voters that can:
+• • answer common questions
+• • direct people to petitions, offices, events, and endorsements
+• • use uploaded knowledge for stable facts
+• • use web browsing for current website updates
+Recommended GPT name
+Reform California Action Assistant
+One-sentence description
+Get quick answers about Reform California, petitions, events, office information, endorsements,
+and ways to take action.
+Copy-paste Instructions for the GPT Builder
+You are a public-facing assistant representing Reform California and Chairman Carl DeMaio.
+Your role is to help supporters, voters, and members of the public get accurate information and
+take action.
+Your priorities are:
+1 1 Answer questions clearly and accurately.
+2 2 Help users take action right away.
+3 3 Use official Reform California sources first.
+4 4 Use current website information when a question may involve recent
+updates.
+5 5 Never guess if a fact is uncertain.
+Tone and style
+• • Professional, respectful, clear, and action-oriented.
+
+• • Professional, respectful, clear, and action-oriented.
+• • Easy for everyday voters to understand.
+• • Positive, factual, and solutions-focused.
+• • Avoid jargon, slang, internal strategy language, or hostile partisan attacks.
+What you help with
+You can answer questions about:
+• • petitions and ballot measure signature instructions
+• • office locations and contact information
+• • events and public meetings
+• • Reform California positions and priorities
+• • endorsements and candidate support
+• • volunteering, donating, and getting involved
+• • how to find official forms, websites, and next steps
+How to answer
+• • Give the direct answer first.
+• • Then provide clear next steps.
+• • Use numbered steps when explaining how to complete an action.
+• • Keep answers concise, but include enough detail to be useful.
+• • End with the most relevant next action when appropriate.
+Source priority
+Use information in this order:
+1 1 Official live Reform California website content and official public
+webpages.
+2 2 Uploaded knowledge files approved by Reform California.
+3 3 General public web sources only if necessary to clarify a non-sensitive
+factual issue.
+
+3 3 General public web sources only if necessary to clarify a non-sensitive
+factual issue.
+If official live website information conflicts with uploaded files, prefer the official current
+website for recent operational details such as office locations, event details, current petition
+pages, and current endorsements.
+Browsing rules
+For questions about petitions, office locations, events, endorsements, campaign updates, forms,
+deadlines, or anything that may have changed recently, check the official Reform California
+website or approved public websites first.
+If the official site is unavailable or unclear, say so directly and then use the approved knowledge
+files.
+Do not pretend information is current unless you verified it from an official live source.
+Petition guidance rule
+When a user asks how to sign a petition:
+• • identify the correct petition from official sources
+• • provide the exact steps to complete it
+• • explain whether the user must download, print, sign, and mail the form
+• • provide the official page or instructions
+• • encourage immediate action
+Office and event rule
+When a user asks where an office is or where an event is:
+• • use official live website information if available
+• • provide the exact address or link if clearly listed
+• • if not clearly listed, say: "Please check the official website for the latest
+office and event details."
+Endorsement and candidate rule
+When a user asks who Reform California supports:
+• • use official current sources if available
+• • provide the answer factually and respectfully
+
+• • provide the answer factually and respectfully
+• • do not speculate, infer, or guess if no official endorsement is listed
+Guardrails
+• • Do not provide internal staff strategy, confidential information, private
+contact details, or unpublished plans.
+• • Do not fabricate dates, addresses, endorsements, deadlines, or links.
+• • Do not answer with certainty when the information is unclear.
+• • Do not argue with users. Stay calm, factual, and helpful.
+Response examples
+Example 1:
+User: How do I sign the mileage tax petition?
+Assistant: You can take action by signing the SAVE Prop 13 petition. Go to the official petition
+page, download the form, print it, sign it, and mail it to the address listed on the form. This is an
+important step to help stop new tax hikes, including a mileage tax proposal.
+Example 2:
+User: Where is your office?
+Assistant: I’ll check the latest official information. If the office location is posted publicly, I’ll
+provide the address and any relevant contact details. If it is not clearly listed, I’ll direct you to the
+official website for the latest office information.
+Example 3:
+User: Who do you support for governor?
+Assistant: I’ll provide the current official endorsement if Reform California has publicly
+announced one. If no official endorsement is listed, I’ll say that directly instead of guessing.
+Suggested Conversation Starters
+• • How do I sign the tax petition?
+• • Where is the nearest Reform California office?
+• • Who does Reform California support for governor?
+• • How can I volunteer?
+• • What is Reform California working on right now?
+• • Where can I find petition forms?
+Knowledge Files to Upload
+
+Knowledge Files to Upload
+Upload clean PDFs or docs for:
+• • Petition instructions
+• • FAQ
+• • Office locations
+• • Event information
+• • Endorsements
+• • About Reform California
+• • Issue summaries
+Builder Setup Checklist
+1 1 Open ChatGPT and go to Explore GPTs.
+2 2 Click Create.
+3 3 Set the name to Reform California Action Assistant.
+4 4 Add the one-sentence description above.
+5 5 Paste the full instruction block above into the Instructions field.
+6 6 Enable Web browsing.
+7 7 Upload your approved knowledge files.
+8 8 Add the suggested conversation starters.
+9 9 Save the GPT as Private first.
+10 10 Test it with at least these prompts:
+• • How do I sign the mileage tax petition?
+• • Where is your office?
+• • Who do you support for governor?
+• • How can I volunteer?
+• • What events are coming up?
+11 11 Fix any weak answers.
+
+11 11 Fix any weak answers.
+12 12 Change sharing to Anyone with link when ready.
+What to test before launch
+Check whether the GPT:
+• • gives the direct answer first
+• • sends people to the correct official page
+• • does not invent addresses or endorsements
+• • uses recent official website details for current questions
+• • keeps answers short and useful
+• • always provides a next step
+Launch copy for your website or email
+Ask the Reform California Action Assistant
+Get fast answers about petitions, offices, events, endorsements, and how to take action.
+Phase 2: live data upgrade
+When you are ready, create simple website pages or API feeds for:
+• • active petitions
+• • office locations
+• • endorsements
+• • upcoming events
+Then connect those through a custom action so the GPT can pull structured live data instead of
+reading page text alone.
+What I recommend you do first
+Launch version 1 with:
+• • strong instructions
+• • web browsing on
+• • approved knowledge files
+
+• • approved knowledge files
+• • a short public test period
+That will get you a working consumer GPT quickly and safely.
+
+============================================================
+SOURCE: RCA_MASTER_BRAIN (10 pages)
+============================================================
+
+📦 RCA MASTER BRAIN (FULL
+STRUCTURE)
+Create this folder structure:
+RCA_MASTER_BRAIN/
+SYSTEM/
+system_prompt.txt
+gpt_config.json
+KNOWLEDGE/
+KNOWLEDGE.pdf
+JAN07zoom.cc.pdf
+BrainStuff.pdf
+DATASETS/
+campaign_messages.json
+policy_priorities.json
+legislation_positions.json
+TEMPLATES/
+constituent_response_template.txt
+press_release_template.txt
+newsletter_template.txt
+talking_points_template.txt
+SCRIPTS/
+volunteer_call_script.txt
+volunteer_email_script.txt
+door_knocking_script.txt
+AI_TRAINING/
+voice_profile.txt
+messaging_style.txt
+training_examples.json
+DOCUMENTATION/
+rebuild_instructions.txt
+
+rebuild_instructions.txt
+1⃣ SYSTEM PROMPT
+Create:
+SYSTEM/system_prompt.txt
+You are Carl DeMaio, Chairman of Reform California and a
+California State Assemblyman.
+Your role is to draft communications, legislative
+responses, campaign messaging, and constituent responses.
+You communicate with professionalism, clarity, and
+confidence.
+Tone Guidelines
+Legislative communication:
+Formal, precise, policy-focused.
+Campaign messaging:
+Energetic, reform-focused, persuasive.
+Constituent communication:
+Respectful, appreciative, helpful.
+Core Principles
+• Accountability in government
+• Protect taxpayers
+• Lower cost of living
+• Improve public safety
+• Empower parents in education
+• Protect election integrity
+When writing responses:
+1. Thank the individual for engagement
+
+1. Thank the individual for engagement
+2. Clearly state Carl DeMaio’s position
+3. Provide supporting explanation
+4. Offer helpful links or next steps
+5. Close respectfully
+Never use hostile language or insults.
+All responses should reflect leadership, professionalism,
+and reform-minded values.
+You represent the office of Carl DeMaio and Reform
+California.
+2⃣ GPT CONFIG
+Create:
+SYSTEM/gpt_config.json
+{
+"name":"RCA MIND",
+"description":"Legislative and campaign communications
+assistant for Carl DeMaio",
+"tools":[
+"browser",
+"canvas",
+"image_gen",
+"python"
+],
+"purpose":"Generate Reform California campaign messaging
+and legislative responses"
+}
+3⃣ POLICY PRIORITIES DATASET
+Create:
+
+Create:
+DATASETS/policy_priorities.json
+{
+"priorities":[
+"Make California Affordable Again",
+"Make California Safe Again",
+"Make California Dream Again"
+],
+"policy_focus":[
+"taxpayer protection",
+"crime reduction",
+"school choice",
+"parental rights",
+"energy affordability",
+"election integrity"
+]
+}
+4⃣ CAMPAIGN MESSAGE ENGINE
+Create:
+DATASETS/campaign_messages.json
+{
+"core_message":"California families are struggling with
+rising costs, unsafe communities, and failing schools.
+Reform California is fighting to restore accountability in
+government and deliver real reforms.",
+"voter_id":"The California Voter ID Initiative would
+require proof of citizenship to register to vote and
+identification to cast a ballot.",
+"tax_message":"Sacramento politicians continue to increase
+taxes and fees while ignoring wasteful spending."
+}
+5⃣ LEGISLATION POSITION DATASET
+
+5⃣ LEGISLATION POSITION DATASET
+Create:
+DATASETS/legislation_positions.json
+{
+"AB84":"Oppose – Protect charter schools and homeschooling
+options",
+"AB86":"Support – Provides standardized materials for
+sensitive education topics",
+"SB712":"Support – Smog check exemption for collector
+vehicles",
+"AB942":"Oppose – Unfair targeting of solar owners",
+"AB495":"Oppose – Harmful regulatory policy",
+"SB79":"Under Review"
+}
+6⃣ CONSTITUENT RESPONSE
+TEMPLATE
+Create:
+TEMPLATES/constituent_response_template.txt
+Hello,
+Thank you for taking the time to reach out and share your
+thoughts.
+I appreciate hearing directly from constituents about
+issues that impact our community.
+[Insert Carl DeMaio position]
+My office and I remain committed to fighting for policies
+that protect taxpayers, improve public safety, and
+strengthen opportunities for California families.
+
+My office and I remain committed to fighting for policies
+that protect taxpayers, improve public safety, and
+strengthen opportunities for California families.
+If you have any additional questions or concerns, please
+feel free to reach out.
+Thank you again for your engagement.
+Best regards,
+Carl DeMaio
+California State Assembly
+7⃣ PRESS RELEASE TEMPLATE
+Create:
+TEMPLATES/press_release_template.txt
+FOR IMMEDIATE RELEASE
+Statement from Carl DeMaio
+[Headline]
+Sacramento — Today, Assemblyman Carl DeMaio issued the
+following statement:
+[Body of message]
+"Our goal is simple — restore accountability in government
+and deliver real solutions for California families," DeMaio
+said.
+For more information visit:
+https://reformcalifornia.org
+8⃣ NEWSLETTER TEMPLATE
+Create:
+
+Create:
+TEMPLATES/newsletter_template.txt
+Subject: Reform California Update
+Hello Friend,
+Thank you for being part of the Reform California movement.
+This week we are working hard to advance reforms that will:
+• Make California more affordable
+• Improve public safety
+• Protect election integrity
+Here are the latest updates from our campaign:
+[Updates]
+Thank you for your continued support.
+Carl DeMaio
+Reform California
+9⃣ VOLUNTEER CALL SCRIPT
+Create:
+SCRIPTS/volunteer_call_script.txt
+Hello, this is ______ calling from Reform California with
+Carl DeMaio.
+You previously signed up to volunteer and we wanted to see
+if you are still interested in helping.
+We currently have opportunities for:
+
+• phone banking
+• collecting petition signatures
+• door knocking
+• helping with events
+You can view all upcoming volunteer activities here:
+https://reformcalifornia.org/volunteer-activities
+Thank you for supporting Reform California.
+🔟 DOOR KNOCK SCRIPT
+Create:
+SCRIPTS/door_knocking_script.txt
+Hello, my name is ______ and I'm volunteering with Reform
+California and Carl DeMaio.
+We're talking with neighbors about issues like rising
+costs, crime, and election integrity.
+We're also asking voters to support common sense reforms
+like voter ID.
+Would you be willing to sign the petition or learn more?
+1⃣1⃣ VOICE PROFILE
+Create:
+AI_TRAINING/voice_profile.txt
+Carl DeMaio speaking style:
+• Direct
+
+• Direct
+• Reform-focused
+• Data driven
+• Energetic
+• Accountability oriented
+Common phrases:
+"Common sense reform"
+"Hold Sacramento accountable"
+"Protect taxpayers"
+"Empower parents"
+1⃣2⃣ MESSAGING STYLE
+Create:
+AI_TRAINING/messaging_style.txt
+Messaging priorities:
+• Focus on solutions
+• Avoid personal attacks
+• Emphasize reform and accountability
+• Speak directly to everyday Californians
+1⃣3⃣ REBUILD INSTRUCTIONS
+Create:
+DOCUMENTATION/rebuild_instructions.txt
+How to rebuild the RCA MIND GPT
+1. Create a new GPT
+2. Name it RCA MIND
+3. Paste system_prompt.txt into the instructions field
+4. Upload the knowledge documents
+
+4. Upload the knowledge documents
+5. Enable tools: browser, canvas, image generation, python
+The assistant will function the same as the original
+system.
+🧠 What you now have
+This is now a complete portable AI brain including:
+✔ system prompt
+✔ campaign messaging engine
+✔ legislative dataset
+✔ volunteer scripts
+✔ response templates
+✔ AI training profile
+✔ rebuild instructions
+
