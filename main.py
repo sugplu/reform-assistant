@@ -1,8 +1,10 @@
 import json
 import logging
 import os
+import re
 import threading
 import time
+from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import List
@@ -61,7 +63,11 @@ def load_knowledge_files() -> list[dict]:
     return docs
 
 
-def chunk_text(text: str, chunk_size: int = 2200, overlap: int = 250) -> list[str]:
+def tokenize(text: str) -> list[str]:
+    return re.findall(r"[a-zA-Z0-9']+", text.lower())
+
+
+def chunk_text(text: str, chunk_size: int = 1800, overlap: int = 200) -> list[str]:
     chunks = []
     start = 0
     text_length = len(text)
@@ -83,12 +89,19 @@ def build_knowledge_chunks(docs: list[dict]) -> list[dict]:
 
     for doc in docs:
         for idx, chunk in enumerate(chunk_text(doc["text"])):
+            lines = [line.strip() for line in chunk.splitlines() if line.strip()]
+            heading = lines[0][:160] if lines else doc["name"]
+            tokens = tokenize(chunk)
+
             chunks.append(
                 {
                     "source": doc["name"],
                     "chunk_id": idx,
+                    "heading": heading,
                     "text": chunk,
                     "search_text": chunk.lower(),
+                    "tokens": tokens,
+                    "token_counts": Counter(tokens),
                 }
             )
 
@@ -100,19 +113,37 @@ KNOWLEDGE_DOCS = load_knowledge_files()
 KNOWLEDGE_CHUNKS = build_knowledge_chunks(KNOWLEDGE_DOCS)
 
 
-def get_relevant_knowledge(query: str, max_chunks: int = 5, max_chars: int = 10000) -> str:
+def get_relevant_knowledge(query: str, max_chunks: int = 6, max_chars: int = 12000) -> str:
     if not query.strip() or not KNOWLEDGE_CHUNKS:
         return ""
 
-    terms = [term.lower() for term in query.split() if len(term.strip()) > 2]
-    if not terms:
+    query_lower = query.lower().strip()
+    query_tokens = tokenize(query)
+    if not query_tokens:
         return ""
 
+    query_counts = Counter(query_tokens)
     scored = []
+
     for item in KNOWLEDGE_CHUNKS:
         score = 0
-        for term in terms:
-            score += item["search_text"].count(term)
+
+        if query_lower in item["search_text"]:
+            score += 200
+
+        if query_lower in item["heading"].lower():
+            score += 120
+
+        phrase_parts = [p.strip() for p in re.split(r"[?.!,;:]", query_lower) if len(p.strip()) > 8]
+        for phrase in phrase_parts:
+            if phrase in item["search_text"]:
+                score += 80
+
+        for token, count in query_counts.items():
+            if len(token) <= 2:
+                continue
+            token_hits = item["token_counts"].get(token, 0)
+            score += min(token_hits, 5) * (8 + count)
 
         if score > 0:
             scored.append((score, item))
@@ -128,7 +159,11 @@ def get_relevant_knowledge(query: str, max_chunks: int = 5, max_chars: int = 100
         if key in seen:
             continue
 
-        formatted = f"=== SOURCE: {item['source']} ===\n{item['text']}"
+        formatted = (
+            f"=== SOURCE: {item['source']} | SECTION: {item['heading']} | SCORE: {score} ===\n"
+            f"{item['text']}"
+        )
+
         if total_chars + len(formatted) > max_chars:
             break
 
@@ -170,7 +205,7 @@ class TextExtractor(HTMLParser):
         return " ".join(self.parts)
 
 
-def fetch_page(url: str, max_chars: int = 2200) -> str:
+def fetch_page(url: str, max_chars: int = 1800) -> str:
     try:
         response = httpx.get(
             url,
@@ -323,22 +358,37 @@ Express appreciation when users want to volunteer, donate, or help.
 
 def build_system_prompt(user_query: str) -> str:
     prompt = BASE_SYSTEM_PROMPT
-
     relevant_knowledge = get_relevant_knowledge(user_query)
+
     if relevant_knowledge:
         prompt += (
-            "\n\n━━━ RELEVANT KNOWLEDGE SNIPPETS ━━━\n"
-            "Use these snippets when relevant. Do not assume anything beyond them.\n\n"
+            "\n\n━━━ REQUIRED KNOWLEDGE SNIPPETS ━━━\n"
+            "Answer from these snippets when they contain the answer. "
+            "Do not ignore them. Do not contradict them. "
+            "If the snippets answer the question, use them as the primary source.\n\n"
             f"{relevant_knowledge}"
+        )
+    else:
+        prompt += (
+            "\n\nNo relevant knowledge snippet was found. "
+            "If the answer is not clearly available from official live site content, say you are not certain."
         )
 
     if live_context["content"]:
         age_minutes = int((time.time() - live_context["last_updated"]) / 60)
         prompt += (
             f"\n\n━━━ LIVE SITE CONTENT (refreshed {age_minutes} min ago) ━━━\n"
-            "Use this for current website content, events, campaigns, and updates.\n\n"
-            f"{live_context['content'][:7000]}"
+            "Use this for current website details only when needed.\n\n"
+            f"{live_context['content'][:5000]}"
         )
+
+    prompt += (
+        "\n\nFINAL ACCURACY RULES\n"
+        "- If the answer appears in the knowledge snippets, use that answer.\n"
+        "- Do not replace a specific known answer with a vague summary.\n"
+        "- Quote exact operational details like links, phone numbers, addresses, steps, and deadlines when present.\n"
+        "- If the sources conflict, say so and send the user to the official page.\n"
+    )
 
     return prompt
 
@@ -390,6 +440,14 @@ async def health():
     }
 
 
+@app.get("/debug-search")
+async def debug_search(q: str):
+    return {
+        "query": q,
+        "results": get_relevant_knowledge(q, max_chunks=3, max_chars=6000),
+    }
+
+
 @app.post("/chat")
 async def chat(body: ChatRequest):
     messages = normalize_messages(body.messages)
@@ -403,7 +461,7 @@ async def chat(body: ChatRequest):
                 messages=[{"role": "system", "content": system_prompt}] + messages,
                 stream=True,
                 max_completion_tokens=int(os.getenv("MAX_TOKENS", "700")),
-                temperature=float(os.getenv("TEMPERATURE", "0.2")),
+                temperature=float(os.getenv("TEMPERATURE", "0.1")),
             )
 
             for chunk in stream:
@@ -427,9 +485,6 @@ async def chat(body: ChatRequest):
     )
 
 
-# ---------------------------------------------------------------------------
-# Entry point
-# ---------------------------------------------------------------------------
 if __name__ == "__main__":
     import uvicorn
 
