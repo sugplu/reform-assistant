@@ -1,33 +1,22 @@
+import os
 import json
 import logging
-import os
-import re
-import threading
-import time
-from collections import Counter
-from html.parser import HTMLParser
 from pathlib import Path
-from typing import List
-
-import httpx
-from dotenv import load_dotenv
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import HTMLResponse, StreamingResponse
+from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import StreamingResponse, HTMLResponse
+from fastapi.middleware.cors import CORSMiddleware
 from openai import OpenAI
+from dotenv import load_dotenv
 from pydantic import BaseModel
+from typing import List
 
 load_dotenv()
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 logger = logging.getLogger(__name__)
 
-BASE_DIR = Path(__file__).resolve().parent
-STATIC_DIR = BASE_DIR / "static"
-KNOWLEDGE_DIR = BASE_DIR / "knowledge"
-
-app = FastAPI(title="Reform California Assistant")
+app = FastAPI(title="Reform California 24/7 Assistant")
 
 app.add_middleware(
     CORSMiddleware,
@@ -38,389 +27,255 @@ app.add_middleware(
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-
-def load_knowledge_files() -> list[dict]:
-    docs = []
-    if not KNOWLEDGE_DIR.exists():
-        logger.warning("knowledge directory not found at %s", KNOWLEDGE_DIR)
-        return docs
-
-    for file_path in sorted(KNOWLEDGE_DIR.iterdir()):
-        if file_path.suffix.lower() not in {".txt", ".md"}:
-            continue
-
-        try:
-            text = file_path.read_text(encoding="utf-8", errors="replace").strip()
-            if text:
-                docs.append({"name": file_path.name, "text": text})
-                logger.info("Loaded knowledge file: %s (%s chars)", file_path.name, len(text))
-        except Exception as exc:
-            logger.warning("Could not read %s: %s", file_path.name, exc)
-
-    return docs
-
-
-def tokenize(text: str) -> list[str]:
-    return re.findall(r"[a-zA-Z0-9']+", text.lower())
-
-
-def chunk_text(text: str, chunk_size: int = 1800, overlap: int = 200) -> list[str]:
+# ---------------------------------------------------------------------------
+# Optional: load extra knowledge files from /knowledge folder
+# Drop REFORM_Notes_Export.txt, BrainStuff context, etc. in there
+# ---------------------------------------------------------------------------
+def load_knowledge() -> str:
+    knowledge_dir = Path("knowledge")
+    if not knowledge_dir.exists():
+        return ""
     chunks = []
-    start = 0
-    text_length = len(text)
+    for f in sorted(knowledge_dir.iterdir()):
+        if f.suffix in (".txt", ".md"):
+            try:
+                text = f.read_text(encoding="utf-8", errors="replace").strip()
+                chunks.append(f"=== {f.name} ===\n{text}")
+                logger.info(f"Loaded knowledge file: {f.name} ({len(text)} chars)")
+            except Exception as e:
+                logger.warning(f"Could not read {f.name}: {e}")
+    return "\n\n".join(chunks)
 
-    while start < text_length:
-        end = min(start + chunk_size, text_length)
-        chunk = text[start:end].strip()
-        if chunk:
-            chunks.append(chunk)
-        if end >= text_length:
-            break
-        start += chunk_size - overlap
+EXTRA_KNOWLEDGE = load_knowledge()
 
-    return chunks
-
-
-def build_knowledge_chunks(docs: list[dict]) -> list[dict]:
-    chunks = []
-
-    for doc in docs:
-        for idx, chunk in enumerate(chunk_text(doc["text"])):
-            lines = [line.strip() for line in chunk.splitlines() if line.strip()]
-            heading = lines[0][:160] if lines else doc["name"]
-            tokens = tokenize(chunk)
-
-            chunks.append(
-                {
-                    "source": doc["name"],
-                    "chunk_id": idx,
-                    "heading": heading,
-                    "text": chunk,
-                    "search_text": chunk.lower(),
-                    "tokens": tokens,
-                    "token_counts": Counter(tokens),
-                }
-            )
-
-    logger.info("Built %s knowledge chunks", len(chunks))
-    return chunks
-
-
-KNOWLEDGE_DOCS = load_knowledge_files()
-KNOWLEDGE_CHUNKS = build_knowledge_chunks(KNOWLEDGE_DOCS)
-
-
-def get_relevant_knowledge(query: str, max_chunks: int = 6, max_chars: int = 12000) -> str:
-    if not query.strip() or not KNOWLEDGE_CHUNKS:
-        return ""
-
-    query_lower = query.lower().strip()
-    query_tokens = tokenize(query)
-    if not query_tokens:
-        return ""
-
-    query_counts = Counter(query_tokens)
-    scored = []
-
-    for item in KNOWLEDGE_CHUNKS:
-        score = 0
-
-        if query_lower in item["search_text"]:
-            score += 200
-
-        if query_lower in item["heading"].lower():
-            score += 120
-
-        phrase_parts = [p.strip() for p in re.split(r"[?.!,;:]", query_lower) if len(p.strip()) > 8]
-        for phrase in phrase_parts:
-            if phrase in item["search_text"]:
-                score += 80
-
-        for token, count in query_counts.items():
-            if len(token) <= 2:
-                continue
-            token_hits = item["token_counts"].get(token, 0)
-            score += min(token_hits, 5) * (8 + count)
-
-        if score > 0:
-            scored.append((score, item))
-
-    scored.sort(key=lambda row: row[0], reverse=True)
-
-    selected = []
-    total_chars = 0
-    seen = set()
-
-    for score, item in scored:
-        key = (item["source"], item["chunk_id"])
-        if key in seen:
-            continue
-
-        formatted = (
-            f"=== SOURCE: {item['source']} | SECTION: {item['heading']} | SCORE: {score} ===\n"
-            f"{item['text']}"
-        )
-
-        if total_chars + len(formatted) > max_chars:
-            break
-
-        selected.append(formatted)
-        seen.add(key)
-        total_chars += len(formatted)
-
-        if len(selected) >= max_chunks:
-            break
-
-    return "\n\n".join(selected)
-
-
-class TextExtractor(HTMLParser):
-    def __init__(self) -> None:
-        super().__init__()
-        self.parts: List[str] = []
-        self.skip_depth = 0
-        self.skip_tags = {"script", "style", "nav", "footer", "head", "header"}
-
-    def handle_starttag(self, tag, attrs):
-        if tag in self.skip_tags:
-            self.skip_depth += 1
-
-    def handle_endtag(self, tag):
-        if tag in self.skip_tags and self.skip_depth > 0:
-            self.skip_depth -= 1
-
-    def handle_data(self, data):
-        if self.skip_depth == 0:
-            cleaned = " ".join(data.split())
-            if cleaned:
-                self.parts.append(cleaned)
-
-    def get_text(self) -> str:
-        return " ".join(self.parts)
-
-
-def fetch_page(url: str, max_chars: int = 1800) -> str:
-    try:
-        response = httpx.get(
-            url,
-            timeout=15,
-            follow_redirects=True,
-            headers={"User-Agent": "Mozilla/5.0 ReformCA-Assistant/1.0"},
-        )
-        response.raise_for_status()
-        parser = TextExtractor()
-        parser.feed(response.text)
-        return parser.get_text()[:max_chars]
-    except Exception as exc:
-        logger.warning("Could not fetch %s: %s", url, exc)
-        return ""
-
-
-LIVE_PAGES = [
-    ("Home", "https://reformcalifornia.org/"),
-    ("Events", "https://reformcalifornia.org/events"),
-    ("Campaigns", "https://reformcalifornia.org/campaigns"),
-    ("Volunteer", "https://reformcalifornia.org/volunteer"),
-    ("Voter Guides", "https://reformcalifornia.org/voter-guides"),
-]
-
-live_context = {
-    "content": "",
-    "last_updated": 0.0,
-}
-
-
-def refresh_live_context() -> None:
-    logger.info("Refreshing live site content...")
-    parts = []
-
-    for label, url in LIVE_PAGES:
-        text = fetch_page(url)
-        if text:
-            parts.append(f"[{label} - {url}]\n{text}")
-
-    live_context["content"] = "\n\n".join(parts)
-    live_context["last_updated"] = time.time()
-    logger.info("Live content refreshed.")
-
-
-def background_refresh(interval_seconds: int = 3600) -> None:
-    while True:
-        time.sleep(interval_seconds)
-        refresh_live_context()
-
-
-refresh_live_context()
-threading.Thread(target=background_refresh, daemon=True).start()
-
-BASE_SYSTEM_PROMPT = """
+# ---------------------------------------------------------------------------
+# System Prompt
+# ---------------------------------------------------------------------------
+SYSTEM_PROMPT = """
 You are the official 24/7 public assistant for Reform California and Chairman Carl DeMaio.
 Your role is to help supporters, voters, donors, and the public get accurate information
 and take immediate action. You are knowledgeable, warm, professional, and action-oriented.
-You speak on behalf of Reform California's team. You are not Carl himself.
+You speak on behalf of Reform California's team — you are not Carl himself.
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 RESPONSE RULES
-1. Give the direct answer first.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. Give the direct answer first — no preamble.
 2. Add the best link or contact.
 3. Offer a clear next step or action.
 4. Use numbered steps for multi-step processes.
 5. Keep answers concise but complete.
-6. Never invent facts, dates, endorsements, office details, petition details, or deadlines.
-7. If a detail is uncertain or not verified, say so clearly and direct the user to the official source.
+6. Never invent facts, dates, endorsements, or petition details.
+7. If unsure, say so and direct to https://reformcalifornia.org
 
-SOURCE PRIORITY
-1. Official Reform California website and official public pages.
-2. Relevant snippets from uploaded knowledge files.
-3. Live fetched website content included in this prompt.
-4. General public facts only when necessary and low risk.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+WHO WE ARE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Reform California is a grassroots political organization focused on:
+- Taxpayer protection
+- Public safety improvement
+- Education reform and parental rights
+- Election integrity
 
+Three core priorities:
+  Make California Affordable Again
+  Make California Safe Again
+  Make California Dream Again
+
+Core message: California families are struggling with rising costs, unsafe communities,
+and failing schools. Reform California is fighting to restore accountability in government
+and deliver real reforms. Chairman Carl DeMaio is also California State Assemblyman for AD 75.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 KEY LINKS
-Main website: https://reformcalifornia.org
-Events / Town Halls: https://reformcalifornia.org/events
-Volunteer signup: https://reformcalifornia.org/volunteer
-Volunteer activities: https://reformcalifornia.org/volunteer-activities
-Volunteer shifts: https://reformcalifornia.volunteershift.com/shifts?sort=soonest
-All campaigns: https://reformcalifornia.org/campaigns
-Election Integrity: https://reformcalifornia.org/campaigns/election-integrity-initiative
-Block Rate Hikes: https://reformcalifornia.org/campaigns/block-the-rate-hikes
-Voter guides: https://reformcalifornia.org/voter-guides
-Statewide guide: https://reformcalifornia.org/voter-guides/california
-Petition mail form: https://reformcalifornia.org/forms/volunteer-to-stop-the-savings-tax
-Signature volunteer form: https://reformcalifornia.org/forms/election-integrity-signature-volunteer-sign-up
-Voter registration: https://www.sos.ca.gov/elections/registration-status
-Polling place lookup: https://www.sos.ca.gov/elections/polling-place
-Ballot tracking: https://www.trackmyballot.org
-Campaign finance: https://cal-access.sos.ca.gov/
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Main website:          https://reformcalifornia.org
+Events / Town Halls:   https://reformcalifornia.org/events
+Volunteer signup:      https://reformcalifornia.org/volunteer
+Volunteer activities:  https://reformcalifornia.org/volunteer-activities
+Volunteer shifts:      https://reformcalifornia.volunteershift.com/shifts?sort=soonest
+All campaigns:         https://reformcalifornia.org/campaigns
+Election Integrity:    https://reformcalifornia.org/campaigns/election-integrity-initiative
+Block Rate Hikes:      https://reformcalifornia.org/campaigns/block-the-rate-hikes
+Voter guides:          https://reformcalifornia.org/voter-guides
+Statewide guide:       https://reformcalifornia.org/voter-guides/california
+Petition mail form:    https://reformcalifornia.org/forms/volunteer-to-stop-the-savings-tax
+Sig volunteer form:    https://reformcalifornia.org/forms/election-integrity-signature-volunteer-sign-up
+Voter registration:    https://www.sos.ca.gov/elections/registration-status
+Polling place lookup:  https://www.sos.ca.gov/elections/polling-place
+Ballot tracking:       https://www.trackmyballot.org
+Campaign finance:      https://cal-access.sos.ca.gov/
+Donate:                https://reformcalifornia.org (click the yellow contribution button)
 
-CONTACT
-Volunteer hotline: 619-354-7257
-Volunteer email: volunteers@reformcalifornia.org
-Walk-in office: 1320 W Valley Pkwy #304, Escondido CA 92029
-Mailing address: Reform California, PO Box 27227, San Diego, CA 92198
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CONTACT & OFFICE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Volunteer hotline:  619-354-7257
+Volunteer email:    volunteers@reformcalifornia.org
+Walk-in office:     1320 W Valley Pkwy #304, Escondido CA 92029
+Office hours:       Mon–Fri 9am–3pm | Sat 9am–5pm | Sun 11am–3pm
+Mailing address:    Reform California, PO Box 27227, San Diego, CA 92198
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TOPIC PLAYBOOK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PETITIONS
+- Always distinguish online interest forms from official ballot petitions.
+- Online form = registers interest or requests a mailed petition kit. It is NOT
+  an official signature.
+- Official ballot petition = physical wet signature required. Cannot be submitted online.
+- Downloadable petitions are NOT available. Even small formatting errors can
+  invalidate an entire petition sheet, so only official hard copies are used.
+- To request a mailed petition kit:
+    1. Go to: https://reformcalifornia.org/forms/volunteer-to-stop-the-savings-tax
+    2. Fill out the form so the team knows how many sheets to send and where.
+    3. Kit arrives within approximately one week.
+    4. Each petition page has 7 signature spaces.
+    5. Mail completed petitions to: Reform California, PO Box 27227, San Diego, CA 92198
+    6. Current deadline: April 15th — every signature makes a difference!
+
+VOLUNTEER
+- Signup: https://reformcalifornia.org/volunteer
+- Opportunities (phone banking, door knocking, events, signature collecting):
+    https://reformcalifornia.org/volunteer-activities
+- Shift scheduling: https://reformcalifornia.volunteershift.com/shifts?sort=soonest
+- Phone banking CAN be done from home.
+- Walk-in: 1320 W Valley Pkwy #304, Escondido CA 92029
+- Hotline: 619-354-7257 | Email: volunteers@reformcalifornia.org
+- If someone signed up but heard nothing: give hotline and email.
+
+EVENTS / TOWN HALLS
+- All events: https://reformcalifornia.org/events
+- Do not invent dates or venues — always direct to the events page.
+- Town halls are typically free; food and beverages are often served.
+
+VOTER GUIDES
+- Main guide: https://reformcalifornia.org/voter-guides
+- Statewide guide: https://reformcalifornia.org/voter-guides/california
+- If a race or candidate is missing: Reform California either could not support
+  the candidates running or did not have enough information to make an informed
+  recommendation. Do not speculate further.
+
+ENDORSEMENTS
+- Only reference officially published endorsements found on reformcalifornia.org.
+- Never speculate about endorsements.
+
+DONATIONS
+- Donate at: https://reformcalifornia.org (yellow contribution button)
+- Reform California is a non-profit, donor-supported organization.
+- Recurring donations only occur if the recurring box was checked at checkout.
+- Banks sometimes label past one-time donations as "recurring" on statements.
+- For donation issues, advise that the donor relations team will follow up.
+- To adjust email frequency: use the unsubscribe link at the bottom of any
+  Reform California email. Options: weekly, monthly, or none.
+
+LEGISLATIVE CASES
+- Reform California cannot open individual legislative cases.
+- Direct to the person's elected Assemblymember or State Senator's office.
+- Offer to help identify the correct office if they share their full address.
+
+VOTER REGISTRATION & BALLOTS
+- Registration status: https://www.sos.ca.gov/elections/registration-status
+- Polling place: https://www.sos.ca.gov/elections/polling-place
+- Ballot tracking: https://www.trackmyballot.org
+- Ballot curing: the process of correcting errors on a mail ballot that would
+  otherwise cause rejection. Direct to the county registrar instructions they received.
+
+CAMPAIGN FINANCE RECORDS
+- Public records viewable at: https://cal-access.sos.ca.gov/
+- Carl DeMaio for State Assembly 2024 and Reform California both report there.
+
+CAN-SPAM / EMAIL COMPLAINTS
+- Political messages are protected under the First Amendment.
+- CAN-SPAM applies only to commercial email, not political/non-commercial bulk email.
+- To adjust email frequency: unsubscribe link at bottom of any email.
+
+ABOUT CARL DEMAIO
+- Chairman of Reform California.
+- California State Assemblyman for Assembly District 75 (AD 75).
+- Due to high volume, individual calls with Carl are not possible.
+- Carl is present at all in-person and online events: https://reformcalifornia.org/events
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+GUARDRAILS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- Never invent dates, venues, petition availability, or endorsement decisions.
+- Never confuse online interest forms with official ballot petitions.
+- No legal, tax, or campaign finance advice.
+- Do not speculate about candidate motives or internal deliberations.
+- Do not share confidential, internal, or staff information.
+- Do not argue with users. Stay calm and solutions-focused.
+- If uncertain about any fact, direct to https://reformcalifornia.org
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+TONE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Professional, warm, clear, and action-oriented. Use plain language for everyday
+voters. Be positive and solutions-focused. Express appreciation when users reach
+out to volunteer, donate, or get involved. No jargon, slang, or partisan hostility.
 """.strip()
 
-
-def build_system_prompt(user_query: str) -> str:
-    prompt = BASE_SYSTEM_PROMPT
-    relevant_knowledge = get_relevant_knowledge(user_query)
-
-    if relevant_knowledge:
-        prompt += (
-            "\n\n━━━ REQUIRED KNOWLEDGE SNIPPETS ━━━\n"
-            "Answer from these snippets when they contain the answer. "
-            "Do not ignore them. Do not contradict them. "
-            "If the snippets answer the question, use them as the primary source.\n\n"
-            f"{relevant_knowledge}"
-        )
-
-    if live_context["content"]:
-        age_minutes = int((time.time() - live_context["last_updated"]) / 60)
-        prompt += (
-            f"\n\n━━━ LIVE SITE CONTENT (refreshed {age_minutes} min ago) ━━━\n"
-            "Use this for current website details only when needed.\n\n"
-            f"{live_context['content'][:5000]}"
-        )
-
-    prompt += (
-        "\n\nFINAL ACCURACY RULES\n"
-        "- If the answer appears in the knowledge snippets, use that answer.\n"
-        "- Do not replace a specific known answer with a vague summary.\n"
-        "- Quote exact operational details like links, phone numbers, addresses, steps, and deadlines when present.\n"
-        "- Always write full absolute links starting with https:// .\n"
-        "- If the sources conflict, say so and send the user to the official page.\n"
-    )
-
-    return prompt
+# Append any extra knowledge files
+if EXTRA_KNOWLEDGE:
+    SYSTEM_PROMPT += f"\n\n━━━ ADDITIONAL KNOWLEDGE BASE ━━━\n{EXTRA_KNOWLEDGE}"
+    logger.info(f"System prompt enriched with {len(EXTRA_KNOWLEDGE)} chars of extra knowledge.")
 
 
+# ---------------------------------------------------------------------------
+# Models
+# ---------------------------------------------------------------------------
 class Message(BaseModel):
     role: str
     content: str
-
 
 class ChatRequest(BaseModel):
     messages: List[Message]
 
 
-def normalize_messages(messages: List[Message]) -> List[dict]:
-    allowed_roles = {"user", "assistant"}
-    normalized = []
-
-    for message in messages:
-        role = message.role if message.role in allowed_roles else "user"
-        normalized.append({"role": role, "content": message.content})
-
-    return normalized
-
-
-app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
-
+# ---------------------------------------------------------------------------
+# Routes
+# ---------------------------------------------------------------------------
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/")
 async def root():
-    index_path = STATIC_DIR / "index.html"
-    return HTMLResponse(index_path.read_text(encoding="utf-8"))
-
+    with open("static/index.html", "r", encoding="utf-8") as f:
+        return HTMLResponse(f.read())
 
 @app.get("/health")
 async def health():
-    age_minutes = int((time.time() - live_context["last_updated"]) / 60) if live_context["last_updated"] else None
-    return {
-        "status": "ok",
-        "knowledge_files_loaded": len(KNOWLEDGE_DOCS),
-        "knowledge_chunks_loaded": len(KNOWLEDGE_CHUNKS),
-        "live_content_loaded": bool(live_context["content"]),
-        "live_content_age_mins": age_minutes,
-    }
-
-
-@app.get("/debug-search")
-async def debug_search(q: str):
-    return {
-        "query": q,
-        "results": get_relevant_knowledge(q, max_chunks=3, max_chars=6000),
-    }
-
+    return {"status": "ok", "knowledge_loaded": bool(EXTRA_KNOWLEDGE)}
 
 @app.post("/chat")
 async def chat(body: ChatRequest):
-    messages = normalize_messages(body.messages)
-    latest_user_message = next((m.content for m in reversed(body.messages) if m.role == "user"), "")
-    system_prompt = build_system_prompt(latest_user_message)
+    messages = [{"role": m.role, "content": m.content} for m in body.messages]
 
     def generate():
         try:
             stream = client.chat.completions.create(
                 model=os.getenv("OPENAI_MODEL", "gpt-4o"),
-                messages=[{"role": "system", "content": system_prompt}] + messages,
+                messages=[{"role": "system", "content": SYSTEM_PROMPT}] + messages,
                 stream=True,
-                max_completion_tokens=int(os.getenv("MAX_TOKENS", "700")),
-                temperature=float(os.getenv("TEMPERATURE", "0.1")),
+                max_tokens=int(os.getenv("MAX_TOKENS", "900")),
+                temperature=float(os.getenv("TEMPERATURE", "0.3")),
             )
-
             for chunk in stream:
                 delta = chunk.choices[0].delta
-                if getattr(delta, "content", None):
+                if delta.content:
                     yield f"data: {json.dumps({'content': delta.content})}\n\n"
-
             yield "data: [DONE]\n\n"
-        except Exception as exc:
-            logger.error("OpenAI error: %s", exc)
-            yield f"data: {json.dumps({'error': 'Something went wrong. Please try again or call 619-354-7257.'})}\n\n"
-            yield "data: [DONE]\n\n"
+        except Exception as e:
+            logger.error(f"OpenAI error: {e}")
+            yield f"data: {json.dumps({'error': 'Something went wrong. Please try again or call us at 619-354-7257.'})}\n\n"
 
-    return StreamingResponse(
-        generate(),
-        media_type="text/event-stream",
-        headers={
-            "Cache-Control": "no-cache",
-            "Connection": "keep-alive",
-        },
-    )
+    return StreamingResponse(generate(), media_type="text/event-stream")
 
 
+# ---------------------------------------------------------------------------
+# Entry point
+# ---------------------------------------------------------------------------
 if __name__ == "__main__":
     import uvicorn
-
-    port = int(os.getenv("PORT", "8000"))
+    port = int(os.getenv("PORT", 8000))
     uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
