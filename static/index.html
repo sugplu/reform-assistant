@@ -3,884 +3,498 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ask Reform California</title>
+  <title>Reform California — 24/7 Assistant</title>
   <style>
-    :root {
-      --ink-950: #07111d;
-      --ink-900: #0d1b2c;
-      --ink-800: #132741;
-      --blue-700: #1d5fbe;
-      --blue-600: #2f76dc;
-      --blue-100: #e8f1ff;
-      --gold-500: #e7b82f;
-      --gold-300: #f6d97c;
-      --stone-900: #182230;
-      --stone-700: #344054;
-      --stone-500: #667085;
-      --stone-300: #d0d5dd;
-      --stone-200: #eaecf0;
-      --white: #ffffff;
-      --danger-bg: #fef3f2;
-      --danger-border: #fecdca;
-      --danger-text: #b42318;
-      --shadow-xl: 0 28px 80px rgba(7, 17, 29, 0.16);
-      --shadow-lg: 0 16px 40px rgba(7, 17, 29, 0.09);
-      --shadow-md: 0 8px 20px rgba(7, 17, 29, 0.06);
-      --radius-2xl: 32px;
-      --radius-xl: 24px;
-      --radius-lg: 18px;
-      --radius-md: 14px;
-    }
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f0f2f5; }
 
-    * { box-sizing: border-box; }
-
-    html, body {
-      margin: 0;
-      min-height: 100%;
-      font-family: Georgia, "Times New Roman", serif;
-      background:
-        radial-gradient(circle at top left, rgba(246, 217, 124, 0.22), transparent 24%),
-        linear-gradient(180deg, #eef3f8 0%, #f8fafc 42%, #edf2f7 100%);
-      color: var(--stone-900);
-    }
-
-    body { padding: 22px; }
-
-    .app {
-      width: min(100%, 1180px);
-      min-height: calc(100vh - 44px);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 320px minmax(0, 1fr);
-      background: rgba(255, 255, 255, 0.92);
-      border: 1px solid rgba(255, 255, 255, 0.72);
-      border-radius: var(--radius-2xl);
-      overflow: hidden;
-      box-shadow: var(--shadow-xl);
-      backdrop-filter: blur(12px);
-    }
-
-    .sidebar {
-      position: relative;
-      padding: 28px 24px;
-      background:
-        linear-gradient(180deg, rgba(7, 17, 29, 0.98), rgba(19, 39, 65, 0.96));
-      color: var(--white);
+    /* ── Layout ── */
+    .app-wrapper {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      height: 100dvh;
+      max-width: 820px;
+      margin: 0 auto;
+      background: #fff;
+      box-shadow: 0 0 40px rgba(0,0,0,.12);
     }
 
-    .brand {
+    /* ── Header ── */
+    .header {
+      background: linear-gradient(135deg, #0a2d6e 0%, #1a4fa0 100%);
+      color: #fff;
+      padding: 16px 20px;
       display: flex;
-      gap: 14px;
       align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
     }
-
-    .brand-mark {
-      width: 56px;
-      height: 56px;
-      border-radius: 18px;
+    .header-logo {
+      width: 46px;
+      height: 46px;
+      background: #f5c518;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, var(--gold-300), var(--gold-500));
-      color: var(--ink-900);
-      font-family: "Segoe UI", sans-serif;
-      font-size: 20px;
-      font-weight: 800;
-      flex: 0 0 auto;
+      font-weight: 900;
+      font-size: 18px;
+      color: #0a2d6e;
+      flex-shrink: 0;
+      letter-spacing: -1px;
     }
-
-    .brand-copy h1 {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      font-size: 20px;
-    }
-
-    .brand-copy p {
-      margin: 4px 0 0;
-      color: rgba(255, 255, 255, 0.78);
-      font-family: "Segoe UI", sans-serif;
-      font-size: 13px;
-      line-height: 1.45;
-    }
-
-    .status-card,
-    .sidebar-card {
-      border-radius: var(--radius-xl);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(255, 255, 255, 0.06);
-      padding: 18px;
-    }
-
-    .status-top {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 10px;
-      font-family: "Segoe UI", sans-serif;
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
-      color: rgba(255, 255, 255, 0.72);
-    }
-
-    .pulse {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
+    .header-text h1 { font-size: 17px; font-weight: 700; line-height: 1.2; }
+    .header-text p  { font-size: 12px; opacity: .8; margin-top: 2px; }
+    .status-dot {
+      width: 8px; height: 8px;
       background: #4ade80;
+      border-radius: 50%;
+      margin-left: auto;
+      flex-shrink: 0;
+      box-shadow: 0 0 6px #4ade80;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; } 50% { opacity: .4; }
     }
 
-    .status-card h2,
-    .sidebar-card h3 {
-      margin: 0;
-      font-size: 22px;
-      line-height: 1.1;
-    }
-
-    .status-card p,
-    .sidebar-card p {
-      margin: 10px 0 0;
-      color: rgba(255, 255, 255, 0.82);
-      font-family: "Segoe UI", sans-serif;
-      font-size: 14px;
-      line-height: 1.65;
-    }
-
-    .sidebar-links {
+    /* ── Chat Area ── */
+    .chat-area {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px 16px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .sidebar-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      text-decoration: none;
-      color: var(--white);
-      font-family: "Segoe UI", sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      padding: 12px 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.10);
-      background: rgba(255, 255, 255, 0.05);
-      transition: background 0.18s ease, transform 0.18s ease;
-    }
-
-    .sidebar-link:hover {
-      transform: translateX(2px);
-      background: rgba(255, 255, 255, 0.09);
-    }
-
-    .sidebar-meta {
-      margin-top: auto;
-      color: rgba(255, 255, 255, 0.64);
-      font-family: "Segoe UI", sans-serif;
-      font-size: 12px;
-      line-height: 1.6;
-    }
-
-    .main {
-      min-width: 0;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      background: linear-gradient(180deg, rgba(248, 250, 252, 0.78), rgba(255, 255, 255, 0.96));
-    }
-
-    .main-top {
-      padding: 24px 28px 18px;
-      border-bottom: 1px solid rgba(208, 213, 221, 0.7);
-      background: rgba(255, 255, 255, 0.72);
-    }
-
-    .main-top h2 {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      font-size: 18px;
-    }
-
-    .main-top p {
-      margin: 6px 0 0;
-      font-family: "Segoe UI", sans-serif;
-      font-size: 13px;
-      color: var(--stone-500);
-      line-height: 1.55;
-    }
-
-    .chat-scroll {
-      min-height: 0;
-      overflow-y: auto;
-      padding: 22px 28px 24px;
+      gap: 14px;
       scroll-behavior: smooth;
     }
 
-    .welcome {
-      margin-bottom: 20px;
-      border-radius: var(--radius-xl);
-      background: linear-gradient(135deg, #ffffff, #edf4fb);
-      border: 1px solid #dce8f6;
-      box-shadow: var(--shadow-md);
-      overflow: hidden;
+    /* ── Welcome card ── */
+    .welcome-card {
+      background: linear-gradient(135deg, #f8faff 0%, #eef3ff 100%);
+      border: 1px solid #c7d8f5;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
     }
+    .welcome-card h2 { color: #0a2d6e; font-size: 16px; margin-bottom: 8px; }
+    .welcome-card p  { color: #555; font-size: 13.5px; line-height: 1.6; }
 
-    .welcome-inner { padding: 24px; }
-
-    .welcome-kicker {
-      margin: 0 0 10px;
-      font-family: "Segoe UI", sans-serif;
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--blue-700);
-    }
-
-    .welcome h3 {
-      margin: 0;
-      font-size: 32px;
-      line-height: 1.02;
-      color: var(--ink-900);
-    }
-
-    .welcome p {
-      margin: 12px 0 0;
-      max-width: 700px;
-      font-family: "Segoe UI", sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--stone-700);
-    }
-
-    .question-row {
+    /* ── Quick questions ── */
+    .quick-questions {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
+      gap: 8px;
+      padding: 0 2px;
     }
-
-    .question-chip {
-      appearance: none;
-      border: 1px solid #d8e4f4;
-      background: rgba(255, 255, 255, 0.9);
-      color: var(--ink-800);
-      padding: 10px 14px;
-      border-radius: 999px;
-      font-family: "Segoe UI", sans-serif;
+    .quick-btn {
+      background: #fff;
+      border: 1.5px solid #1a4fa0;
+      color: #1a4fa0;
+      padding: 7px 13px;
+      border-radius: 20px;
       font-size: 12.5px;
-      font-weight: 700;
       cursor: pointer;
+      transition: all .18s;
+      font-weight: 500;
     }
+    .quick-btn:hover { background: #1a4fa0; color: #fff; }
 
-    .question-chip:hover {
-      border-color: #b7d1f4;
-    }
-
-    .message-list {
+    /* ── Messages ── */
+    .msg-row {
       display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .message-row {
-      display: flex;
-      gap: 12px;
       align-items: flex-end;
+      gap: 8px;
     }
-
-    .message-row.user {
-      flex-direction: row-reverse;
-    }
+    .msg-row.user  { flex-direction: row-reverse; }
 
     .avatar {
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      flex: 0 0 auto;
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      flex-shrink: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: "Segoe UI", sans-serif;
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 700;
     }
-
-    .avatar.assistant {
-      background: linear-gradient(135deg, var(--ink-900), var(--blue-700));
-      color: var(--gold-300);
-    }
-
-    .avatar.user {
-      background: linear-gradient(135deg, #ffffff, #ecf2f8);
-      color: var(--stone-700);
-      border: 1px solid #dde6ef;
-    }
-
-    .message-stack {
-      max-width: min(78%, 760px);
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .message-row.user .message-stack {
-      align-items: flex-end;
-    }
-
-    .message-label {
-      padding: 0 4px;
-      color: var(--stone-500);
-      font-family: "Segoe UI", sans-serif;
-      font-size: 11px;
-      font-weight: 800;
-    }
+    .avatar.rc { background: #0a2d6e; color: #f5c518; }
+    .avatar.user-av { background: #e2e8f0; color: #475569; }
 
     .bubble {
-      padding: 15px 17px;
-      border-radius: 20px;
-      font-family: "Segoe UI", sans-serif;
+      max-width: 75%;
+      padding: 11px 15px;
+      border-radius: 18px;
       font-size: 14px;
-      line-height: 1.72;
+      line-height: 1.65;
       word-break: break-word;
     }
-
-    .bubble.assistant {
-      background: rgba(255, 255, 255, 0.96);
-      border: 1px solid #e4ebf3;
-      border-bottom-left-radius: 7px;
-      color: var(--stone-900);
-      box-shadow: var(--shadow-md);
+    .bubble.rc-bubble {
+      background: #f4f7fe;
+      border: 1px solid #dde6f9;
+      border-bottom-left-radius: 4px;
+      color: #1e293b;
     }
-
-    .bubble.user {
-      background: linear-gradient(135deg, var(--blue-700), var(--blue-600));
-      color: var(--white);
-      border-bottom-right-radius: 7px;
+    .bubble.user-bubble {
+      background: #1a4fa0;
+      color: #fff;
+      border-bottom-right-radius: 4px;
     }
+    .bubble a { color: #1a4fa0; }
+    .bubble.user-bubble a { color: #bfdbfe; }
+    .bubble p + p { margin-top: 8px; }
+    .bubble ul, .bubble ol { padding-left: 18px; margin-top: 6px; }
+    .bubble li { margin-bottom: 3px; }
 
-    .bubble p { margin: 0; }
-    .bubble p + p { margin-top: 10px; }
-    .bubble ul, .bubble ol { margin: 8px 0 0; padding-left: 20px; }
-    .bubble li + li { margin-top: 4px; }
-
-    .bubble a {
-      color: var(--blue-700);
-      font-weight: 700;
-      text-decoration-thickness: 1.5px;
-      text-underline-offset: 2px;
-    }
-
-    .bubble.user a {
-      color: #e8f2ff;
-    }
-
-    .typing {
-      display: inline-flex;
+    /* ── Typing indicator ── */
+    .typing-indicator {
+      display: flex;
       align-items: center;
-      gap: 6px;
-      padding: 5px 1px;
+      gap: 4px;
+      padding: 10px 14px;
     }
-
-    .typing span {
-      width: 8px;
-      height: 8px;
+    .dot {
+      width: 7px; height: 7px;
+      background: #94a3b8;
       border-radius: 50%;
-      background: #98a2b3;
-      animation: bounce 1s infinite ease-in-out;
+      animation: bounce .9s infinite;
     }
-
-    .typing span:nth-child(2) { animation-delay: 0.12s; }
-    .typing span:nth-child(3) { animation-delay: 0.24s; }
-
+    .dot:nth-child(2) { animation-delay: .15s; }
+    .dot:nth-child(3) { animation-delay: .3s;  }
     @keyframes bounce {
-      0%, 80%, 100% { transform: translateY(0); opacity: 0.55; }
-      40% { transform: translateY(-6px); opacity: 1; }
+      0%, 60%, 100% { transform: translateY(0); }
+      30% { transform: translateY(-6px); }
     }
 
-    .error-banner {
-      padding: 12px 14px;
-      border-radius: var(--radius-md);
-      border: 1px solid var(--danger-border);
-      background: var(--danger-bg);
-      color: var(--danger-text);
-      font-family: "Segoe UI", sans-serif;
-      font-size: 13px;
-      line-height: 1.5;
+    /* ── Error ── */
+    .error-bubble {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #b91c1c;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 13.5px;
     }
 
-    .composer {
-      padding: 20px 24px 24px;
-      border-top: 1px solid rgba(208, 213, 221, 0.75);
-      background: rgba(255, 255, 255, 0.82);
-    }
-
-    .composer-shell {
+    /* ── Input Bar ── */
+    .input-bar {
       display: flex;
-      gap: 12px;
-      align-items: flex-end;
+      gap: 8px;
+      padding: 12px 14px;
+      background: #fff;
+      border-top: 1px solid #e5e9f0;
+      flex-shrink: 0;
     }
-
-    .composer-input {
+    .input-bar textarea {
       flex: 1;
-      display: flex;
-      align-items: flex-end;
-      gap: 10px;
-      padding: 12px 14px;
-      border-radius: 22px;
-      border: 1px solid #d8e3ef;
-      background: linear-gradient(180deg, #ffffff, #f9fbfd);
+      resize: none;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      max-height: 120px;
+      min-height: 44px;
+      line-height: 1.5;
+      transition: border .18s;
     }
-
-    .composer-input:focus-within {
-      border-color: #a2c5fb;
-      box-shadow: 0 0 0 4px rgba(47, 118, 220, 0.12);
-    }
-
-    .composer-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 13px;
-      flex: 0 0 auto;
+    .input-bar textarea:focus { border-color: #1a4fa0; }
+    .send-btn {
+      background: #1a4fa0;
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      padding: 0 18px;
+      cursor: pointer;
+      font-size: 20px;
+      transition: background .18s;
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, rgba(29, 95, 190, 0.12), rgba(231, 184, 47, 0.16));
-      color: var(--ink-900);
-      font-family: "Segoe UI", sans-serif;
-      font-size: 16px;
-      font-weight: 800;
+      min-width: 50px;
     }
+    .send-btn:hover  { background: #0a2d6e; }
+    .send-btn:disabled { background: #94a3b8; cursor: not-allowed; }
 
-    textarea {
-      width: 100%;
-      resize: none;
-      border: 0;
-      outline: 0;
-      background: transparent;
-      color: var(--stone-900);
-      font-family: "Segoe UI", sans-serif;
-      font-size: 14px;
-      line-height: 1.55;
-      max-height: 150px;
-      min-height: 24px;
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      font-size: 11px;
+      color: #94a3b8;
+      padding: 6px 12px 10px;
+      background: #fff;
+      flex-shrink: 0;
     }
+    .footer a { color: #1a4fa0; text-decoration: none; }
 
-    textarea::placeholder {
-      color: #98a2b3;
-    }
-
-    .send-btn {
-      width: 56px;
-      height: 56px;
-      border: 0;
-      border-radius: 20px;
-      flex: 0 0 auto;
-      cursor: pointer;
-      color: var(--white);
-      background: linear-gradient(135deg, var(--ink-900), var(--blue-700));
-    }
-
-    .send-btn:disabled {
-      opacity: 0.55;
-      cursor: not-allowed;
-    }
-
-    .send-btn svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .composer-meta {
-      margin-top: 10px;
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      color: var(--stone-500);
-      font-family: "Segoe UI", sans-serif;
-      font-size: 12px;
-      line-height: 1.45;
-    }
-
-    .composer-meta a {
-      color: var(--blue-700);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    @media (max-width: 980px) {
-      body { padding: 0; }
-      .app {
-        width: 100%;
-        min-height: 100vh;
-        border-radius: 0;
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 680px) {
-      .main-top,
-      .chat-scroll,
-      .composer,
-      .sidebar {
-        padding-left: 16px;
-        padding-right: 16px;
-      }
-
-      .welcome-inner { padding: 18px; }
-      .welcome h3 { font-size: 25px; }
-      .message-stack { max-width: 88%; }
-      .composer-meta { flex-direction: column; }
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      .bubble { max-width: 88%; }
+      .header-text h1 { font-size: 15px; }
     }
   </style>
 </head>
 <body>
-  <div class="app">
-    <aside class="sidebar">
-      <div class="brand">
-        <div class="brand-mark">RC</div>
-        <div class="brand-copy">
-          <h1>Ask Reform California</h1>
-          <p>Official help, direct answers, and the right next step.</p>
-        </div>
-      </div>
+<div class="app-wrapper">
 
-      <section class="status-card">
-        <div class="status-top">
-          <span class="pulse"></span>
-          <span>Live Assistant</span>
-        </div>
-        <h2>Public information, without the runaround.</h2>
-        <p>Ask about petitions, volunteering, events, voter guides, donations, office details, or where to go next.</p>
-      </section>
-
-      <section class="sidebar-card">
-        <h3>Useful Links</h3>
-        <p>Open official pages directly here anytime.</p>
-        <div class="sidebar-links">
-          <a class="sidebar-link" href="https://reformcalifornia.org" target="_blank" rel="noopener noreferrer"><span>Main Website</span><span>↗</span></a>
-          <a class="sidebar-link" href="https://reformcalifornia.org/events" target="_blank" rel="noopener noreferrer"><span>Events</span><span>↗</span></a>
-          <a class="sidebar-link" href="https://reformcalifornia.org/volunteer" target="_blank" rel="noopener noreferrer"><span>Volunteer</span><span>↗</span></a>
-          <a class="sidebar-link" href="https://reformcalifornia.org/voter-guides" target="_blank" rel="noopener noreferrer"><span>Voter Guides</span><span>↗</span></a>
-        </div>
-      </section>
-
-      <div class="sidebar-meta">
-        Reform California<br />
-        Hotline: <a href="tel:6193547257" style="color:#fff;text-decoration:none;font-weight:700;">619-354-7257</a>
-      </div>
-    </aside>
-
-    <section class="main">
-      <div class="main-top">
-        <h2>Conversation</h2>
-        <p>Ask a straightforward question and the assistant will respond with the clearest answer it can provide.</p>
-      </div>
-
-      <div class="chat-scroll" id="chatArea">
-        <div class="welcome" id="welcomeCard">
-          <div class="welcome-inner">
-            <div class="welcome-kicker">Reform California</div>
-            <h3>Find the page, process, or answer you actually need.</h3>
-            <p>Ask naturally. For example: “How do I sign the petition?”, “Where is the voter guide?”, “Can I volunteer from home?”, or “What are the office hours?”</p>
-            <div class="question-row">
-              <button class="question-chip" type="button" onclick="askQuick('How do I sign a petition?')">How do I sign a petition?</button>
-              <button class="question-chip" type="button" onclick="askQuick('How can I volunteer with Reform California?')">How can I volunteer?</button>
-              <button class="question-chip" type="button" onclick="askQuick('Where are upcoming events?')">Where are upcoming events?</button>
-              <button class="question-chip" type="button" onclick="askQuick('Where can I find the voter guide?')">Where is the voter guide?</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="message-list" id="messageList"></div>
-      </div>
-
-      <div class="composer">
-        <div class="composer-shell">
-          <div class="composer-input">
-            <div class="composer-icon" id="composerIcon">RC</div>
-            <textarea
-              id="userInput"
-              rows="1"
-              placeholder="Ask your question here..."
-              oninput="autoResize(this)"
-              onkeydown="handleKey(event)"
-            ></textarea>
-          </div>
-
-          <button class="send-btn" id="sendBtn" type="button" onclick="sendMessage()" aria-label="Send message">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 2L11 13"></path>
-              <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
-            </svg>
-          </button>
-        </div>
-
-        <div class="composer-meta">
-          <div>Official links and direct next steps are included when relevant.</div>
-          <div>
-            <a href="https://reformcalifornia.org" target="_blank" rel="noopener noreferrer">reformcalifornia.org</a>
-            &nbsp;·&nbsp;
-            <a href="tel:6193547257">619-354-7257</a>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- Header -->
+  <div class="header">
+    <div class="header-logo">RC</div>
+    <div class="header-text">
+      <h1>Reform California Assistant</h1>
+      <p>Ask me anything about petitions, volunteering, events &amp; more</p>
+    </div>
+    <div class="status-dot" title="Online 24/7"></div>
   </div>
 
-  <script>
-    const chatArea = document.getElementById("chatArea");
-    const messageList = document.getElementById("messageList");
-    const userInput = document.getElementById("userInput");
-    const sendBtn = document.getElementById("sendBtn");
-    const composerIcon = document.getElementById("composerIcon");
+  <!-- Chat Area -->
+  <div class="chat-area" id="chatArea">
 
-    let conversationHistory = [];
-    let isStreaming = false;
+    <!-- Welcome Card -->
+    <div class="welcome-card" id="welcomeCard">
+      <h2>Welcome! How can I help you today?</h2>
+      <p>I'm here 24/7 to answer your questions about Reform California, Chairman Carl DeMaio,
+         our campaigns, petitions, volunteering, and more.</p>
+    </div>
 
-    function scrollBottom() {
-      chatArea.scrollTop = chatArea.scrollHeight;
-    }
+    <!-- Quick Questions -->
+    <div class="quick-questions" id="quickQuestions">
+      <button class="quick-btn" onclick="askQuick('How do I sign a petition?')">📝 Sign a Petition</button>
+      <button class="quick-btn" onclick="askQuick('How can I volunteer?')">🙋 Volunteer</button>
+      <button class="quick-btn" onclick="askQuick('Where are your upcoming events?')">📅 Events</button>
+      <button class="quick-btn" onclick="askQuick('How do I find the voter guide?')">🗳️ Voter Guide</button>
+      <button class="quick-btn" onclick="askQuick('How do I donate?')">💛 Donate</button>
+      <button class="quick-btn" onclick="askQuick('What is Reform California?')">ℹ️ About RC</button>
+    </div>
 
-    function autoResize(el) {
-      el.style.height = "auto";
-      el.style.height = Math.min(el.scrollHeight, 150) + "px";
-    }
+  </div><!-- /chat-area -->
 
-    function handleKey(event) {
-      if (event.key === "Enter" && !event.shiftKey) {
-        event.preventDefault();
-        sendMessage();
-      }
-    }
+  <!-- Input Bar -->
+  <div class="input-bar">
+    <textarea
+      id="userInput"
+      placeholder="Type your question here…"
+      rows="1"
+      onkeydown="handleKey(event)"
+      oninput="autoResize(this)"
+    ></textarea>
+    <button class="send-btn" id="sendBtn" onclick="sendMessage()" title="Send">&#9658;</button>
+  </div>
 
-    function askQuick(question) {
-      userInput.value = question;
+  <!-- Footer -->
+  <div class="footer">
+    <a href="https://reformcalifornia.org" target="_blank">reformcalifornia.org</a>
+    &nbsp;·&nbsp; Volunteer Hotline: <a href="tel:6193547257">619-354-7257</a>
+    &nbsp;·&nbsp; Powered by Reform California
+  </div>
+
+</div><!-- /app-wrapper -->
+
+<script>
+  const chatArea   = document.getElementById("chatArea");
+  const userInput  = document.getElementById("userInput");
+  const sendBtn    = document.getElementById("sendBtn");
+
+  let conversationHistory = [];
+  let isStreaming = false;
+
+  // ── Helpers ──────────────────────────────────────────────────────────────
+
+  function scrollBottom() {
+    chatArea.scrollTop = chatArea.scrollHeight;
+  }
+
+  function autoResize(el) {
+    el.style.height = "auto";
+    el.style.height = Math.min(el.scrollHeight, 120) + "px";
+  }
+
+  function handleKey(e) {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
       sendMessage();
     }
+  }
 
-    function clearWelcome() {
-      document.getElementById("welcomeCard")?.remove();
-    }
+  function askQuick(q) {
+    // Hide quick buttons after first use
+    const qqs = document.getElementById("quickQuestions");
+    if (qqs) qqs.style.display = "none";
+    userInput.value = q;
+    sendMessage();
+  }
 
-    function escapeHtml(text) {
-      return text
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
-    }
+  // ── Render message ────────────────────────────────────────────────────────
 
-    function normalizeUrl(url) {
-      if (!url) return url;
-      let clean = url.trim().replace(/[),.;!?]+$/g, "");
-      if (/^https?:\/\//i.test(clean)) return clean;
-      if (/^www\./i.test(clean)) return "https://" + clean;
-      if (/^[a-z0-9.-]+\.[a-z]{2,}(\/.*)?$/i.test(clean)) return "https://" + clean;
-      return clean;
-    }
+  function addMessage(role, content = "") {
+    const row = document.createElement("div");
+    row.className = `msg-row ${role}`;
 
-    function formatText(text) {
-      if (!text) return "";
+    const avatar = document.createElement("div");
+    avatar.className = `avatar ${role === "assistant" ? "rc" : "user-av"}`;
+    avatar.textContent = role === "assistant" ? "RC" : "You";
 
-      let safe = escapeHtml(text);
+    const bubble = document.createElement("div");
+    bubble.className = `bubble ${role === "assistant" ? "rc-bubble" : "user-bubble"}`;
+    bubble.innerHTML = formatText(content);
 
-      safe = safe.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+    row.appendChild(avatar);
+    row.appendChild(bubble);
+    chatArea.appendChild(row);
+    scrollBottom();
+    return bubble;
+  }
 
-      safe = safe.replace(
-        /\[([^\]]+)\]\((https?:\/\/[^\s)]+|www\.[^\s)]+|[a-z0-9.-]+\.[a-z]{2,}[^\s)]*)\)/gi,
-        (_, label, url) => `<a href="${normalizeUrl(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`
-      );
+  function addTypingIndicator() {
+    const row = document.createElement("div");
+    row.className = "msg-row assistant";
+    row.id = "typingRow";
 
-      safe = safe.replace(
-        /(^|[\s(>])((https?:\/\/[^\s<>"']+|www\.[^\s<>"']+|[a-z0-9.-]+\.[a-z]{2,}(\/[^\s<>"']*)?))/gi,
-        (_, prefix, url) => `${prefix}<a href="${normalizeUrl(url)}" target="_blank" rel="noopener noreferrer">${url.replace(/[),.;!?]+$/g, "")}</a>`
-      );
+    const avatar = document.createElement("div");
+    avatar.className = "avatar rc";
+    avatar.textContent = "RC";
 
-      safe = safe.replace(/^\d+\.\s(.+)$/gm, "<li>$1</li>");
-      safe = safe.replace(/^[-•]\s(.+)$/gm, "<li>$1</li>");
+    const ind = document.createElement("div");
+    ind.className = "bubble rc-bubble typing-indicator";
+    ind.innerHTML = '<div class="dot"></div><div class="dot"></div><div class="dot"></div>';
 
-      return safe
-        .split(/\n{2,}/)
-        .map((block) => {
-          const trimmed = block.trim();
-          if (!trimmed) return "";
-          if (trimmed.includes("<li>")) return "<ul>" + trimmed + "</ul>";
-          return "<p>" + trimmed.replace(/\n/g, "<br>") + "</p>";
-        })
-        .join("");
-    }
+    row.appendChild(avatar);
+    row.appendChild(ind);
+    chatArea.appendChild(row);
+    scrollBottom();
+    return row;
+  }
 
-    function createMessageRow(role, content = "") {
-      const row = document.createElement("div");
-      row.className = "message-row " + role;
+  function removeTypingIndicator() {
+    const el = document.getElementById("typingRow");
+    if (el) el.remove();
+  }
 
-      const avatar = document.createElement("div");
-      avatar.className = "avatar " + (role === "assistant" ? "assistant" : "user");
-      avatar.textContent = role === "assistant" ? "RC" : "You";
+  // ── Text formatter: markdown-lite ─────────────────────────────────────────
 
-      const stack = document.createElement("div");
-      stack.className = "message-stack";
+  function formatText(text) {
+    if (!text) return "";
+    // Bold
+    text = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+    // Links
+    text = text.replace(
+      /(https?:\/\/[^\s<>"']+)/g,
+      '<a href="$1" target="_blank" rel="noopener">$1</a>'
+    );
+    // Numbered lists
+    text = text.replace(/^\d+\.\s(.+)$/gm, "<li>$1</li>");
+    text = text.replace(/(<li>.*<\/li>)/s, "<ol>$1</ol>");
+    // Bullet lists
+    text = text.replace(/^[-•]\s(.+)$/gm, "<li>$1</li>");
+    // Paragraphs
+    text = text.split(/\n{2,}/).map(p => {
+      p = p.trim();
+      if (!p) return "";
+      if (p.startsWith("<ol>") || p.startsWith("<ul>") || p.startsWith("<li>")) return p;
+      return `<p>${p.replace(/\n/g, "<br>")}</p>`;
+    }).join("");
+    return text;
+  }
 
-      const label = document.createElement("div");
-      label.className = "message-label";
-      label.textContent = role === "assistant" ? "Reform California" : "You";
+  // ── Send ──────────────────────────────────────────────────────────────────
 
-      const bubble = document.createElement("div");
-      bubble.className = "bubble " + (role === "assistant" ? "assistant" : "user");
-      bubble.innerHTML = formatText(content);
+  async function sendMessage() {
+    if (isStreaming) return;
+    const text = userInput.value.trim();
+    if (!text) return;
 
-      stack.appendChild(label);
-      stack.appendChild(bubble);
-      row.appendChild(avatar);
-      row.appendChild(stack);
-      messageList.appendChild(row);
+    // Hide welcome elements on first real message
+    const wc = document.getElementById("welcomeCard");
+    if (wc) wc.remove();
+    const qq = document.getElementById("quickQuestions");
+    if (qq) qq.remove();
 
-      scrollBottom();
-      return bubble;
-    }
+    // Add user message
+    addMessage("user", text);
+    conversationHistory.push({ role: "user", content: text });
 
-    function addTyping() {
-      composerIcon.textContent = "...";
+    userInput.value = "";
+    userInput.style.height = "auto";
+    sendBtn.disabled = true;
+    isStreaming = true;
 
-      const row = document.createElement("div");
-      row.className = "message-row assistant";
-      row.id = "typingRow";
+    // Typing indicator
+    addTypingIndicator();
 
-      const avatar = document.createElement("div");
-      avatar.className = "avatar assistant";
-      avatar.textContent = "RC";
+    let fullResponse = "";
+    let responseBubble = null;
 
-      const stack = document.createElement("div");
-      stack.className = "message-stack";
+    try {
+      const res = await fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: conversationHistory })
+      });
 
-      const label = document.createElement("div");
-      label.className = "message-label";
-      label.textContent = "Reform California";
+      if (!res.ok) throw new Error(`Server error ${res.status}`);
 
-      const bubble = document.createElement("div");
-      bubble.className = "bubble assistant";
-      bubble.innerHTML = '<div class="typing"><span></span><span></span><span></span></div>';
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = "";
 
-      stack.appendChild(label);
-      stack.appendChild(bubble);
-      row.appendChild(avatar);
-      row.appendChild(stack);
-      messageList.appendChild(row);
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
 
-      scrollBottom();
-    }
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split("\n");
+        buffer = lines.pop(); // keep incomplete line
 
-    function removeTyping() {
-      composerIcon.textContent = "RC";
-      document.getElementById("typingRow")?.remove();
-    }
+        for (const line of lines) {
+          if (!line.startsWith("data: ")) continue;
+          const payload = line.slice(6).trim();
+          if (payload === "[DONE]") break;
 
-    function showError(message) {
-      const error = document.createElement("div");
-      error.className = "error-banner";
-      error.textContent = message;
-      messageList.appendChild(error);
-      scrollBottom();
-    }
-
-    async function sendMessage() {
-      if (isStreaming) return;
-
-      const text = userInput.value.trim();
-      if (!text) return;
-
-      clearWelcome();
-      createMessageRow("user", text);
-      conversationHistory.push({ role: "user", content: text });
-
-      userInput.value = "";
-      userInput.style.height = "auto";
-      sendBtn.disabled = true;
-      isStreaming = true;
-
-      addTyping();
-
-      let fullResponse = "";
-      let responseBubble = null;
-
-      try {
-        const response = await fetch("/chat", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ messages: conversationHistory })
-        });
-
-        if (!response.ok || !response.body) {
-          throw new Error("Server error");
-        }
-
-        const reader = response.body.getReader();
-        const decoder = new TextDecoder();
-        let buffer = "";
-        let doneReceived = false;
-
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-
-          buffer += decoder.decode(value, { stream: true });
-          const lines = buffer.split("\n");
-          buffer = lines.pop() || "";
-
-          for (const line of lines) {
-            if (!line.startsWith("data: ")) continue;
-            const payload = line.slice(6).trim();
-
-            if (payload === "[DONE]") {
-              doneReceived = true;
-              break;
+          try {
+            const parsed = JSON.parse(payload);
+            if (parsed.error) {
+              removeTypingIndicator();
+              const errDiv = document.createElement("div");
+              errDiv.className = "error-bubble";
+              errDiv.textContent = parsed.error;
+              chatArea.appendChild(errDiv);
+              scrollBottom();
+              return;
             }
-
-            try {
-              const parsed = JSON.parse(payload);
-
-              if (parsed.error) {
-                removeTyping();
-                showError(parsed.error);
-                doneReceived = true;
-                break;
+            if (parsed.content) {
+              removeTypingIndicator();
+              if (!responseBubble) {
+                responseBubble = addMessage("assistant", "");
               }
-
-              if (parsed.content) {
-                removeTyping();
-                if (!responseBubble) {
-                  responseBubble = createMessageRow("assistant", "");
-                }
-                fullResponse += parsed.content;
-                responseBubble.innerHTML = formatText(fullResponse);
-                scrollBottom();
-              }
-            } catch (err) {
-              console.error("Bad SSE payload", err);
+              fullResponse += parsed.content;
+              responseBubble.innerHTML = formatText(fullResponse);
+              scrollBottom();
             }
-          }
-
-          if (doneReceived) break;
+          } catch (_) {}
         }
-
-        if (fullResponse) {
-          conversationHistory.push({ role: "assistant", content: fullResponse });
-        }
-      } catch (error) {
-        removeTyping();
-        showError("Connection issue. Please try again or call 619-354-7257.");
-      } finally {
-        isStreaming = false;
-        sendBtn.disabled = false;
-        userInput.focus();
       }
-    }
 
-    userInput.focus();
-  </script>
+      // Save assistant message to history
+      if (fullResponse) {
+        conversationHistory.push({ role: "assistant", content: fullResponse });
+      }
+
+    } catch (err) {
+      removeTypingIndicator();
+      console.error(err);
+      const errDiv = document.createElement("div");
+      errDiv.className = "error-bubble";
+      errDiv.textContent = "Connection issue. Please try again or call us at 619-354-7257.";
+      chatArea.appendChild(errDiv);
+      scrollBottom();
+    } finally {
+      isStreaming = false;
+      sendBtn.disabled = false;
+      userInput.focus();
+    }
+  }
+</script>
 </body>
 </html>
